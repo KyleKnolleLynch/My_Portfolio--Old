@@ -14,7 +14,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  background: var(--black-color);
 }
 
 a {
@@ -34,11 +34,10 @@ nav ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 3rem 2.5rem;
+  padding: 3rem 2.5rem 0;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
-
 
 section {
   min-height: 100vh;
@@ -46,7 +45,50 @@ section {
 }
 
 .home-section-1 {
-  background: var(--black-color);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.projects-title {
+  font-size: 6rem;
+  margin-top: 10rem;
+  z-index: 1;
+  line-height: 1;
+}
+
+.projects-title :nth-child(2) {
+  color: var(--black-color);
+  text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
+    -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
+}
+
+@supports (
+  (text-stroke: 2px var(--white-color)) or
+    (-webkit-text-stroke: 2px var(--white-color))
+) {
+  .projects-title :nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--white-color);
+    text-stroke: 2px var(--white-color);
+    text-shadow: none;
+  }
+}
+
+.projects-title :nth-child(3) {
+  font-size: 0.8rem;
+  display: inline;
+  float: right;
+  margin-top: 1.2rem;
+}
+
+.home-section-1 img {
+  max-width: 60vw;
+  max-height: 50vh;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 34vh;
 }
 
 .profile-section-1 {
