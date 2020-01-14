@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../layout/Navbar';
-import inertiaDis from '../../assets/images/projects/inertia-display.png';
+import ProjectCards from '../layout/ProjectCards';
+import Footer from '../layout/Footer';
+import inertiaDis from '../../assets/images/inertia-display.png';
 
 const Home = () => {
   return (
@@ -15,9 +18,16 @@ const Home = () => {
             <span>Projects</span>
             <span>(19-20)</span>
           </div>
-          <img src={inertiaDis} alt="inertia-display" />
+          <img src={inertiaDis} alt='inertia-display' />
         </section>
+        <section className='section home-section-2'>
+          <ProjectCards />
+        </section>
+        <article className='profile-link-bottom'>
+          <Link to='/profile'>Profile</Link>
+        </article>
       </main>
+      <Footer />
     </Fragment>
   );
 };

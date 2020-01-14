@@ -15,6 +15,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--black-color);
+  color: var(--white-color);
 }
 
 a {
@@ -30,10 +31,13 @@ a {
   background: var(--profile-bg-color);
 }
 
+ul {
+  list-style: none;
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
-  list-style: none;
   padding: 3rem 2.5rem 0;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -41,7 +45,6 @@ nav ul {
 
 section {
   min-height: 100vh;
-  color: var(--white-color);
 }
 
 .home-section-1 {
@@ -55,6 +58,7 @@ section {
   margin-top: 10rem;
   z-index: 1;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .projects-title :nth-child(2) {
@@ -91,6 +95,95 @@ section {
   top: 34vh;
 }
 
+.project-card {
+  background: var(--white-color); /*<--*/
+  width: 30rem;
+  height: 26rem;
+  margin-bottom: 10rem;
+  padding: 0.5rem;
+  color: var(--black-color);
+}
+
+.project-content {
+  margin: 1rem 0 0 95%;
+  color: var(--white-color);
+}
+
+.project-content :nth-child(1) {
+  width: 8rem;
+  border-top: 2px solid #ccc;
+  margin-left: -200%;
+}
+
+.project-1 {
+  background: url('../assets/images/projects/inertia.png') no-repeat center;
+  background-size: contain;
+}
+.project-2 {
+  background: url('../assets/images/projects/online-cart-fix.png') no-repeat center;
+  background-size: contain;
+}
+
+.project-3 {
+  background: url('../assets/images/projects/githubSearcher.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+.project-4 {
+  background: url('../assets/images/projects/resort-rentals.png') no-repeat
+    center;
+  background-size: contain;
+}
+
+.project-5 {
+  background: url('../assets/images/projects/clientPanel.png') no-repeat
+    center;
+  background-size: contain;
+}
+
 .profile-section-1 {
   background: var(--profile-bg-color);
 }
+
+.profile-link-bottom {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6rem;
+  margin: 3rem 0;
+}
+
+.profile-link-bottom a {
+  color: var(--black-color);
+  text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
+    -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
+}
+
+@supports (
+  (text-stroke: 2px var(--white-color)) or
+    (-webkit-text-stroke: 2px var(--white-color))
+) {
+  .profile-link-bottom a {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--white-color);
+    text-stroke: 2px var(--white-color);
+    text-shadow: none;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 6rem;
+}
+
+footer ul {
+  margin-left: 4rem;
+}
+
+footer ul li {  
+  display: inline;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+

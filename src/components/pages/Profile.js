@@ -9,7 +9,8 @@ const About = () => {
       </header>
       <main>
         <section className='section profile-section-1'>
-          <h1>Hello from Profile</h1>
+          
+          
         </section>
       </main>
     </Fragment>
