@@ -1,60 +1,33 @@
-import React, { Fragment } from 'react';
-import Fade from 'react-reveal/Fade';
+import React, { Fragment, useState } from 'react';
+// import { Spring } from 'react-spring/renderprops';
+import VisibilitySensor from 'react-visibility-sensor';
+import { projectsData } from '../../data';
 
 const ProjectCards = () => {
+  const [projects, setProjects] = useState(projectsData);
+
   return (
     <Fragment>
-      <Fade bottom duration={2000}>
-        <div className='project-card project-1'>
-          <div className='project-content'>
-            <div></div>
-            <h1>Inertia</h1>
-            <h3>Vanilla Javascript</h3>
-          </div>
-        </div>
-      </Fade>
-      <Fade bottom duration={3000}>
-        <div className='project-card project-2'>
-          <div className='project-content'>
-            <div></div>
-            <h1>Online Cart</h1>
-            <h3>
-              React
-            </h3>
-          </div>
-        </div>
-      </Fade>
-      <Fade left duration={3000}>
-        <div className='project-card project-3'>
-          <div className='project-content'>
-            <div></div>
-            <h1>GitHub Searcher</h1>
-            <h3>
-              React
-            </h3>
-          </div>
-        </div>
-      </Fade>
-      <Fade right duration={3000}>
-        <div className='project-card project-4'>
-          <div className='project-content'>
-            <div></div>
-            <h1>Resort Rentals</h1>
-            <h3>React</h3>
-          </div>
-        </div>
-      </Fade>
-      <Fade top duration={3000}>
-        <div className='project-card project-5'>
-          <div className='project-content'>
-            <div></div>
-            <h2>Birder's Journal</h2>
-            <h3>
-              Javasctipt
-            </h3>
-          </div>
-        </div>
-      </Fade>
+      {projects.map(project => (
+        <VisibilitySensor partialVisibility key={project.id}>
+          {({ isVisible }) => (
+            <div
+              className={
+                isVisible
+                  ? 'slideDown enter project-card'
+                  : 'slideDown project-card'
+              }
+            >
+              <img src={project.img} alt='inerita' />
+              <div className='project-content'>
+                <div></div>
+                <h2>{project.title}</h2>
+                <h3>{project.subtitle}</h3>
+              </div>
+            </div>
+          )}
+        </VisibilitySensor>
+      ))}
     </Fragment>
   );
 };

@@ -14,7 +14,8 @@ const Home = () => {
       <main>
         <section className='section home-section-1'>
           <div className='projects-title'>
-            Selected <br />
+            Selected
+            <br />
             <span>Projects</span>
             <span>(19-20)</span>
           </div>
