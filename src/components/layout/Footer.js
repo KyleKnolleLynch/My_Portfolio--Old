@@ -5,13 +5,13 @@ const Footer = () => {
     <footer>
       <ul className='footer-links'>
         <li>
-          <a href='https://github.com/KyleKnolleLynch'>Gh</a>
+          <a href='https://github.com/KyleKnolleLynch'>GH</a>
         </li>
         <li>
-          <a href='https://github.com/KyleKnolleLynch'>Tw</a>
+          <a href='https://github.com/KyleKnolleLynch'>TW</a>
         </li>
         <li>
-          <a href='https://github.com/KyleKnolleLynch'>Fa</a>
+          <a href='https://github.com/KyleKnolleLynch'>FA</a>
         </li>
       </ul>
     </footer>

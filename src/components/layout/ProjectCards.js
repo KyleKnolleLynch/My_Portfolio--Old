@@ -18,12 +18,12 @@ const ProjectCards = () => {
                   : 'slideDown project-card'
               }
             >
-              <img src={project.img} alt='inerita' />
-              <div className='project-content'>
+              <img src={project.img} alt='projects' />
+              {/* <div className='project-content'>
                 <div></div>
                 <h2>{project.title}</h2>
                 <h3>{project.subtitle}</h3>
-              </div>
+              </div> */}
             </div>
           )}
         </VisibilitySensor>

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import ProjectCards from '../layout/ProjectCards';
 import Footer from '../layout/Footer';
@@ -16,10 +17,17 @@ const Home = () => {
           <div className='projects-title'>
             Selected
             <br />
-            <span>Projects</span>
-            <span>(19-20)</span>
+            <p>Work</p>
           </div>
           <img src={inertiaDis} alt='inertia-display' />
+          <VisibilitySensor offset={{ top: -200 }}>
+            {({ isVisible }) => (
+              <div className={isVisible ? 'scroll-div hidden' : 'scroll-div'}>
+                <p>SCROLL</p>
+                <p className='scroll-vert'></p>
+              </div>
+            )}
+          </VisibilitySensor>
         </section>
         <section className='section home-section-2'>
           <ProjectCards />

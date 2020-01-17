@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --profile-bg-color: orangered;
+  --profile-bg-color: #140029;
 }
 
 * {
@@ -16,6 +18,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--black-color);
   color: var(--white-color);
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 a {
@@ -25,6 +28,7 @@ a {
 
 .home-header {
   background: var(--black-color);
+  letter-spacing: 2px;
 }
 
 .profile-header {
@@ -33,6 +37,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 nav ul {
@@ -51,6 +59,7 @@ section {
   display: flex;
   justify-content: center;
   position: relative;
+  text-align: center;
 }
 
 .projects-title {
@@ -58,10 +67,11 @@ section {
   margin-top: 10rem;
   z-index: 1;
   line-height: 1;
+  letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
 
-.projects-title span:nth-child(2) {
+.projects-title p {
   color: var(--black-color);
   text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
     -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
@@ -71,7 +81,7 @@ section {
   (text-stroke: 2px var(--white-color)) or
     (-webkit-text-stroke: 2px var(--white-color))
 ) {
-  .projects-title span:nth-child(2) {
+  .projects-title p {
     color: transparent;
     -webkit-text-stroke: 2px var(--white-color);
     text-stroke: 2px var(--white-color);
@@ -79,12 +89,15 @@ section {
   }
 }
 
-.projects-title span:nth-child(3) {
-  font-size: 0.8rem;
-  display: inline;
+.projects-title::after {
+  content: '(19-20)';
   float: right;
-  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  margin-top: -5rem;
+  padding-right: 2rem;
+  letter-spacing: 1px;
 }
+
 
 .home-section-1 img {
   max-width: 60vw;
@@ -95,33 +108,69 @@ section {
   top: 34vh;
 }
 
+.scroll-div {
+  position: absolute;
+  bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-div p {
+  padding-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.scroll-vert {
+  border-left: 1px solid var(--white-color);
+  height: 2.5rem;
+  animation: bounce 3500ms infinite;
+}
+
 .home-section-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 6rem;
-  justify-items: center;
+  grid-template-columns:
+    minmax(2.6rem, 1fr) minmax(20rem, 28rem) minmax(3rem, 10rem)
+    minmax(20rem, 28rem) minmax(2.6rem, 1fr);
+  grid-template-rows: repeat(4, 46rem);
+  grid-gap: 18rem 0;
+  margin: auto;
 }
 
 .project-card {
-  width: 30rem;
   height: 40rem;
-  margin-bottom: 10rem;
-  padding: 0.5rem;
 }
 
 .project-card:nth-child(3n) {
-  width: 60rem;
-  height: 40rem;
-  grid-column: span 2;
+  width: 45vw;
+  min-width: 768px;
+  height: 38rem;
+  grid-column: span 5;
 }
 
 .project-card:nth-child(1) {
-  justify-self: flex-end;
+  grid-column: 2 / 3;
+  align-self: flex-end;
 }
 
 .project-card:nth-child(2) {
-  justify-self: flex-start;
+  grid-column: 4 / 5;
+}
+
+.project-card:nth-child(3) {
+  justify-self: flex-end;
+}
+
+.project-card:nth-child(4) {
+  grid-column: 2 / 3;
+  align-self: flex-end;
+}
+
+.project-card:nth-child(5) {
+  grid-column: 4 / 5;
+}
+
+.project-card:nth-child(6) {
 }
 
 .project-card img {
@@ -130,16 +179,16 @@ section {
   object-fit: cover;
 }
 
-.project-content {
+/* .project-content {
   color: var(--white-color);
-}
+} */
 
-.project-content :nth-child(1) {
+/* .project-content :nth-child(1) {
   width: 8rem;
   border-top: 2px solid #ccc;
   margin-left: -20%;
   padding-bottom: 5px;
-}
+} */
 
 /* .fadeIn {
   transition: opacity 1s ease-in-out;
@@ -206,4 +255,40 @@ footer ul li {
   display: inline;
   padding: 0.3rem;
   font-size: 1.2rem;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: translateY(8px);
+  }
+
+  75%,
+  25% 
+   {
+    transform: translateY(-2px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-section-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 6rem 0;
+    place-items: center;
+  }
+
+  .project-card:nth-child(n) {
+    grid-column: 1;
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .project-card:nth-child(5) {
+    grid-column: 1;
+    min-width: 50%;
+  }
 }
