@@ -1,15 +1,15 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 // import { Spring } from 'react-spring/renderprops';
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from './VisibilitySensor';
 import { projectsData } from '../../data';
 
 const ProjectCards = () => {
-  const [projects, setProjects] = useState(projectsData);
+  const projects = projectsData;
 
   return (
     <Fragment>
       {projects.map(project => (
-        <VisibilitySensor partialVisibility key={project.id}>
+        <VisibilitySensor partialVisibility key={project.id} once>
           {({ isVisible }) => (
             <div
               className={

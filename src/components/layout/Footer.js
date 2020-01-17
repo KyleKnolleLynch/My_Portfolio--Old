@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <ul className='footer-links'>
+      <ul>
         <li>
           <a href='https://github.com/KyleKnolleLynch'>GH</a>
         </li>

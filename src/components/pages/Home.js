@@ -9,7 +9,7 @@ import inertiaDis from '../../assets/images/inertia-display.png';
 const Home = () => {
   return (
     <Fragment>
-      <header className='home-header'>
+      <header>
         <Navbar title1='Kyle Lynch' title2='Profile' linkName='/profile' />
       </header>
       <main>
@@ -20,7 +20,7 @@ const Home = () => {
             <p>Work</p>
           </div>
           <img src={inertiaDis} alt='inertia-display' />
-          <VisibilitySensor offset={{ top: -200 }}>
+          <VisibilitySensor offset={{ top: -300 }}>
             {({ isVisible }) => (
               <div className={isVisible ? 'scroll-div hidden' : 'scroll-div'}>
                 <p>SCROLL</p>
