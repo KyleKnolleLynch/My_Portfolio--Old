@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
@@ -8,7 +8,7 @@ import inertiaDis from '../../assets/images/inertia-display.png';
 
 const Home = () => {
   return (
-    <Fragment>
+    <div>
       <header>
         <Navbar title1='Kyle Lynch' title2='Profile' linkName='/profile' />
       </header>
@@ -20,7 +20,7 @@ const Home = () => {
             <p>Work</p>
           </div>
           <img src={inertiaDis} alt='inertia-display' />
-          <VisibilitySensor offset={{ top: -300 }}>
+          <VisibilitySensor offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div className={isVisible ? 'scroll-div hidden' : 'scroll-div'}>
                 <p>SCROLL</p>
@@ -33,11 +33,12 @@ const Home = () => {
           <ProjectCards />
         </section>
         <article className='profile-link-bottom'>
+          <span>Visit</span>
           <Link to='/profile'>Profile</Link>
         </article>
       </main>
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 

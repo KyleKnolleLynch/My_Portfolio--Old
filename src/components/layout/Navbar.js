@@ -7,7 +7,7 @@ const Navbar = ({ title1, title2, linkName }) => {
       <nav>
         <ul>
           <li>
-            <a href='/'>{title1}</a>
+            <Link to='/'>{title1}</Link>
           </li>
           <li>
             <Link to={linkName}>{title2}</Link>

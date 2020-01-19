@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
@@ -11,13 +12,25 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop>
-        <Fragment>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/profile' component={Profile} />
-            <Route component={NotFound} />
-          </Switch>
-        </Fragment>
+        <Route
+          render={({ location }) => (
+            <div className='container'>
+              <TransitionGroup>
+                <CSSTransition
+                  key={location.key}
+                  classNames='fade'
+                  timeout={650}
+                >
+                  <Switch location={location}>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/profile' component={Profile} />
+                    <Route component={NotFound} />
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroup>
+            </div>
+          )}
+        />
       </ScrollToTop>
     </Router>
   );

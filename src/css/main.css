@@ -4,6 +4,8 @@
   --white-color: #fff;
   --black-color: #000;
   --profile-bg-color: #140029;
+  --scrollbarBG: #333;
+  --thumbBG: #222;
 }
 
 * {
@@ -19,6 +21,30 @@ body {
   background: var(--black-color);
   color: var(--white-color);
   font-family: 'Nanum Gothic', sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 a {
@@ -110,7 +136,7 @@ section {
 
 .scroll-div {
   position: absolute;
-  bottom: 3.5rem;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +160,7 @@ section {
     minmax(20rem, 28rem) minmax(2.6rem, 1fr);
   grid-template-rows: repeat(4, 46rem);
   grid-gap: 18rem 0;
-  margin: auto;
+  margin-top: 6rem;
 }
 
 .project-card {
@@ -225,9 +251,13 @@ section {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
-  margin: 3rem 0;
+  margin: 5rem 0 10rem;
 }
 
+.profile-link-bottom span {
+  font-size: 0.8rem;
+  display: block;
+}
 
 .profile-link-bottom a:hover {
   color: var(--black-color);
@@ -250,17 +280,31 @@ section {
 footer {
   position: fixed;
   bottom: 6rem;
+  left: 4rem;
   z-index: 1;
-}
-
-footer ul {
-  margin-left: 4rem;
 }
 
 footer ul li {
   display: inline;
   padding: 0.4rem;
   font-size: 1.2rem;
+}
+
+/* css transition group  */
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in 150ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms ease-in;
 }
 
 @keyframes bounce {
