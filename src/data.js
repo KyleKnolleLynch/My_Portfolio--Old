@@ -10,31 +10,36 @@ export const projectsData = [
     id: 1,
     title: 'Inertia',
     subtitle: 'Javascript',
-    img: img1
+    img: img1,
+    link: 'https://inertiapage.netlify.com/index.html'
   },
   {
     id: 2,
     title: 'Online Cart',
     subtitle: 'React',
-    img: img2
+    img: img2,
+    link: 'https://inertiapage.netlify.com/index.html'
   },
   {
     id: 3,
     title: 'Inertia',
     subtitle: 'Javascript',
-    img: img3
+    img: img3,
+    link: 'https://inertiapage.netlify.com/index.html'
   },
   {
     id: 4,
     title: 'Github Searcher',
     subtitle: 'React',
-    img: img4
+    img: img4,
+    link: 'https://inertiapage.netlify.com/index.html'
   },
   {
     id: 5,
     title: "Birder's Journal",
     subtitle: 'Javascript',
-    img: img5
+    img: img5,
+    link: 'https://birders-journal.web.app'
   },
   {
     id: 6,

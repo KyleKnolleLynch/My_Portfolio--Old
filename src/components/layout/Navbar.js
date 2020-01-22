@@ -7,10 +7,10 @@ const Navbar = ({ title1, title2, linkName }) => {
       <nav>
         <ul>
           <li>
-            <Link to='/'>{title1}</Link>
+            <Link to='/' className='ping'>{title1}</Link>
           </li>
           <li>
-            <Link to={linkName}>{title2}</Link>
+            <Link to={linkName} className='ping'>{title2}</Link>
           </li>
         </ul>
       </nav>

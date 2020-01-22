@@ -5,13 +5,19 @@ const Footer = () => {
     <footer>
       <ul>
         <li>
-          <a href='https://github.com/KyleKnolleLynch'>GH</a>
+          <a href='https://github.com/KyleKnolleLynch' className='ping'>
+            GH
+          </a>
         </li>
         <li>
-          <a href='https://github.com/KyleKnolleLynch'>TW</a>
+          <a href='https://github.com/KyleKnolleLynch' className='ping'>
+            TW
+          </a>
         </li>
         <li>
-          <a href='https://github.com/KyleKnolleLynch'>FA</a>
+          <a href='https://github.com/KyleKnolleLynch' className='ping'>
+            FA
+          </a>
         </li>
       </ul>
     </footer>
