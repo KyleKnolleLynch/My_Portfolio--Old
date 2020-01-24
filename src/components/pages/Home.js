@@ -19,7 +19,11 @@ const Home = () => {
             <br />
             <p>Work</p>
           </div>
-          <img src={inertiaDis} alt='inertia-display' />
+
+          <img src={inertiaDis} alt='inertia-display' className='img-dis-1' />
+          <img src={inertiaDis} alt='inertia-display' className='img-dis-2' />
+          <img src={inertiaDis} alt='inertia-display' className='img-dis-3' />
+
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
               <div className={isVisible ? 'scroll-div hidden' : 'scroll-div'}>

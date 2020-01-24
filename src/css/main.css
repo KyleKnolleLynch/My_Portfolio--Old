@@ -21,6 +21,7 @@ body {
   color: var(--white-color);
   font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
   overflow-y: scroll;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
@@ -56,10 +57,27 @@ a {
   color: var(--white-color);
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+}
+
 .hidden {
   opacity: 0;
 }
 
+.ping:hover,
+.ping:focus {
+  animation: ping 700ms;
+  -webkit-animation: ping 700ms;
+  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0);
+}
+
+/*  Header  */
 header {
   letter-spacing: 2px;
   position: fixed;
@@ -75,30 +93,21 @@ nav ul {
   justify-content: space-between;
   padding: 3rem 2.5rem 0;
   text-transform: uppercase;
-  font-size: 1.2rem;
 }
 
-.ping:hover,
-.ping:focus {
-  animation: ping 700ms;
-  -webkit-animation: ping 700ms;
-  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0);
-}
-
-section {
-  min-height: 100vh;
-}
+/*  Home  */
 
 .home-section-1 {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   position: relative;
 }
 
 .projects-title {
   font-size: 6rem;
-  margin-top: 10rem;
+  margin-top: 1rem;
   z-index: 1;
   line-height: 1;
   letter-spacing: 0.3rem;
@@ -133,12 +142,29 @@ section {
 }
 
 .home-section-1 img {
-  max-width: 60vw;
-  max-height: 50vh;
-  object-fit: cover;
   position: absolute;
-  right: 0;
-  top: 34vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.img-dis-1 {
+  max-width: 30rem;
+  height: 40rem;
+  bottom: 14vh;
+  left: 6vw;
+}
+
+.img-dis-2 {
+  width: 16rem;
+  height: 30vh;
+  top: 5vh;
+  left: 45vw;
+}
+.img-dis-3 {
+  width: 20rem;
+  height: 36vh;
+  bottom: 6vh;
+  right: 13vw;
 }
 
 .scroll-div {
@@ -151,12 +177,13 @@ section {
 
 .scroll-div p {
   padding-bottom: 1rem;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 .scroll-vert {
   border-left: 1px solid var(--white-color);
-  height: 2.5rem;
+  height: 3.2rem;
+  margin-bottom: -0.5rem;
   -webkit-animation: bounce 3500ms infinite;
   -moz-animation: bounce 3500ms infinite;
   -o-animation: bounce 3500ms infinite;
@@ -180,7 +207,7 @@ section {
 }
 
 .project-card a:hover {
-  cursor: url('../assets/icons/arrow.svg'), pointer;
+  cursor: url('../assets/icons/pointer.svg'), pointer;
 }
 
 .project-card:nth-child(3n) {
@@ -213,9 +240,7 @@ section {
 }
 
 .project-card img {
-  width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
   position: relative;
 }
@@ -287,10 +312,6 @@ section {
   transform: translateY(0);
 }
 
-.profile-section-1 {
-  background: var(--profile-bg-color);
-}
-
 .profile-link-bottom {
   text-align: center;
   text-transform: uppercase;
@@ -321,6 +342,83 @@ section {
   }
 }
 
+/*  Profile */
+.profile-section-1 {
+  background: var(--profile-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.profile-img-div img {
+  height: 30rem;
+  object-fit: cover;
+}
+
+.profile-img-div {
+  width: 40rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.banner {
+  width: 200%;
+  font-size: 12rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  transform: skew(22deg) rotate(-7deg);
+}
+
+.profile-banner-1 {
+  padding-bottom: 13rem;
+}
+
+.profile-banner-1 div {
+  position: absolute;
+}
+
+.profile-banner-2 {
+  z-index: 2;
+  margin-bottom: 12rem;
+  writing-mode: reverse;
+}
+
+.profile-banner-2 div {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  position: absolute;
+  color: var(--profile-bg-color);
+  text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
+    -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
+}
+
+@supports (
+  (text-stroke: 1px var(--white-color)) or
+    (-webkit-text-stroke: 1px var(--white-color))
+) {
+  .profile-banner-2 div {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--white-color);
+    text-stroke: 1px var(--white-color);
+    text-shadow: none;
+  }
+}
+
+.profile-main {
+  background: var(--profile-bg-color);
+  text-align: center;
+}
+
+.profile-section-2 {
+  max-width: 1100px;
+  padding: 5rem;
+  margin: auto;
+}
+
+/*  Footer  */
 footer {
   position: fixed;
   bottom: 6rem;
@@ -350,7 +448,7 @@ footer ul li {
   opacity: 0;
   transition: opacity 150ms ease-in;
 }
-
+/*  Bounce  */
 @-webkit-keyframes bounce {
   0%,
   25%,
@@ -410,7 +508,7 @@ footer ul li {
     transform: translateY(-2px);
   }
 }
-
+/*  Ping  */
 @keyframes ping {
   0% {
     box-shadow: 0 0 0 0 var(--white-color);
