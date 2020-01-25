@@ -24,7 +24,7 @@ const ProjectCards = () => {
                 <div className='project-content'>
                   <h1>{project.title}</h1>
                   <br />
-                  <h3>{project.subtitle}</h3>
+                  <h2>{project.subtitle}</h2>
                 </div>
               </a>
             </div>

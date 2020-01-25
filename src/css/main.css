@@ -3,7 +3,7 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --profile-bg-color: #140029;
+  --profile-bg-color: rgb(36, 0, 56);
   --scrollbarBG: #333;
   --thumbBG: #222;
 }
@@ -197,15 +197,15 @@ nav ul {
 .home-section-2 {
   display: grid;
   grid-template-columns:
-    minmax(3rem, 1fr) minmax(30rem, 38rem) minmax(6rem, 14rem)
-    minmax(30rem, 38rem) minmax(3rem, 1fr);
-  grid-template-rows: repeat(4, 46rem);
+    minmax(4rem, 1fr) minmax(30rem, 40rem) minmax(5rem, 14rem)
+    minmax(30rem, 40rem) minmax(4rem, 1fr);
+  grid-template-rows: repeat(4, 60rem);
   grid-gap: 26rem 0;
   margin-top: 20rem;
 }
 
 .project-card {
-  height: 50rem;
+  height: 52rem;
   position: relative;
   text-align: center;
 }
@@ -216,7 +216,7 @@ nav ul {
 
 .project-card:nth-child(3n) {
   width: 45vw;
-  min-width: 768px;
+  min-width: 700px;
   height: 55rem;
   grid-column: span 5;
 }
@@ -284,7 +284,7 @@ nav ul {
 }
 
 .project-content h1,
-.project-content h3 {
+.project-content h2 {
   transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   transform: scale(0);
@@ -293,7 +293,7 @@ nav ul {
 }
 
 .project-card:hover .project-content h1,
-.project-card:hover .project-content h3 {
+.project-card:hover .project-content h2 {
   transform: scale(1);
   -webkit-transform: scale(1);
   opacity: 1;
@@ -324,7 +324,7 @@ nav ul {
 }
 
 .profile-link-bottom span {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   display: block;
 }
 
@@ -347,13 +347,25 @@ nav ul {
 }
 
 /*  Profile */
+.profile-container {
+  background: linear-gradient(rgb(255, 192, 203), rgb(0, 255, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+}
+
+.profile-main {
+  /* background: var(--profile-bg-color); */
+  background-color: transparent;
+  text-align: center;
+}
+
 .profile-section-1 {
-  background: var(--profile-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   position: relative;
 }
 
@@ -369,31 +381,35 @@ nav ul {
 }
 
 .banner {
-  width: 200%;
-  font-size: 12rem;
+  position: absolute;
+  font-size: 15rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1rem;
+  letter-spacing: 1.4rem;
+  line-height: 15rem;
+  white-space: nowrap;
   transform: skew(22deg) rotate(-7deg);
-  transform-origin: 50% 50%;
 }
 
 .profile-banner-1 {
-  padding-bottom: 13rem;
+  z-index: 0;
 }
 
 .profile-banner-1 div {
   position: absolute;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+  bottom: 0;
+  left: -55vw;
+  color: var(--white-color);
 }
 
 .profile-banner-2 {
   z-index: 2;
-  margin-bottom: 12rem;
 }
 
 .profile-banner-2 div {
   position: absolute;
+  top: 0;
+  left: -60vw;
   color: var(--profile-bg-color);
   text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
     -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
@@ -411,15 +427,14 @@ nav ul {
   }
 }
 
-.profile-main {
-  background: var(--profile-bg-color);
-  text-align: center;
-}
+
 
 .profile-section-2 {
   max-width: 1100px;
+  min-height: auto;
   padding: 5rem;
   margin: auto;
+  color: var(--white-color);
 }
 
 /*  Footer  */
@@ -433,7 +448,7 @@ footer {
 footer ul li {
   display: inline;
   padding: 0 0.6rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 /* css transition group  */
@@ -502,20 +517,20 @@ footer ul li {
 
 /*  Shift */
 @keyframes shiftLeft {
-  from {
+  to {
     transform: translateX(-140px);
   }
-  to {
+  from {
     transform: translateX(0px);
   }
 }
 
 @keyframes shiftRight {
-  from {
-    transform: translateX(140px);
-  }
   to {
-    transform: translateX(0);
+    transform: translateX(0px);
+  }
+  from {
+    transform: translateX(-140px);
   }
 }
 
@@ -543,7 +558,7 @@ footer ul li {
   .home-section-2 {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: 6rem 0;
+    grid-gap: 20rem 0;
     place-items: center;
     margin: 0 1rem;
   }
