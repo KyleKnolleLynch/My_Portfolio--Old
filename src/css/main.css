@@ -8,6 +8,10 @@
   --thumbBG: #222;
 }
 
+html {
+  font-size: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -91,8 +95,9 @@ header {
 nav ul {
   display: flex;
   justify-content: space-between;
-  padding: 3rem 2.5rem 0;
+  padding: 4.5rem 5.5rem 0;
   text-transform: uppercase;
+  font-size: 1.3rem;
 }
 
 /*  Home  */
@@ -106,10 +111,9 @@ nav ul {
 }
 
 .projects-title {
-  font-size: 6rem;
-  margin-top: 1rem;
+  font-size: 10rem;
   z-index: 1;
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
 }
@@ -135,8 +139,8 @@ nav ul {
 .projects-title::after {
   content: '(19-20)';
   float: right;
-  font-size: 0.8rem;
-  margin-top: -5rem;
+  font-size: 1.4rem;
+  margin-top: -10rem;
   padding-right: 2rem;
   letter-spacing: 1px;
 }
@@ -155,8 +159,8 @@ nav ul {
 }
 
 .img-dis-2 {
-  width: 16rem;
-  height: 30vh;
+  width: 20rem;
+  height: 25vh;
   top: 5vh;
   left: 45vw;
 }
@@ -176,32 +180,32 @@ nav ul {
 }
 
 .scroll-div p {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
 .scroll-vert {
-  border-left: 1px solid var(--white-color);
-  height: 3.2rem;
-  margin-bottom: -0.5rem;
-  -webkit-animation: bounce 3500ms infinite;
-  -moz-animation: bounce 3500ms infinite;
-  -o-animation: bounce 3500ms infinite;
-  animation: bounce 3500ms infinite;
+  border-left: 0.1rem solid;
+  height: 5rem;
+  -webkit-animation: bounce 2s ease both infinite;
+  animation: bounce 2s ease both infinite;
+  -moz-animation: bounce 2s ease both infinite;
+  -o-animation: bounce 2s ease both infinite;
 }
 
 .home-section-2 {
   display: grid;
   grid-template-columns:
-    minmax(2.6rem, 1fr) minmax(20rem, 28rem) minmax(3rem, 10rem)
-    minmax(20rem, 28rem) minmax(2.6rem, 1fr);
+    minmax(3rem, 1fr) minmax(30rem, 38rem) minmax(6rem, 14rem)
+    minmax(30rem, 38rem) minmax(3rem, 1fr);
   grid-template-rows: repeat(4, 46rem);
-  grid-gap: 18rem 0;
-  margin-top: 10rem;
+  grid-gap: 26rem 0;
+  margin-top: 20rem;
 }
 
 .project-card {
-  height: 40rem;
+  height: 50rem;
   position: relative;
   text-align: center;
 }
@@ -213,7 +217,7 @@ nav ul {
 .project-card:nth-child(3n) {
   width: 45vw;
   min-width: 768px;
-  height: 38rem;
+  height: 55rem;
   grid-column: span 5;
 }
 
@@ -296,7 +300,7 @@ nav ul {
 }
 
 .project-content h1 {
-  font-size: 1.8em;
+  font-size: 3rem;
 }
 
 .slideDown {
@@ -315,12 +319,12 @@ nav ul {
 .profile-link-bottom {
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem;
-  margin: 5rem 0 10rem;
+  font-size: 5rem;
+  margin: 20rem 0 15rem;
 }
 
 .profile-link-bottom span {
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   display: block;
 }
 
@@ -370,6 +374,7 @@ nav ul {
   text-transform: uppercase;
   letter-spacing: 1rem;
   transform: skew(22deg) rotate(-7deg);
+  transform-origin: 50% 50%;
 }
 
 .profile-banner-1 {
@@ -378,17 +383,16 @@ nav ul {
 
 .profile-banner-1 div {
   position: absolute;
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }
 
 .profile-banner-2 {
   z-index: 2;
   margin-bottom: 12rem;
-  writing-mode: reverse;
 }
 
 .profile-banner-2 div {
-  unicode-bidi: bidi-override;
-  direction: rtl;
   position: absolute;
   color: var(--profile-bg-color);
   text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
@@ -421,15 +425,15 @@ nav ul {
 /*  Footer  */
 footer {
   position: fixed;
-  bottom: 6rem;
-  left: 4rem;
+  bottom: 7rem;
+  left: 6rem;
   z-index: 1;
 }
 
 footer ul li {
   display: inline;
-  padding: 0 0.4rem;
-  font-size: 1.2rem;
+  padding: 0 0.6rem;
+  font-size: 1.8rem;
 }
 
 /* css transition group  */
@@ -449,65 +453,40 @@ footer ul li {
   transition: opacity 150ms ease-in;
 }
 /*  Bounce  */
-@-webkit-keyframes bounce {
+@keyframes bounce {
   0%,
-  25%,
-  50%,
-  75%,
-  100% {
-    transform: translateY(8px);
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
-
-  75%,
-  25% {
-    transform: translateY(-2px);
+  50% {
+    -webkit-transform: translateY(35%);
+    transform: translateY(35%);
   }
 }
 
 @-moz-keyframes bounce {
   0%,
-  25%,
-  50%,
-  75%,
-  100% {
-    transform: translateY(8px);
+  to {
+    transform: translateY(0);
   }
 
-  75%,
-  25% {
-    transform: translateY(-2px);
+  50% {
+    transform: translateY(35%);
   }
 }
 
 @-o-keyframes bounce {
   0%,
-  25%,
-  50%,
-  75%,
-  100% {
-    transform: translateY(8px);
+  to {
+    transform: translateY(0);
   }
 
-  75%,
-  25% {
-    transform: translateY(-2px);
+  50% {
+    transform: translateY(35%);
   }
 }
 
-@keyframes bounce {
-  0%,
-  25%,
-  50%,
-  75%,
-  100% {
-    transform: translateY(8px);
-  }
-
-  75%,
-  25% {
-    transform: translateY(-2px);
-  }
-}
 /*  Ping  */
 @keyframes ping {
   0% {
@@ -521,6 +500,26 @@ footer ul li {
   }
 }
 
+/*  Shift */
+@keyframes shiftLeft {
+  from {
+    transform: translateX(-140px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shiftRight {
+  from {
+    transform: translateX(140px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*  Mobile  Responsive  */
 @media screen and (max-width: 768px) {
   nav ul {
     font-size: 1rem;
@@ -539,7 +538,6 @@ footer ul li {
 
   .scroll-div p {
     font-size: 0.8rem;
-    padding-bottom: 0.6rem;
   }
 
   .home-section-2 {

@@ -3,17 +3,35 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import ProfileImg from '../../assets/images/portrait1.jpg';
 
+const Profile = () => {
+  let options = {
+    root: null,
+    rootMargin: '-10px',
+    threshold: 0
+  };
 
-const banner1 = document.querySelector('.profile-banner-1');
+  const banner1 = document.querySelector('.hello1');
+  const banner2 = document.querySelector('.hello2');
+  const section2 = document.querySelector('.profile-section-2');
 
-const observer = new IntersectionObserver((entries) => {
-  console.log(entries);
-})
+  let observer = new IntersectionObserver(entries => {
+    console.log(entries);
+ 
+     if (entries[0].intersectionRatio > 0) {
+      banner1.style.animation = 'shiftLeft 1s ease-in';
+      banner2.style.animation = 'shiftRight 1s ease-in ';
+    } else {
+      banner1.style.animation = 'shiftRight 1s ease-in';
+      banner2.style.animation = 'shiftLeft 1s ease-in';
+    }
+  }, options);
 
-observer.observe(banner1)
+  let target = section2;
 
+  if (target) {
+    observer.observe(target);
+  }
 
-const About = () => {
   return (
     <div>
       <header>
@@ -25,10 +43,10 @@ const About = () => {
             <img src={ProfileImg} alt='profile' />
           </div>
           <div className='profile-banner-1 banner'>
-            <div>HelloHelloHelloHelloHello</div>
+            <div className='hello1'>HelloHelloHelloHelloHello</div>
           </div>
           <div className='profile-banner-2 banner'>
-            <div>HelloHelloHelloHelloHello</div>
+            <div className='hello2'>HelloHelloHelloHelloHello</div>
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
@@ -57,4 +75,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Profile;
