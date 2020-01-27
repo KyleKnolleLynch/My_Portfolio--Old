@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
 :root {
   --white-color: #fff;
@@ -23,11 +25,12 @@ html {
 body {
   background: var(--black-color);
   color: var(--white-color);
-  font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+  font-family: 'Anton', sans-serif;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  cursor: none;
 }
 
 body::-webkit-scrollbar {
@@ -42,6 +45,40 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
+  cursor: none;
+}
+
+.cursor__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+}
+
+.cursor__inner--circle,
+.cursor__inner--dot {
+  /* -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); */
+  opacity: 0;
+}
+
+.cursor__inner--circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--white-color);
+  transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+}
+
+.cursor__inner--dot {
+  width: 6px;
+  height: 6px;
+  background: var(--white-color);
 }
 
 .container {
@@ -97,7 +134,8 @@ nav ul {
   justify-content: space-between;
   padding: 4.5rem 5.5rem 0;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue', cursive;
 }
 
 /*  Home  */
@@ -111,10 +149,10 @@ nav ul {
 }
 
 .projects-title {
-  font-size: 10rem;
+  font-size: 12rem;
   z-index: 1;
   line-height: 1.1;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
 
@@ -140,8 +178,8 @@ nav ul {
   content: '(19-20)';
   float: right;
   font-size: 1.4rem;
-  margin-top: -10rem;
-  padding-right: 2rem;
+  margin-top: -12rem;
+  padding-right: 3rem;
   letter-spacing: 1px;
 }
 
@@ -281,6 +319,7 @@ nav ul {
   left: 0;
   right: 0;
   margin-top: 200px;
+  font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
 }
 
 .project-content h1,
@@ -321,6 +360,7 @@ nav ul {
   text-transform: uppercase;
   font-size: 5rem;
   margin: 20rem 0 15rem;
+  letter-spacing: 0.1rem;
 }
 
 .profile-link-bottom span {
@@ -347,18 +387,11 @@ nav ul {
 }
 
 /*  Profile */
-.profile-container {
-  background: linear-gradient(rgb(255, 192, 203), rgb(0, 255, 255));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
-}
 
 .profile-main {
-  /* background: var(--profile-bg-color); */
-  background-color: transparent;
+  background: var(--profile-bg-color);
   text-align: center;
+  padding-bottom: 14rem;
 }
 
 .profile-section-1 {
@@ -370,23 +403,23 @@ nav ul {
 }
 
 .profile-img-div img {
-  height: 30rem;
+  height: 40rem;
   object-fit: cover;
 }
 
 .profile-img-div {
-  width: 40rem;
+  width: 50rem;
   position: absolute;
   z-index: 1;
 }
 
 .banner {
   position: absolute;
-  font-size: 15rem;
+  font-size: 19rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.4rem;
-  line-height: 15rem;
+  letter-spacing: 4rem;
+  line-height: 20rem;
   white-space: nowrap;
   transform: skew(22deg) rotate(-7deg);
 }
@@ -399,7 +432,6 @@ nav ul {
   position: absolute;
   bottom: 0;
   left: -55vw;
-  color: var(--white-color);
 }
 
 .profile-banner-2 {
@@ -427,14 +459,12 @@ nav ul {
   }
 }
 
-
-
 .profile-section-2 {
   max-width: 1100px;
   min-height: auto;
-  padding: 5rem;
+  padding: 5rem 20vh;
   margin: auto;
-  color: var(--white-color);
+  font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
 }
 
 /*  Footer  */
@@ -467,6 +497,7 @@ footer ul li {
   opacity: 0;
   transition: opacity 150ms ease-in;
 }
+/*  Keyframes */
 /*  Bounce  */
 @keyframes bounce {
   0%,
@@ -533,6 +564,7 @@ footer ul li {
     transform: translateX(-140px);
   }
 }
+
 
 /*  Mobile  Responsive  */
 @media screen and (max-width: 768px) {

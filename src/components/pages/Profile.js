@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
-import P5Wrapper from 'react-p5-wrapper';
-import sketch from '../layout/sketch';
 import Navbar from '../layout/Navbar';
+import Footer from '../layout/Footer';
+import Cursor from '../layout/Cursor';
 import ProfileImg from '../../assets/images/portrait1.jpg';
 
 const Profile = () => {
@@ -34,30 +34,8 @@ const Profile = () => {
     observer.observe(target);
   }
 
-  /* p5 */
-
-  // const setup = (p5, parent) => {
-  //   canvas = p5.createCanvas(window.outerWidth, window.outerHeight).parent(parent);
-  //   canvas.position(0, 0);
-  //   canvas.style('z-index', '3');
-  // };
-
-  //      // Position
-  //     let pos = createVector(random(width), random(height));
-  //     //  Size
-  //     let size = 10;
-
-  //   const draw = (p5) => {
-  //     p5.circle(pos.x, pos.y, size);
-  //   }
-
-
-  const [color, setColor] = useState('transparent');
-
-
   return (
-    <div className='profile-container'>
-      <P5Wrapper sketch={sketch} color={color}></P5Wrapper>
+    <div>
       <header>
         <Navbar title1='Home' title2='other' linkName='/other' />
       </header>
@@ -83,7 +61,7 @@ const Profile = () => {
           </VisibilitySensor>
         </section>
         <section className='section profile-section-2'>
-          <h1>My Profile</h1>
+          <h1>About Me</h1>
           <br />
           <div>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
@@ -95,6 +73,8 @@ const Profile = () => {
           </div>
         </section>
       </main>
+      <Footer />
+      <Cursor />
     </div>
   );
 };

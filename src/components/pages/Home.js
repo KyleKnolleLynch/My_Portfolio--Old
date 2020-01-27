@@ -4,6 +4,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import ProjectCards from '../layout/ProjectCards';
 import Footer from '../layout/Footer';
+import Cursor from '../layout/Cursor';
 import inertiaDis from '../../assets/images/inertia-display.png';
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
         </article>
       </main>
       <Footer />
+      <Cursor />
     </div>
   );
 };
