@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Cursor = () => {
+  const [cursorHover, setCursorHover] = useState(
+    'cursor__inner cursor__inner--circle'
+  );
+
   const cursor1 = document.querySelector('.cursor__inner--circle');
   const cursor2 = document.querySelector('.cursor__inner--dot');
 
@@ -17,9 +21,21 @@ const Cursor = () => {
     });
   }
 
+  document.querySelectorAll('a').forEach(e => {
+    e.addEventListener('mouseenter', () =>
+      setCursorHover('cursor__inner cursor__inner--circle hovered')
+    );
+  });
+
+  document.querySelectorAll('a').forEach(e => {
+    e.addEventListener('mouseleave', () =>
+      setCursorHover('cursor__inner cursor__inner--circle')
+    );
+  });
+
   return (
     <div className='cursor'>
-      <div className='cursor__inner cursor__inner--circle'></div>
+      <div className={cursorHover}></div>
       <div className='cursor__inner cursor__inner--dot'></div>
     </div>
   );

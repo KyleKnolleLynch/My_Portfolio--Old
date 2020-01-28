@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
@@ -17,14 +17,14 @@ const Profile = () => {
   const section2 = document.querySelector('.profile-section-2');
 
   let observer = new IntersectionObserver(entries => {
-    console.log(entries);
+    // console.log(entries);
 
     if (entries[0].intersectionRatio > 0) {
       banner1.style.animation = 'shiftLeft 1s both ease-in-out';
-      banner2.style.animation = 'shiftRight 1s both ease-in-out ';
+      banner2.style.animation = 'shiftRight-2 1s both ease-in-out ';
     } else {
       banner1.style.animation = 'shiftRight 1s both ease-in-out';
-      banner2.style.animation = 'shiftLeft 1s both ease-in-out';
+      banner2.style.animation = 'shiftLeft-2 1s both ease-in-out';
     }
   }, options);
 

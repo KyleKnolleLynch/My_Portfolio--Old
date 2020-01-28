@@ -5,7 +5,7 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --profile-bg-color: rgb(36, 0, 56);
+  --profile-bg-color: rgb(21, 0, 32);
   --scrollbarBG: #333;
   --thumbBG: #222;
 }
@@ -60,8 +60,6 @@ body::-webkit-scrollbar-thumb {
 
 .cursor__inner--circle,
 .cursor__inner--dot {
-  /* -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%); */
   opacity: 0;
 }
 
@@ -71,14 +69,26 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--white-color);
   transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
   transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
 }
 
 .cursor__inner--dot {
   width: 6px;
   height: 6px;
   background: var(--white-color);
+}
+
+.hovered {
+  transform: scale(2.8);
+  -webkit-transform: scale(2.8);
+  transition: scale both ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .container {
@@ -96,6 +106,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--white-color);
+  cursor: none;
 }
 
 img {
@@ -107,16 +118,46 @@ section {
   min-height: 100vh;
 }
 
-.hidden {
-  opacity: 0;
+/* / */
+
+.nav-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
-.ping:hover,
-.ping:focus {
-  animation: ping 700ms;
-  -webkit-animation: ping 700ms;
-  box-shadow: 0 0 0 1rem rgba(255, 255, 255, 0);
+.link-inner {
+  color: transparent;
 }
+
+.link-inner-top,
+.link-inner-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.link-inner-top {
+  -webkit-transform: translateY(0) translateZ(0);
+  transform: translateY(0) translateZ(0);
+}
+
+.link-inner-bottom {
+  -webkit-transform: translateY(120%) translateZ(0);
+  transform: translateY(120%) translateZ(0);
+}
+
+.nav-item-link:hover .link-inner-top {
+  -webkit-transform: translateY(-120%) translateZ(0);
+  transform: translateY(-120%) translateZ(0);
+}
+
+.nav-item-link:hover .link-inner-bottom {
+  -webkit-transform: translateY(0) translateZ(0);
+  transform: translateY(0) translateZ(0);
+}
+/* / */
 
 /*  Header  */
 header {
@@ -246,10 +287,6 @@ nav ul {
   height: 52rem;
   position: relative;
   text-align: center;
-}
-
-.project-card a:hover {
-  cursor: url('../assets/icons/pointer.svg'), pointer;
 }
 
 .project-card:nth-child(3n) {
@@ -387,7 +424,6 @@ nav ul {
 }
 
 /*  Profile */
-
 .profile-main {
   background: var(--profile-bg-color);
   text-align: center;
@@ -395,6 +431,7 @@ nav ul {
 }
 
 .profile-section-1 {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -441,7 +478,7 @@ nav ul {
 .profile-banner-2 div {
   position: absolute;
   top: 0;
-  left: -60vw;
+  left: -80vw;
   color: var(--profile-bg-color);
   text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
     -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
@@ -500,7 +537,6 @@ footer ul li {
 /*  Keyframes */
 /*  Bounce  */
 @keyframes bounce {
-  0%,
   to {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -512,7 +548,6 @@ footer ul li {
 }
 
 @-moz-keyframes bounce {
-  0%,
   to {
     transform: translateY(0);
   }
@@ -523,7 +558,6 @@ footer ul li {
 }
 
 @-o-keyframes bounce {
-  0%,
   to {
     transform: translateY(0);
   }
@@ -533,38 +567,50 @@ footer ul li {
   }
 }
 
-/*  Ping  */
-@keyframes ping {
-  0% {
-    box-shadow: 0 0 0 0 var(--white-color);
-  }
-}
-
-@-webkit-keyframes ping {
-  0% {
-    box-shadow: 0 0 0 0 var(--white-color);
-  }
-}
-
 /*  Shift */
 @keyframes shiftLeft {
   to {
+    -webkit-transform: translateX(-140px);
     transform: translateX(-140px);
   }
   from {
+    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
 }
 
 @keyframes shiftRight {
   to {
+    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
   from {
+    -webkit-transform: translateX(-140px);
     transform: translateX(-140px);
   }
 }
 
+@keyframes shiftLeft-2 {
+  to {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  from {
+    -webkit-transform: translateX(140px);
+    transform: translateX(140px);
+  }
+}
+
+@keyframes shiftRight-2 {
+  to {
+    -webkit-transform: translateX(140px);
+    transform: translateX(140px);
+  }
+  from {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
 
 /*  Mobile  Responsive  */
 @media screen and (max-width: 768px) {
