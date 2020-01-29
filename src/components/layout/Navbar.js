@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ title1, title2, linkName }) => {
+const Navbar = ({ title1, title2, titleDisabled, linkName }) => {
   return (
     <nav>
       <ul>
         <li>
+          <span>{titleDisabled}</span>
           <Link to='/' className='nav-link'>
             <span className='link-inner'>{title1}</span>
             <div className='link-inner-top'>{title1}</div>
@@ -15,7 +16,7 @@ const Navbar = ({ title1, title2, linkName }) => {
         </li>
         <li>
           <Link to={linkName} className='nav-link'>
-          <span className='link-inner'>{title2}</span>
+            <span className='link-inner'>{title2}</span>
             <div className='link-inner-top'>{title2}</div>
             <div className='link-inner-bottom'>{title2}</div>
           </Link>
@@ -28,6 +29,7 @@ const Navbar = ({ title1, title2, linkName }) => {
 Navbar.propTypes = {
   title1: PropTypes.string,
   title2: PropTypes.string,
+  titleDisabled: PropTypes.string,
   linkName: PropTypes.string
 };
 

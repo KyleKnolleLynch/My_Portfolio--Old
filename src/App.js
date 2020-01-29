@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import ScrollToTop from './components/layout/ScrollToTop';
+import ScrollToTop from './components/layout/utils/ScrollToTop';
 import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import NotFound from './components/pages/NotFound';

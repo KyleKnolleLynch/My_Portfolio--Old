@@ -2,8 +2,9 @@ import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
-import Cursor from '../layout/Cursor';
+import Cursor from '../layout/utils/Cursor';
 import ProfileImg from '../../assets/images/portrait1.jpg';
+import ProfileAbout from '../layout/ProfileAbout';
 
 const Profile = () => {
   let options = {
@@ -20,11 +21,11 @@ const Profile = () => {
     // console.log(entries);
 
     if (entries[0].intersectionRatio > 0) {
-      banner1.style.animation = 'shiftLeft 1s both ease-in-out';
-      banner2.style.animation = 'shiftRight-2 1s both ease-in-out ';
+      banner1.style.animation = 'shiftLeft 1.5s both ease-in-out';
+      banner2.style.animation = 'shiftRight-2 1.5s both ease-in-out ';
     } else {
-      banner1.style.animation = 'shiftRight 1s both ease-in-out';
-      banner2.style.animation = 'shiftLeft-2 1s both ease-in-out';
+      banner1.style.animation = 'shiftRight 1.5s both ease-in-out';
+      banner2.style.animation = 'shiftLeft-2 1.5s both ease-in-out';
     }
   }, options);
 
@@ -61,16 +62,7 @@ const Profile = () => {
           </VisibilitySensor>
         </section>
         <section className='section profile-section-2'>
-          <h1>About Me</h1>
-          <br />
-          <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
-            provident culpa perferendis quos et cupiditate laborum architecto,
-            maxime veniam vitae voluptas rerum, voluptatem distinctio accusamus
-            non molestias at? Maxime illo nihil sunt ad fugiat tempora similique
-            quae, eveniet unde magni laboriosam blanditiis et? Dolor dolore quod
-            molestiae distinctio in laudantium?
-          </div>
+        <ProfileAbout />
         </section>
       </main>
       <Footer />

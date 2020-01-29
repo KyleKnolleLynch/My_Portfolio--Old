@@ -1,5 +1,5 @@
 import React from 'react';
-import Cursor from '../layout/Cursor';
+import Cursor from '../layout/utils/Cursor';
 
 const NotFound = () => {
   return (

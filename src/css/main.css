@@ -5,7 +5,8 @@
 :root {
   --white-color: #fff;
   --black-color: #000;
-  --profile-bg-color: rgb(21, 0, 32);
+  --profile-bg-color: rgb(14, 0, 22);
+  --code-bg-color: rgb(54, 9, 82);
   --scrollbarBG: #333;
   --thumbBG: #222;
 }
@@ -118,8 +119,7 @@ section {
   min-height: 100vh;
 }
 
-/* / */
-
+/* Nav Links*/
 .nav-link {
   position: relative;
   display: block;
@@ -148,16 +148,15 @@ section {
   transform: translateY(120%) translateZ(0);
 }
 
-.nav-item-link:hover .link-inner-top {
+.nav-link:hover .link-inner-top {
   -webkit-transform: translateY(-120%) translateZ(0);
   transform: translateY(-120%) translateZ(0);
 }
 
-.nav-item-link:hover .link-inner-bottom {
+.nav-link:hover .link-inner-bottom {
   -webkit-transform: translateY(0) translateZ(0);
   transform: translateY(0) translateZ(0);
 }
-/* / */
 
 /*  Header  */
 header {
@@ -276,11 +275,11 @@ nav ul {
 .home-section-2 {
   display: grid;
   grid-template-columns:
-    minmax(4rem, 1fr) minmax(30rem, 40rem) minmax(5rem, 14rem)
-    minmax(30rem, 40rem) minmax(4rem, 1fr);
+    minmax(8vw, 1fr) minmax(30rem, 40rem) minmax(4rem, 14rem)
+    minmax(30rem, 40rem) minmax(8vw, 1fr);
   grid-template-rows: repeat(4, 60rem);
   grid-gap: 26rem 0;
-  margin-top: 20rem;
+  margin: 22rem 0;
 }
 
 .project-card {
@@ -396,7 +395,7 @@ nav ul {
   text-align: center;
   text-transform: uppercase;
   font-size: 5rem;
-  margin: 20rem 0 15rem;
+  margin-bottom: 18rem;
   letter-spacing: 0.1rem;
 }
 
@@ -497,11 +496,58 @@ nav ul {
 }
 
 .profile-section-2 {
-  max-width: 1100px;
+  max-width: 1200px;
   min-height: auto;
   padding: 5rem 20vh;
-  margin: auto;
+  margin: 20vh auto;
   font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+}
+
+.coding-content {
+  position: relative;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.coding-title {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+}
+
+.coding-title::after {
+  content: attr(data-line-point);
+  position: absolute;
+  top: -1.3rem;
+  left: -0.5rem;
+  font-size: 4rem;
+  color: #542472;
+}
+
+.coding-line {
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.coding-line::before {
+  content: attr(data-line-num);
+  position: absolute;
+  top: 0;
+  left: -3.5rem;
+  color: var(--code-bg-color);
+}
+
+.vert-line {
+  border-left: 1px solid #542472;
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  height: 100%;
+}
+
+.dot {
+  display: inline;
+  vertical-align: middle;
+  color: var(--code-bg-color);
 }
 
 /*  Footer  */
@@ -513,8 +559,8 @@ footer {
 }
 
 footer ul li {
-  display: inline;
-  padding: 0 0.6rem;
+  display: inline-block;
+  padding: 0 0.8rem;
   font-size: 1.6rem;
 }
 

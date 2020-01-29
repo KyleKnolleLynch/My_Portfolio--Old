@@ -4,14 +4,18 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import ProjectCards from '../layout/ProjectCards';
 import Footer from '../layout/Footer';
-import Cursor from '../layout/Cursor';
+import Cursor from '../layout/utils/Cursor';
 import inertiaDis from '../../assets/images/inertia-display.png';
 
 const Home = () => {
   return (
     <div>
       <header>
-        <Navbar title1='Kyle Lynch' title2='Profile' linkName='/profile' />
+        <Navbar
+          titleDisabled='Kyle Lynch'
+          title2='Profile'
+          linkName='/profile'
+        />
       </header>
       <main>
         <section className='section home-section-1'>

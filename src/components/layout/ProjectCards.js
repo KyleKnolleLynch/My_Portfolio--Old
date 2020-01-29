@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-// import { Spring } from 'react-spring/renderprops';
-import VisibilitySensor from './VisibilitySensor';
+import VisibilitySensor from './utils/VisibilitySensor';
 import { projectsData } from '../../data';
 
 const ProjectCards = () => {
