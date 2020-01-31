@@ -496,17 +496,17 @@ nav ul {
 }
 
 .profile-section-2 {
-  max-width: 1200px;
   min-height: auto;
-  padding: 5rem 20vh;
-  margin: 20vh auto;
+  margin: 24vh 25vw;
   font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
-}
-
-.coding-content {
   position: relative;
   text-align: left;
   font-size: 1.8rem;
+}
+
+.coding-wrap,
+.coding-wrap a {
+  color: #8a2be2;
 }
 
 .coding-title {
@@ -518,9 +518,8 @@ nav ul {
   content: attr(data-line-point);
   position: absolute;
   top: -1.3rem;
-  left: -0.5rem;
+  left: -0.55rem;
   font-size: 4rem;
-  color: #542472;
 }
 
 .coding-line {
@@ -548,6 +547,36 @@ nav ul {
   display: inline;
   vertical-align: middle;
   color: var(--code-bg-color);
+}
+.coding-bright {
+  color: #ff0;
+  text-shadow: 0 0 2px var(--profile-bg-color), 0 0 4px #ff0;
+}
+
+.coding-decs {
+  color: #483d8b;
+}
+
+.coding-desc {
+  color: #f835f8;
+}
+
+.coding-proper {
+  color: #fcf1f1;
+  text-shadow: 0 0 2px var(--profile-bg-color), 0 0 4px #f00, 0 0 6px #f00;
+}
+
+.coding-data {
+  color: #0f0;
+}
+
+/*  Certs */
+.certs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-gap: 4rem;
+  place-content: center;
+  margin: -10vh 10vw 0;
 }
 
 /*  Footer  */
@@ -660,23 +689,27 @@ footer ul li {
 
 /*  Mobile  Responsive  */
 @media screen and (max-width: 768px) {
+  .cursor__inner {
+    display: none;
+  }
+
   nav ul {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .projects-title {
-    font-size: 3.5rem;
-    letter-spacing: 0.1rem;
+    font-size: 6rem;
+    letter-spacing: 0.4rem;
   }
 
   .projects-title::after {
-    font-size: 0.6rem;
-    margin-top: -2.6rem;
-    padding-right: 0.5rem;
+    font-size: 1rem;
+    margin-top: -6rem;
+    padding-right: 0.8rem;
   }
 
   .scroll-div p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .home-section-2 {
@@ -690,12 +723,6 @@ footer ul li {
   .project-card:nth-child(n) {
     grid-column: 1;
     min-width: 100%;
-    text-align: center;
-  }
-
-  .project-card:nth-child(5) {
-    grid-column: 1;
-    min-width: 50%;
   }
 
   .project-card .overlay {
@@ -705,7 +732,7 @@ footer ul li {
   }
 
   .project-card .project-content h1,
-  .project-card .project-content h3 {
+  .project-card .project-content h2 {
     transform: scale(1);
     -webkit-transform: scale(1);
     opacity: 1;

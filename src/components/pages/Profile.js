@@ -38,7 +38,7 @@ const Profile = () => {
   return (
     <div>
       <header>
-        <Navbar title1='Home' title2='other' linkName='/other' />
+        <Navbar title1='Home' title2='Certs' linkName='/certs' />
       </header>
       <main className='profile-main'>
         <section className='section profile-section-1'>
