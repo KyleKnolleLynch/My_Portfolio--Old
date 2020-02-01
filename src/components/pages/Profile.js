@@ -35,6 +35,15 @@ const Profile = () => {
     observer.observe(target);
   }
 
+  const parallax = e => {
+    const imgDiv = document.querySelector('.profile-img-div');
+    if (imgDiv) {
+      imgDiv.style.transform = `translateX(${(e.clientX * 10) /
+        1000}px) translateY(${(e.clientY * 10) / 1000}px)`;
+    }
+  };
+  document.addEventListener('mousemove', parallax);
+
   return (
     <div>
       <header>
@@ -62,7 +71,7 @@ const Profile = () => {
           </VisibilitySensor>
         </section>
         <section className='section profile-section-2'>
-        <ProfileAbout />
+          <ProfileAbout />
         </section>
       </main>
       <Footer />

@@ -8,6 +8,17 @@ import Cursor from '../layout/utils/Cursor';
 import inertiaDis from '../../assets/images/inertia-display.png';
 
 const Home = () => {
+  const parallax = e => {
+    const displays = document.querySelectorAll('.display');
+    if (displays) {
+      displays.forEach(display => {
+        display.style.transform = `translateX(${(e.clientX * 20) /
+          1000}px) translateY(${(e.clientY * 20) / 1000}px)`;
+      });
+    }
+  };
+  document.addEventListener('mousemove', parallax);
+
   return (
     <div>
       <header>
@@ -25,9 +36,23 @@ const Home = () => {
             <p>Work</p>
           </div>
 
-          <img src={inertiaDis} alt='inertia-display' className='img-dis-1' />
-          <img src={inertiaDis} alt='inertia-display' className='img-dis-2' />
-          <img src={inertiaDis} alt='inertia-display' className='img-dis-3' />
+          <div  className='display img-dis-1'>
+            <img
+              src={inertiaDis}
+              alt='inertia-display'
+              // className='display img-dis-1'
+            />
+          </div>
+          {/* <img
+            src={inertiaDis}
+            alt='inertia-display'
+            className='display img-dis-2'
+          />
+          <img
+            src={inertiaDis}
+            alt='inertia-display'
+            className='display img-dis-3'
+          /> */}
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (

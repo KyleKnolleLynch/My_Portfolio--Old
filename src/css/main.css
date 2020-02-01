@@ -215,27 +215,30 @@ nav ul {
 }
 
 .home-section-1 img {
-  position: absolute;
+  /* position: absolute; */
   object-fit: cover;
   z-index: -1;
+  max-width: 100%;
+  height: auto;
 }
 
 .img-dis-1 {
-  max-width: 30rem;
-  height: 40rem;
+  position: absolute;
+  max-width: 30vw;
+  min-height: 60vh;
   bottom: 14vh;
   left: 6vw;
 }
 
 .img-dis-2 {
   width: 20rem;
-  height: 25vh;
+  height: 25rem;
   top: 5vh;
   left: 45vw;
 }
 .img-dis-3 {
-  width: 20rem;
-  height: 36vh;
+  width: 22rem;
+  height: 30rem;
   bottom: 6vh;
   right: 13vw;
 }
@@ -687,6 +690,20 @@ footer ul li {
     padding-right: 0.8rem;
   }
 
+  .img-dis-1 {
+    top: 6vh;
+    left: 20vw;
+  }
+
+  .img-dis-2 {
+    top: 25vh;
+    left: 60vw;
+  }
+  .img-dis-3 {
+    bottom: 12vh;
+    right: 50vw;
+  }
+
   .scroll-div p {
     font-size: 1rem;
   }
@@ -735,6 +752,26 @@ footer ul li {
 }
 
 @media screen and (max-width: 500px) {
+  .img-dis-1 {
+    max-width: 25rem;
+    height: 30rem;
+    top: 10vh;
+    left: 25vw;
+  }
+
+  .img-dis-2 {
+    width: 16rem;
+    height: 22rem;
+    top: 30vh;
+    left: 5vw;
+  }
+  .img-dis-3 {
+    width: 18rem;
+    height: 25rem;
+    bottom: 5vh;
+    right: 8vw;
+  }
+
   .section-404 div:nth-child(1) {
     font-size: 30rem;
   }
