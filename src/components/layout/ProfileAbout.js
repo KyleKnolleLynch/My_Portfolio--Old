@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProfileAbout = () => {
   return (
-    <div className='coding-wrap'>
+    <article className='coding-wrap'>
       <div className='vert-line'></div>
       <div className='coding-title coding-line' data-line-point='&bull;'>
         About
@@ -148,7 +148,7 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='28'>
         {'}'}
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -10,7 +10,7 @@ import img4 from '../../assets/images/certs/cert-react-ftb-orig.png';
 const Certs = () => {
   return (
     <Fragment>
-      <Navbar title1='Home' title2='Profile' linkName='/profile' />
+      <Navbar title1='HOME' title2='PROFILE' linkName='/profile' />
       <main>
         <section className='certs-container'>
           <img src={img1} alt='cert-js' />

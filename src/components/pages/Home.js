@@ -12,8 +12,8 @@ const Home = () => {
     <div>
       <header>
         <Navbar
-          titleDisabled='Kyle Lynch'
-          title2='Profile'
+          titleDisabled='KYLE LYNCH'
+          title2='PROFILE'
           linkName='/profile'
         />
       </header>

@@ -10,7 +10,7 @@ const ProjectCards = () => {
       {projects.map(project => (
         <VisibilitySensor partialVisibility key={project.id} once>
           {({ isVisible }) => (
-            <div
+            <article
               className={
                 isVisible
                   ? 'slideDown enter project-card'
@@ -26,7 +26,7 @@ const ProjectCards = () => {
                   <h2>{project.subtitle}</h2>
                 </div>
               </a>
-            </div>
+            </article>
           )}
         </VisibilitySensor>
       ))}
