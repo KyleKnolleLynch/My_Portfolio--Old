@@ -5,7 +5,8 @@ import Navbar from '../layout/Navbar';
 import ProjectCards from '../layout/ProjectCards';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
-import inertiaDis from '../../assets/images/inertia-display.png';
+import inertiaVert from '../../assets/images/inertia-vert.png';
+import birdersJn from '../../assets/images/birders-jn.png';
 
 const Home = () => {
   const parallax = e => {
@@ -36,23 +37,15 @@ const Home = () => {
             <p>Work</p>
           </div>
 
-          <div  className='display img-dis-1'>
-            <img
-              src={inertiaDis}
-              alt='inertia-display'
-              // className='display img-dis-1'
-            />
+          <div className='display img-dis-1'>
+            <img src={inertiaVert} alt='inertia-display' />
           </div>
-          {/* <img
-            src={inertiaDis}
-            alt='inertia-display'
-            className='display img-dis-2'
-          />
-          <img
-            src={inertiaDis}
-            alt='inertia-display'
-            className='display img-dis-3'
-          /> */}
+          <div className='display img-dis-2'>
+            <img src={inertiaVert} alt='inertia-display' />
+          </div>
+          <div className='display img-dis-3'>
+            <img src={birdersJn} alt='inertia-display' />
+          </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (

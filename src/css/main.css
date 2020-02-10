@@ -11,10 +11,6 @@
   --thumbBG: #222;
 }
 
-html {
-  font-size: 10px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,15 +19,26 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+body,
+html {
   background: var(--black-color);
   color: var(--white-color);
   font-family: 'Anton', sans-serif;
+  font-size: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   cursor: none;
+
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body::-webkit-scrollbar {
@@ -215,32 +222,35 @@ nav ul {
 }
 
 .home-section-1 img {
-  /* position: absolute; */
   object-fit: cover;
-  z-index: -1;
   max-width: 100%;
   height: auto;
+  filter: brightness(0.9);
+}
+
+.display {
+  position: absolute;
+  z-index: -2;
 }
 
 .img-dis-1 {
-  position: absolute;
-  max-width: 30vw;
-  min-height: 60vh;
-  bottom: 14vh;
+  width: 28vw;
+  min-width: 30rem;
+  bottom: 20vh;
   left: 6vw;
 }
 
 .img-dis-2 {
-  width: 20rem;
-  height: 25rem;
+  width: 13vw;
+  min-width: 22rem;
   top: 5vh;
-  left: 45vw;
+  left: 48vw;
 }
 .img-dis-3 {
-  width: 22rem;
-  height: 30rem;
+  width: 14vw;
+  min-width: 18rem;
   bottom: 6vh;
-  right: 13vw;
+  right: 18vw;
 }
 
 .scroll-div {
@@ -312,6 +322,10 @@ nav ul {
   height: 100%;
   object-fit: cover;
   position: relative;
+}
+
+.project-card:nth-child(3) img {
+  object-fit: contain;
 }
 
 .project-card:nth-child(5) img {
@@ -713,7 +727,7 @@ footer ul li {
     grid-template-rows: auto;
     grid-gap: 20rem 0;
     place-items: center;
-    margin: 0 1rem;
+    margin: 0 2rem;
   }
 
   .project-card:nth-child(n) {
@@ -723,6 +737,7 @@ footer ul li {
 
   .project-card .overlay {
     transform: scaleY(1);
+    background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
   }
 
@@ -753,21 +768,18 @@ footer ul li {
 
 @media screen and (max-width: 500px) {
   .img-dis-1 {
-    max-width: 25rem;
-    height: 30rem;
+    min-width: 22rem;
     top: 10vh;
     left: 25vw;
   }
 
   .img-dis-2 {
-    width: 16rem;
-    height: 22rem;
-    top: 30vh;
+    min-width: 16rem;
+    top: 55vh;
     left: 5vw;
   }
   .img-dis-3 {
-    width: 18rem;
-    height: 25rem;
+    min-width: 12rem;
     bottom: 5vh;
     right: 8vw;
   }

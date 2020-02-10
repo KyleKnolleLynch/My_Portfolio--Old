@@ -49,14 +49,14 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='09'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>skills</span> = (primary) => {'{'}
+        <span className='coding-bright'>skills</span> = (comfortableWith) => {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='10'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
           &apos;HTML5&apos;, &apos;CSS4&apos;, &apos;Javascript&apos;,
           &apos;React&apos;, &apos;JSX&apos;, &apos;SASS&apos;,
-          &apos;Bootstrap/Materialize&apos;, &apos;GitHub&apos;, &apos;&apos;
+          &apos;Bootstrap/Materialize&apos;, &apos;HTTP/REST&apos;, &apos;GitHub&apos;, &apos;Service Workers&apos;
         </span>
       </div>
       <div className='coding-line' data-line-num='11'>
@@ -71,15 +71,14 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='13'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>otherSkills</span> = () =>{' '}
+        <span className='coding-bright'>otherSkills</span> = (familiarWith) =>{' '}
         {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='14'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
           &apos;NodeJS&apos;, &apos;MongoDB&apos;, &apos;Express&apos;,
-          &apos;Firebase&apos;, &apos;Redux&apos;, &apos;ReactNative&apos;,
-          &apos;GitHub&apos;, &apos;&apos;
+          &apos;Firebase&apos;, &apos;Redux&apos;, &apos;ReactNative&apos;, &apos;Gimp&apos;
         </span>
       </div>
       <div className='coding-line' data-line-num='15'>
