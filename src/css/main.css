@@ -435,15 +435,16 @@ nav ul {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
 .profile-img-div img {
+  width: 50rem;
   height: 40rem;
   object-fit: cover;
 }
 
 .profile-img-div {
-  width: 50rem;
   position: absolute;
   z-index: 1;
 }
@@ -466,7 +467,7 @@ nav ul {
 .profile-banner-1 div {
   position: absolute;
   bottom: 0;
-  left: -55vw;
+  left: -75vw;
 }
 
 .profile-banner-2 {
@@ -476,7 +477,7 @@ nav ul {
 .profile-banner-2 div {
   position: absolute;
   top: 0;
-  left: -80vw;
+  left: -100vw;
   color: var(--profile-bg-color);
   text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
     -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
@@ -572,10 +573,11 @@ nav ul {
 /*  Certs */
 .certs-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 500px));
-  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 500px));
+  grid-gap: 3rem;
   place-content: center;
-  margin: 0 10vw 10vw;
+  margin: 0 10vw 12vh;
+  min-height: 100vh;
 }
 
 /*  404 Page  */
@@ -705,17 +707,20 @@ footer ul li {
   }
 
   .img-dis-1 {
+    min-width: 26rem;
     top: 6vh;
     left: 20vw;
   }
 
   .img-dis-2 {
+    min-width: 20rem;
     top: 25vh;
     left: 60vw;
   }
   .img-dis-3 {
+    min-width: 16rem;
     bottom: 12vh;
-    right: 50vw;
+    right: 60vw;
   }
 
   .scroll-div p {
@@ -727,7 +732,7 @@ footer ul li {
     grid-template-rows: auto;
     grid-gap: 20rem 0;
     place-items: center;
-    margin: 0 2rem;
+    margin: 16rem 4rem;
   }
 
   .project-card:nth-child(n) {
@@ -751,6 +756,21 @@ footer ul li {
     font-size: 0.8em;
   }
 
+  .profile-img-div img {
+    transform: scale(0.8);
+  }
+
+  .banner {
+    font-size: 14rem;
+    letter-spacing: 3rem;
+    line-height: 14rem;
+  }
+
+  .profile-section-2 {
+    font-size: 1.6rem;
+    margin: 20vh 16vw;
+  }
+
   .certs-container {
     margin-top: 5vh;
   }
@@ -768,20 +788,39 @@ footer ul li {
 
 @media screen and (max-width: 500px) {
   .img-dis-1 {
-    min-width: 22rem;
-    top: 10vh;
+    min-width: 18rem;
+    top: 12vh;
     left: 25vw;
   }
 
   .img-dis-2 {
-    min-width: 16rem;
+    min-width: 15rem;
     top: 55vh;
-    left: 5vw;
+    left: 6vw;
   }
   .img-dis-3 {
-    min-width: 12rem;
-    bottom: 5vh;
-    right: 8vw;
+    min-width: 10rem;
+    bottom: 10vh;
+    right: 10vw;
+  }
+
+  .profile-img-div img {
+    transform: scale(0.5);
+  }
+
+  .banner {
+    font-size: 12rem;
+    letter-spacing: 2rem;
+    line-height: 12rem;
+  }
+
+  .profile-section-2 {
+    font-size: 1.4rem;
+    margin: 18vh 14vw 10vh;
+  }
+
+  .certs-container {
+    margin-top: 8vh;
   }
 
   .section-404 div:nth-child(1) {
