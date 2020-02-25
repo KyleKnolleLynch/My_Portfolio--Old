@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
@@ -7,39 +7,25 @@ import ProfileImg from '../../assets/images/portrait1.jpg';
 import ProfileAbout from '../layout/ProfileAbout';
 
 const Profile = () => {
-  let options = {
-    root: null,
-    rootMargin: '-10px',
-    threshold: 0
-  };
+  useEffect(() => {
+    const handleScroll = e => {
+      const banner1 = document.querySelector('.hello1');
+      const banner2 = document.querySelector('.hello2');
 
-  const banner1 = document.querySelector('.hello1');
-  const banner2 = document.querySelector('.hello2');
-  const section2 = document.querySelector('.profile-section-2');
-
-  let observer = new IntersectionObserver(entries => {
-    // console.log(entries);
-
-    if (entries[0].intersectionRatio > 0) {
-      banner1.style.animation = 'shiftLeft 1.5s both ease-in-out';
-      banner2.style.animation = 'shiftRight-2 1.5s both ease-in-out ';
-    } else {
-      banner1.style.animation = 'shiftRight 1.5s both ease-in-out';
-      banner2.style.animation = 'shiftLeft-2 1.5s both ease-in-out';
-    }
-  }, options);
-
-  let target = section2;
-
-  if (target) {
-    observer.observe(target);
-  }
+      banner1.style.transform = `translateX(-${window.scrollY / 3}px)`;
+      banner2.style.transform = `translateX(${window.scrollY / 3}px)`;
+    };
+    document.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const parallax = e => {
     const imgDiv = document.querySelector('.profile-img-div');
     if (imgDiv) {
-      imgDiv.style.transform = `translateX(${(e.clientX * 10) /
-        1000}px) translateY(${(e.clientY * 10) / 1000}px)`;
+      imgDiv.style.transform = `translateX(${(e.clientX * 20) /
+        1000}px) translateY(${(e.clientY * 20) / 1000}px)`;
     }
   };
   document.addEventListener('mousemove', parallax);

@@ -28,6 +28,20 @@ const Cursor = () => {
     );
   });
 
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener(
+      'mouseenter',
+      () => (cursor1.className += ' hovered')
+    );
+  });
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener(
+      'mouseleave',
+      () => (cursor1.className = 'cursor__inner cursor__inner--circle')
+    );
+  });
+
   return (
     <div className='cursor'>
       <div className='cursor__inner cursor__inner--circle'></div>
