@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
@@ -31,7 +31,7 @@ const Profile = () => {
   document.addEventListener('mousemove', parallax);
 
   return (
-    <div>
+    <Fragment>
       <header>
         <Navbar title1='HOME' title2='CERTS' linkName='/certs' />
       </header>
@@ -62,7 +62,7 @@ const Profile = () => {
       </main>
       <Footer />
       <Cursor />
-    </div>
+    </Fragment>
   );
 };
 

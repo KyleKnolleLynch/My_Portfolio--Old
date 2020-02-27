@@ -423,8 +423,8 @@ nav ul {
   margin: auto;
   padding: 2rem 1.5rem;
   font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
-  background: rgba(33, 33, 33, 0.9);
-  border: 1px solid var(--white-color);
+  /* background: rgba(33, 33, 33, 0.9);
+  border: 1px solid var(--white-color); */
   transform: scale(0);
   opacity: 0;
   transition: all 0.5s linear;
@@ -492,6 +492,7 @@ nav ul {
   background: var(--profile-bg-color);
   text-align: center;
   padding-bottom: 14rem;
+  overflow-x: hidden;
 }
 
 .profile-section-1 {
@@ -770,21 +771,21 @@ footer ul li {
     min-width: 100%;
   }
 
-  .project-card:hover .overlay {
-    transform: scaleY(0);
-    opacity: 0;
+  .project-card .overlay {
+    transform: scale(1);
+    opacity: 0.4;
   }
 
-  .project-card .project-content h1,
-  .project-card .project-content h2 {
-    transform: scale(1);
-    opacity: 1;
+  .project-card:hover .overlay {
+    opacity: 0.4;
   }
 
   .project-content {
     width: 50%;
     transform: scale(1);
     opacity: 1;
+    background: rgba(33, 33, 33, 0.8);
+    border-radius: 5px;
   }
 
   .project-content h1 {
@@ -826,6 +827,11 @@ footer ul li {
 }
 
 @media screen and (max-width: 600px) {
+  html {
+    height: 100vh;
+    min-height: 120%;
+  }
+
   .img-dis-1 {
     min-width: 18rem;
     top: 12vh;
