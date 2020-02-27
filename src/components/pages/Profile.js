@@ -12,8 +12,8 @@ const Profile = () => {
       const banner1 = document.querySelector('.hello1');
       const banner2 = document.querySelector('.hello2');
 
-      banner1.style.transform = `translateX(-${window.scrollY / 3}px)`;
-      banner2.style.transform = `translateX(${window.scrollY / 3}px)`;
+      banner1.style.transform = `translateX(-${window.scrollY / 2 + 100}px)`;
+      banner2.style.transform = `translateX(${window.scrollY / 2 + 100}px)`;
     };
     document.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
@@ -41,10 +41,10 @@ const Profile = () => {
             <img src={ProfileImg} alt='profile' />
           </div>
           <div className='profile-banner-1 banner'>
-            <div className='hello1'>HelloHelloHelloHelloHello</div>
+            <div className='hello1'>HelloHelloHelloHelloHelloHello</div>
           </div>
           <div className='profile-banner-2 banner'>
-            <div className='hello2'>HelloHelloHelloHelloHello</div>
+            <div className='hello2'>HelloHelloHelloHelloHelloHello</div>
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>

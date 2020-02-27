@@ -226,7 +226,7 @@ nav ul {
   object-fit: cover;
   max-width: 100%;
   height: auto;
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 }
 
 .display {
@@ -235,21 +235,22 @@ nav ul {
 }
 
 .img-dis-1 {
-  width: 28vw;
-  min-width: 30rem;
-  bottom: 20vh;
-  left: 6vw;
+  width: 23vw;
+  min-width: 26rem;
+  bottom: 16vh;
+  left: 8vw;
 }
 
 .img-dis-2 {
-  width: 13vw;
-  min-width: 22rem;
-  top: 5vh;
+  width: 10vw;
+  min-width: 16rem;
+  top: 3vh;
   left: 48vw;
 }
+
 .img-dis-3 {
   width: 14vw;
-  min-width: 18rem;
+  min-width: 22rem;
   bottom: 6vh;
   right: 18vw;
 }
@@ -392,8 +393,10 @@ nav ul {
   position: relative;
 }
 
-.project-card:nth-child(5) img {
-  object-fit: scale-down;
+.project-card:nth-child(3) img,
+.project-card:nth-child(5) img,
+.project-card:nth-child(6) img {
+  object-fit: contain;
 }
 
 .overlay {
@@ -415,7 +418,6 @@ nav ul {
 }
 
 .project-content {
-  width: 75%;
   position: absolute;
   top: 40%;
   left: 0;
@@ -533,7 +535,7 @@ nav ul {
 .profile-banner-1 div {
   position: absolute;
   bottom: 0;
-  left: -75vw;
+  left: -85vw;
   transition: transform 0.6s ease-in-out;
 }
 
@@ -544,7 +546,7 @@ nav ul {
 .profile-banner-2 div {
   position: absolute;
   top: 0;
-  left: -100vw;
+  left: -110vw;
   color: var(--profile-bg-color);
   text-shadow: -1px -1px 0 var(--white-color), 1px -1px 0 var(--white-color),
     -1px 1px 0 var(--white-color), 1px 1px 0 var(--white-color);
@@ -738,19 +740,19 @@ footer ul li {
   }
 
   .img-dis-1 {
-    min-width: 26rem;
-    top: 6vh;
+    min-width: 22rem;
+    top: 8vh;
     left: 20vw;
   }
 
   .img-dis-2 {
-    min-width: 20rem;
+    min-width: 18rem;
     top: 25vh;
-    left: 60vw;
+    left: 67vw;
   }
   .img-dis-3 {
-    min-width: 16rem;
-    bottom: 12vh;
+    min-width: 18rem;
+    bottom: 14vh;
     right: 60vw;
   }
 
@@ -781,7 +783,7 @@ footer ul li {
   }
 
   .project-content {
-    width: 50%;
+    width: 40%;
     transform: scale(1);
     opacity: 1;
     background: rgba(33, 33, 33, 0.8);
@@ -833,24 +835,28 @@ footer ul li {
   }
 
   .img-dis-1 {
-    min-width: 18rem;
-    top: 12vh;
+    min-width: 14rem;
+    top: 13vh;
     left: 25vw;
   }
 
   .img-dis-2 {
-    min-width: 15rem;
-    top: 55vh;
+    min-width: 10rem;
+    top: 52vh;
     left: 6vw;
   }
   .img-dis-3 {
-    min-width: 10rem;
-    bottom: 10vh;
+    min-width: 12rem;
+    bottom: 16vh;
     right: 10vw;
   }
 
   .scroll-div {
-    bottom: 0.5rem;
+    bottom: 2rem;
+  }
+
+  .project-content {
+    width: 60%;
   }
 
   .profile-img-div img {

@@ -1,10 +1,23 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import VisibilitySensor from './utils/VisibilitySensor';
 import { projectsData } from '../../data';
 
 const ProjectCards = () => {
   const projects = projectsData;
   const [flipped, setFlipped] = useState(false);
+
+  useEffect(() => {
+    const card = document.querySelector('.flip-container');
+    const onTouchStart = () => {
+      setFlipped(!flipped);
+    };
+
+    card.addEventListener('onTouchStart', onTouchStart, { passive: true });
+
+    return () => {
+      card.removeEventListener('onTouchStart', onTouchStart);
+    };
+  }, [flipped]);
 
   return (
     <Fragment>
@@ -20,12 +33,19 @@ const ProjectCards = () => {
             >
               <div
                 onClick={() => setFlipped(!flipped)}
-                onTouchStart={() => setFlipped(!flipped)}
                 className={flipped ? 'flip-container flip' : 'flip-container'}
+                onMouseEnter={() => flipped && setFlipped(!flipped)}
               >
                 <div className='flipper'>
                   <div className='card-front'>
-                    <img src={project.img} alt='projects' />
+                    <picture>
+                      <source
+                        media='(max-width: 768px)'
+                        srcSet={project.imgVert}
+                      />
+                      <source media='(min-width: 768px)' srcSet={project.img} />
+                      <img src={project.img} alt='project' />
+                    </picture>
                     <div className='overlay'></div>
                     <div className='project-content'>
                       <h1>{project.title}</h1>

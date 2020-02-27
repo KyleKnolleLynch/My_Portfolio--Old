@@ -5,7 +5,8 @@ import Navbar from '../layout/Navbar';
 import ProjectCards from '../layout/ProjectCards';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
-import inertiaVert from '../../assets/images/inertia-vert.png';
+import inertiaVert from '../../assets/images/inertia-vert-sm.png';
+import toursVert from '../../assets/images/projects/tours-vert.jpg';
 import birdersJn from '../../assets/images/birders-jn.png';
 
 const Home = () => {
@@ -41,10 +42,10 @@ const Home = () => {
             <img src={inertiaVert} alt='inertia-display' />
           </div>
           <div className='display img-dis-2'>
-            <img src={inertiaVert} alt='inertia-display' />
+            <img src={birdersJn} alt='birders-display' />
           </div>
           <div className='display img-dis-3'>
-            <img src={birdersJn} alt='inertia-display' />
+            <img src={toursVert} alt='tours-display' />
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
