@@ -1,11 +1,12 @@
 import img1 from './assets/images/projects/resort-rentals.png';
 import img2 from './assets/images/projects/online-cart-fix.png';
 import img3 from './assets/images/projects/inertia.jpg';
-import img4 from './assets/images/projects/githubSearcher.png';
+import img4 from './assets/images/projects/glitchLog.png';
 import img5 from './assets/images/projects/birders-journal.png';
 import img6 from './assets/images/projects/tours.jpg';
 
 import img3Vert from './assets/images/inertia-vert-sm.png';
+import img4Vert from './assets/images/projects/glitchLog-light.png';
 import img6Vert from './assets/images/projects/tours-vert.jpg';
 
 export const projectsData = [
@@ -29,7 +30,7 @@ export const projectsData = [
   {
     id: 3,
     title: 'Inertia',
-    subtitle: 'React',
+    subtitle: 'Javascript',
     img: img3,
     imgVert: img3Vert,
     link: 'https://inertiapage.netlify.com/index.html',
@@ -39,10 +40,13 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: 'Github Searcher',
+    title: 'Game Glitch Log',
     subtitle: 'React',
     img: img4,
-    link: 'https://inertiapage.netlify.com/index.html'
+    imgVert: img4Vert,
+    link: 'https://kyleknollelynch.github.io/game-glitch-log',
+    gitLink: 'https://github.com/KyleKnolleLynch/game-glitch-log',
+    desc: 'Game method/glitch log using context API, hooks, and local storage. Toggleable light/dark theme.'
   },
   {
     id: 5,
@@ -52,7 +56,7 @@ export const projectsData = [
     link: 'https://birders-journal.web.app',
     gitLink: 'https://github.com/KyleKnolleLynch/birders-journal',
     desc:
-      'Progressive web app built with vanilla Javascript using Firebase/Firestore for the database. This app adds, stores, and deletes data entered by user about birding/bird watching activites. Admin functionality used to add or delete other admins or users/data. Materialize and Material Icons used for styling.'
+      'Progressive web app built with vanilla Javascript using Firebase/Firestore for the database. This app adds, stores, and deletes data entered by user about birding activites. Admin functionality used to add or delete other admins or users/data. Materialize and Material Icons used for styling.'
   },
   {
     id: 6,

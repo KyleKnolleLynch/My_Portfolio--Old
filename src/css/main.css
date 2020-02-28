@@ -342,6 +342,11 @@ nav ul {
   font-size: 1.3rem;
   padding-bottom: 3rem;
   text-align: left;
+  line-height: 1.4;
+}
+
+.card-back p::first-letter {
+  font-size: 3rem;
 }
 
 .card-btn {
@@ -389,14 +394,13 @@ nav ul {
 
 .project-card img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
 }
 
-.project-card:nth-child(3) img,
-.project-card:nth-child(5) img,
-.project-card:nth-child(6) img {
-  object-fit: contain;
+.project-card:nth-child(1) img,
+.project-card:nth-child(2) img {
+  object-fit: cover;
 }
 
 .overlay {
@@ -828,14 +832,18 @@ footer ul li {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), (max-height: 550px) {
   html {
     height: 100vh;
     min-height: 120%;
   }
 
+  .home-section-1 {
+    min-height: 96vh;
+  }
+
   .img-dis-1 {
-    min-width: 14rem;
+    min-width: 13rem;
     top: 13vh;
     left: 25vw;
   }
@@ -846,12 +854,16 @@ footer ul li {
     left: 6vw;
   }
   .img-dis-3 {
-    min-width: 12rem;
+    min-width: 10rem;
     bottom: 16vh;
     right: 10vw;
   }
 
   .scroll-div {
+    bottom: 1rem;
+  }
+
+  .profile-section-1 .scroll-div {
     bottom: 2rem;
   }
 

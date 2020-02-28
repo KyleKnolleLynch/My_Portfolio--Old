@@ -7,7 +7,7 @@ import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
 import inertiaVert from '../../assets/images/inertia-vert-sm.png';
 import toursVert from '../../assets/images/projects/tours-vert.jpg';
-import birdersJn from '../../assets/images/birders-jn.png';
+import glitchLog from '../../assets/images/projects/glitchLog.png';
 
 const Home = () => {
   const parallax = e => {
@@ -42,7 +42,7 @@ const Home = () => {
             <img src={inertiaVert} alt='inertia-display' />
           </div>
           <div className='display img-dis-2'>
-            <img src={birdersJn} alt='birders-display' />
+            <img src={glitchLog} alt='glitchLog-display' />
           </div>
           <div className='display img-dis-3'>
             <img src={toursVert} alt='tours-display' />
