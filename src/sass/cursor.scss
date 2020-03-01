@@ -1,0 +1,24 @@
+.cursor__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+}
+
+.cursor__inner--circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $white-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.cursor__inner--dot {
+  width: 6px;
+  height: 6px;
+  background: $white-color;
+}

@@ -1,0 +1,256 @@
+@import './config.scss';
+
+@include mediaLg {
+  .certs-container {
+    margin-top: 0;
+  }
+}
+
+@include mediaMd {
+  .cursor__inner {
+    display: none;
+  }
+
+  nav ul {
+    font-size: 1.3rem;
+  }
+
+  .home-section-1 {
+    .projects-title {
+      font-size: 6rem;
+      letter-spacing: 0.4rem;
+      &::after {
+        font-size: 1rem;
+        margin-top: -6rem;
+        padding-right: 0.8rem;
+      }
+    }
+    .img-dis-1 {
+      min-width: 22rem;
+      top: 8vh;
+      left: 20vw;
+    }
+    .img-dis-2 {
+      min-width: 18rem;
+      top: 25vh;
+      left: 67vw;
+    }
+    .img-dis-3 {
+      min-width: 18rem;
+      bottom: 14vh;
+      right: 60vw;
+    }
+  }
+
+  .scroll-div p {
+    font-size: 1rem;
+  }
+
+  .home-section-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20rem 0;
+    place-items: center;
+    margin: 16rem 4rem;
+  }
+
+  .project-card {
+    &,
+    .flip-container,
+    .card-front,
+    .card-back {
+      height: 48rem;
+    }
+    &:nth-child(n) {
+      grid-column: 1;
+      min-width: 100%;
+    }
+    .overlay {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    &:nth-child(3) img,
+    &:nth-child(5) img,
+    &:nth-child(6) img {
+      object-fit: contain;
+    }
+    .project-content {
+      width: 40%;
+      transform: scale(1);
+      opacity: 1;
+      background: rgba(33, 33, 33, 0.8);
+      border: 1px solid $white-color;
+      border-radius: 5px;
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .profile-main .profile-section-1 {
+    .profile-img-div img {
+      transform: scale(0.8);
+    }
+    .banner {
+      font-size: 14rem;
+      letter-spacing: 3rem;
+      line-height: 14rem;
+    }
+  }
+
+  .profile-section-2 {
+    font-size: 1.6rem;
+    margin: 20vh 14vw;
+  }
+
+  .certs-container {
+    margin-top: 5vh;
+  }
+
+  .section-404 {
+    margin-top: 8vh;
+    p {
+      font-size: 50rem;
+      span {
+        font-size: 8rem;
+        word-spacing: 1rem;
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  html {
+    height: 100vh;
+    min-height: 120%;
+  }
+
+  .home-section-1 {
+    min-height: 96vh;
+    .img-dis-1 {
+      min-width: 13rem;
+      top: 13vh;
+      left: 25vw;
+    }
+    .img-dis-2 {
+      min-width: 10rem;
+      top: 52vh;
+      left: 6vw;
+    }
+    .img-dis-3 {
+      min-width: 10rem;
+      bottom: 16vh;
+      right: 10vw;
+    }
+    .scroll-div {
+      bottom: 1rem;
+    }
+  }
+
+  .project-card .project-content {
+    width: 60%;
+  }
+
+  .profile-main .profile-section-1 {
+    .profile-img-div img {
+      transform: scale(0.5);
+    }
+    .scroll-div {
+      bottom: 0.5rem;
+    }
+    .banner {
+      font-size: 12rem;
+      letter-spacing: 2rem;
+      line-height: 12rem;
+    }
+    .profile-banner-1 div {
+      left: -112vw;
+    }
+    .profile-banner-2 div {
+      left: -188vw;
+    }
+  }
+
+  .profile-section-2 {
+    font-size: 1.4rem;
+    margin: 18vh 10vw 10vh 14vw;
+    .coding-wrap .coding-line {
+      padding-left: 1rem;
+      &::before {
+        left: -2.4rem;
+      }
+    }
+  }
+
+  .certs-container {
+    margin-top: 8vh;
+  }
+
+  .section-404 {
+    p {
+      font-size: 30rem;
+      span {
+        bottom: 9vh;
+        font-size: 5rem;
+        border: 2px solid $white-color;
+      }
+    }
+  }
+}
+
+@include mediaVt {
+  .home-section-1 {
+    .img-dis-1 {
+      width: 10rem;
+      min-width: 10rem;
+      top: 22vh;
+      left: 8vw;
+    }
+    .img-dis-2 {
+      min-width: 10rem;
+      top: 50vh;
+      left: 26vw;
+    }
+    .img-dis-3 {
+      min-width: 11rem;
+      bottom: 16vh;
+      right: 10vw;
+    }
+  }
+
+  .project-card .project-content {
+    width: 60%;
+  }
+
+  .profile-main .profile-section-1 {
+    .profile-img-div img {
+      transform: scale(0.5);
+    }
+    .banner {
+      font-size: 10rem;
+      letter-spacing: 1.9rem;
+      line-height: 10rem;
+    }
+    .profile-banner-1 div {
+      left: -112vw;
+    }
+    .profile-banner-2 div {
+      left: -188vw;
+    }
+  }
+
+  .section-404 {
+    margin-top: 16vh;
+    p {
+      font-size: 30rem;
+      span {
+        bottom: 24vh;
+        font-size: 5rem;
+        border: 2px solid $white-color;
+      }
+    }
+  }
+}

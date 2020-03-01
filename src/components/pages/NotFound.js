@@ -6,11 +6,17 @@ import Footer from '../layout/Footer';
 const NotFound = () => {
   return (
     <Fragment>
-      <Navbar title1='HOME' title2='PROFILE' linkName='/profile' />
+      <header>
+        <Navbar title1='HOME' title2='PROFILE' linkName='/profile' />
+      </header>
       <main>
         <section className='section-404'>
-          <div>404</div>
-          <div>404 404 404 404 404 404 404 404 404 404</div>
+          <div>
+            <p>
+              404
+              <span>404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404</span>
+            </p>
+          </div>
         </section>
       </main>
       <Footer />

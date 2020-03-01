@@ -1,0 +1,30 @@
+.section-404 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5vh;
+  overflow: hidden;
+
+  p {
+    width: 200vw;
+    font-size: 70rem;
+    line-height: 1;
+    color: darkkhaki;
+    position: relative;
+
+    span {
+      width: 400%;
+      position: absolute;
+      left: 0;
+      bottom: 12vh;
+      text-align: left;
+      font-size: 12rem;
+      line-height: 1.1;
+      word-spacing: 3.6rem;
+      color: $white-color;
+      border: 3px solid $white-color;
+      z-index: 1;
+    }
+  }
+}
