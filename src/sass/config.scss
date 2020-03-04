@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
+/*  colors  */
 $white-color: #fff;
 $black-color: #000;
 $profile-bg-color: rgb(14, 0, 22);
@@ -9,6 +10,12 @@ $code-bg-color: rgb(54, 9, 82);
 $scrollbarBG: #333;
 $thumbBG: #222;
 
+/*  font stacks */
+$font-anton:'Anton', sans-serif;
+$font-bebas: 'Bebas Neue', cursive;
+$font-nanum: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+
+/*  html/body */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +28,7 @@ body,
 html {
   background: $black-color;
   color: $white-color;
-  font-family: 'Anton', sans-serif;
+  font-family: $font-anton;
   font-size: 10px;
   overflow-y: scroll;
   overflow-x: hidden;

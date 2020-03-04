@@ -76,7 +76,7 @@
 .profile-section-2 {
   min-height: auto;
   margin: 24vh 25vw;
-  font-family: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+  font-family: $font-nanum;
   position: relative;
   text-align: left;
   font-size: 1.8rem;
@@ -93,7 +93,7 @@
     }
 
     .coding-title {
-      font-family: 'Bebas Neue', cursive;
+      font-family: $font-bebas;
       margin: 0;
 
       &::after {

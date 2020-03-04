@@ -2,7 +2,10 @@
 
 @include mediaLg {
   .certs-container {
-    margin-top: 0;
+    margin: 10vh 10vw;
+    &::before {
+      top: -2rem;
+    }
   }
 }
 
@@ -107,7 +110,7 @@
   }
 
   .certs-container {
-    margin-top: 5vh;
+    margin: 14vh 10vw;
   }
 
   .section-404 {
@@ -126,6 +129,10 @@
   html {
     height: 100vh;
     min-height: 120%;
+  }
+
+  header nav ul {
+    padding: 4.5rem 2.5rem 0;
   }
 
   .home-section-1 {
@@ -186,7 +193,7 @@
   }
 
   .certs-container {
-    margin-top: 8vh;
+    margin-bottom: 18vh;
   }
 
   .section-404 {
@@ -240,6 +247,10 @@
     .profile-banner-2 div {
       left: -188vw;
     }
+  }
+
+  .certs-container {
+    margin: 25vh 16vw 35vh;
   }
 
   .section-404 {

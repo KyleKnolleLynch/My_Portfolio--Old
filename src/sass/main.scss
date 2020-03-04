@@ -56,7 +56,7 @@ header {
     padding: 4.5rem 5.5rem 0;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-family: 'Bebas Neue', cursive;
+    font-family: $font-bebas;
   }
 }
 
@@ -80,8 +80,19 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 500px));
   grid-gap: 3rem;
   place-content: center;
-  margin: 12vh 10vw 12vh;
+  text-align: center;
+  margin: 0 10vw;
   min-height: 100vh;
+  position: relative;
+  &::before {
+    content: '( click to zoom in/out )';
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    font-family: $font-bebas;
+    font-size: 1.1rem;
+  }
 }
 
 /* css transition group  */
