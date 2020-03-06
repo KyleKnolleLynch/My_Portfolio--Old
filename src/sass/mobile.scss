@@ -50,10 +50,10 @@
   }
 
   .home-section-2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: 50vw;
     grid-template-rows: auto;
     grid-gap: 20rem 0;
-    place-items: center;
+    place-content: center;
     margin: 16rem 4rem;
   }
 
@@ -67,15 +67,15 @@
     &:nth-child(n) {
       grid-column: 1;
       min-width: 100%;
+      width: 100%;
     }
     .overlay {
       transform: scale(1);
       opacity: 0.4;
     }
-    &:nth-child(3) img,
-    &:nth-child(5) img,
-    &:nth-child(6) img {
-      object-fit: contain;
+    &:nth-child(n) img {
+      height: 100%;
+      object-fit: contain; 
     }
     .project-content {
       width: 40%;
@@ -111,6 +111,9 @@
 
   .certs-container {
     margin: 14vh 10vw;
+    &::before {
+      opacity: 0;
+    }
   }
 
   .section-404 {
@@ -135,6 +138,10 @@
     padding: 4.5rem 2.5rem 0;
   }
 
+  .scroll-div {
+    bottom: 1rem;
+  }
+
   .home-section-1 {
     min-height: 96vh;
     .img-dis-1 {
@@ -152,9 +159,6 @@
       bottom: 16vh;
       right: 10vw;
     }
-    .scroll-div {
-      bottom: 1rem;
-    }
   }
 
   .project-card .project-content {
@@ -164,9 +168,6 @@
   .profile-main .profile-section-1 {
     .profile-img-div img {
       transform: scale(0.5);
-    }
-    .scroll-div {
-      bottom: 0.5rem;
     }
     .banner {
       font-size: 12rem;
@@ -190,6 +191,10 @@
         left: -2.4rem;
       }
     }
+  }
+
+  footer {
+    left: 3rem;
   }
 
   .certs-container {

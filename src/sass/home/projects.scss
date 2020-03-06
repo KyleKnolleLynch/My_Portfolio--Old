@@ -84,8 +84,7 @@
   }
 
   img {
-    height: 100%;
-    object-fit: contain;
+    height: auto;
     position: relative;
   }
 
@@ -145,17 +144,14 @@
     opacity: 1;
   }
 
-  &:nth-child(1) img,
-  &:nth-child(2) img,
   &:nth-child(3) img,
   &:nth-child(6) img {
-    object-fit: cover;
+    // object-fit: cover;
   }
 
   &:nth-child(3n) {
-    width: 45vw;
+    width: 40vw;
     min-width: 700px;
-    height: 55rem;
     grid-column: span 5;
   }
 

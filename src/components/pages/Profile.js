@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
@@ -16,22 +16,23 @@ const Profile = () => {
       banner2.style.transform = `translateX(${window.scrollY / 2 + 100}px)`;
     };
     document.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      document.removeEventListener('scroll', handleScroll);
-    };
+    return () => document.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const parallax = e => {
-    const imgDiv = document.querySelector('.profile-img-div');
-    if (imgDiv) {
-      imgDiv.style.transform = `translateX(${(e.clientX * 20) /
-        1000}px) translateY(${(e.clientY * 20) / 1000}px)`;
-    }
-  };
-  document.addEventListener('mousemove', parallax);
+  useEffect(() => {
+    const parallax = e => {
+      const imgDiv = document.querySelector('.profile-img-div');
+      if (imgDiv) {
+        imgDiv.style.transform = `translateX(${(e.clientX * 20) /
+          1000}px) translateY(${(e.clientY * 20) / 1000}px)`;
+      }
+    };
+    document.addEventListener('mousemove', parallax);
+    return () => document.removeEventListener('mousemove', parallax);
+  }, []);
 
   return (
-    <Fragment>
+    <div>
       <header>
         <Navbar title1='HOME' title2='CERTS' linkName='/certs' />
       </header>
@@ -62,7 +63,7 @@ const Profile = () => {
       </main>
       <Footer />
       <Cursor />
-    </Fragment>
+    </div>
   );
 };
 

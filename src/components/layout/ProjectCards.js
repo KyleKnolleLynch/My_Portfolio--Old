@@ -11,12 +11,8 @@ const ProjectCards = () => {
     const onTouchStart = () => {
       setFlipped(!flipped);
     };
-
     card.addEventListener('onTouchStart', onTouchStart, { passive: true });
-
-    return () => {
-      card.removeEventListener('onTouchStart', onTouchStart);
-    };
+    return () => card.removeEventListener('onTouchStart', onTouchStart);
   }, [flipped]);
 
   return (

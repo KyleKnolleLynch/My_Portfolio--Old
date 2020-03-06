@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Cursor from '../layout/utils/Cursor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 
 const NotFound = () => {
   return (
-    <Fragment>
+    <div>
       <header>
         <Navbar title1='HOME' title2='PROFILE' linkName='/profile' />
       </header>
@@ -21,7 +21,7 @@ const NotFound = () => {
       </main>
       <Footer />
       <Cursor />
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import img1 from './assets/images/projects/resort-rentals.png';
-import img2 from './assets/images/projects/online-cart-fix.png';
+import img2 from './assets/images/projects/onlineCart.jpg';
 import img3 from './assets/images/projects/inertia.jpg';
 import img4 from './assets/images/projects/glitchLog.png';
 import img5 from './assets/images/projects/birders-journal.png';
