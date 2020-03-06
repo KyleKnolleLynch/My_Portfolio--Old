@@ -5,8 +5,8 @@
     minmax(8vw, 1fr) minmax(30rem, 40rem) minmax(4rem, 14rem)
     minmax(30rem, 40rem) minmax(8vw, 1fr);
   grid-template-rows: repeat(4, 60rem);
-  grid-gap: 26rem 0;
-  margin: 22rem 0;
+  grid-gap: 33rem 0;
+  margin: 24rem 0;
 
   .slideDown {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -127,7 +127,7 @@
   .card-front,
   .card-back {
     width: 100%;
-    height: 52rem;
+    height: 100%;
   }
 
   .flip:hover .flipper {
@@ -157,7 +157,7 @@
 
   &:nth-child(1) {
     grid-column: 2 / 3;
-    align-self: flex-end;
+    margin-top: 10rem;
   }
 
   &:nth-child(2) {
@@ -170,7 +170,7 @@
 
   &:nth-child(4) {
     grid-column: 2 / 3;
-    align-self: flex-end;
+    margin-top: 10rem;
   }
 
   &:nth-child(5) {
