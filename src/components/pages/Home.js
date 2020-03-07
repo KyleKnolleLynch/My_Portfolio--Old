@@ -6,7 +6,7 @@ import ProjectCards from '../layout/ProjectCards';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
 import inertiaVert from '../../assets/images/inertia-vert-sm.png';
-import toursVert from '../../assets/images/projects/tours-vert.jpg';
+import toursVert from '../../assets/images/projects/tours.jpg';
 import glitchLog from '../../assets/images/projects/glitchLog.png';
 
 const Home = () => {

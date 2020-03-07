@@ -1,22 +1,22 @@
-import img1 from './assets/images/projects/resort-rentals.png';
+import img1 from './assets/images/projects/tours.jpg';
 import img2 from './assets/images/projects/onlineCart.jpg';
-import img3 from './assets/images/projects/inertia.jpg';
+import img3 from './assets/images/projects/inertiaPage.jpg';
 import img4 from './assets/images/projects/glitchLog.png';
 import img5 from './assets/images/projects/birders-journal.png';
-import img6 from './assets/images/projects/tours.jpg';
+import img6 from './assets/images/projects/resortRentals.jpg';
 
 import img3Vert from './assets/images/inertia-vert-sm.png';
 import img4Vert from './assets/images/projects/glitchLog-light.png';
-import img6Vert from './assets/images/projects/tours-vert.jpg';
+import img6Vert from './assets/images/projects/resortRental-vert.jpg';
 
 export const projectsData = [
   {
     id: 1,
-    title: 'Resort Rentals',
+    title: 'Central Texas Tours',
     subtitle: 'React',
     img: img1,
-    link: 'https://inertiapage.netlify.com/index.html',
-    gitLink: 'https://github.com/KyleKnolleLynch/Inertia',
+    link: 'https://central-texas-tours.netlify.com/',
+    gitLink: 'https://github.com/KyleKnolleLynch/central-texas-tours',
     desc:
       "Welcome page built with vanilla Javascript. Local storage is used to let user save their name, daily focus, settings, and todo list as well. Background photos from Unsplash API are dynamically displayed to match user's time of day and refresh on page reload. Openweathermap API is utilized to display user's local weather. Random quotes are displayed upon page reload, brought in by the FavQ API. Impliments service worker and default local photos to allow offline use or in case of temporary Unsplash API server disruption. Icons by Font Awesome, weather icons by owfont/Deniz Fuchidzhiev."
   },
@@ -25,7 +25,9 @@ export const projectsData = [
     title: 'Online Cart',
     subtitle: 'React',
     img: img2,
-    link: 'https://inertiapage.netlify.com/index.html'
+    link: 'https://inertiapage.netlify.com/index.html',
+    gitLink: 'https://github.com/KyleKnolleLynch/React-Online-Cart',
+    desc: ''
   },
   {
     id: 3,
@@ -60,12 +62,12 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: 'Central Texas Tours',
+    title: 'Resort Rentals',
     subtitle: 'React',
     img: img6,
     imgVert: img6Vert,
-    link: 'https://central-texas-tours.netlify.com',
-    gitLink: 'https://github.com/KyleKnolleLynch/Central-Texas-Tours',
+    link: 'https://resort-rentals.netlify.com/',
+    gitLink: 'https://github.com/KyleKnolleLynch/Resort-Rentals',
     desc: ''
   }
 ];
