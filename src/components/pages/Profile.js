@@ -8,12 +8,17 @@ import ProfileAbout from '../layout/ProfileAbout';
 
 const Profile = () => {
   useEffect(() => {
-    const handleScroll = e => {
+    const handleScroll = () => {
       const banner1 = document.querySelector('.hello1');
       const banner2 = document.querySelector('.hello2');
 
-      banner1.style.transform = `translateX(-${window.scrollY / 2 + 100}px)`;
-      banner2.style.transform = `translateX(${window.scrollY / 2 + 100}px)`;
+      if (window.scrollY > 1000) {
+        banner1.style.transform = 'translateX(0)';
+        banner2.style.transform = 'translateX(0)';
+      } else {
+        banner1.style.transform = `translateX(-${window.scrollY / 2 + 100}px)`;
+        banner2.style.transform = `translateX(${window.scrollY / 2 + 100}px)`;
+      }
     };
     document.addEventListener('scroll', handleScroll, { passive: true });
     return () => document.removeEventListener('scroll', handleScroll);
@@ -42,10 +47,10 @@ const Profile = () => {
             <img src={ProfileImg} alt='profile' />
           </div>
           <div className='profile-banner-1 banner'>
-            <div className='hello1'>HelloHelloHelloHelloHelloHello</div>
+            <div className='hello1'>Hello Hello Hello Hello Hello Hello</div>
           </div>
           <div className='profile-banner-2 banner'>
-            <div className='hello2'>HelloHelloHelloHelloHelloHello</div>
+            <div className='hello2'>Hello Hello Hello Hello Hello Hello</div>
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>

@@ -144,10 +144,10 @@
     opacity: 1;
   }
 
-  &:nth-child(3) img,
-  &:nth-child(6) img {
-    // object-fit: cover;
-  }
+  // &:nth-child(3) img,
+  // &:nth-child(6) img {
+  //   object-fit: cover;
+  // }
 
   &:nth-child(3n) {
     width: 40vw;
