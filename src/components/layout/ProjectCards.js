@@ -50,16 +50,20 @@ const ProjectCards = () => {
                     </div>
                   </div>
                   <div className='card-back'>
+                  <img src={project.icon} alt='icons' />
                     <h1>{project.title}</h1>
                     <br />
                     <p>{project.desc}</p>
-                    <br />
-                    <a href={project.link} className='card-btn'>
-                      View Project
-                    </a>
-                    <a href={project.gitLink} className='card-btn'>
-                      View Code
-                    </a>
+                    <div className='card-btn-wrap'>
+                      <a href={project.link} className='card-btn'>
+                        View Project
+                      </a>
+                      <a href={project.gitLink} className='card-btn'>
+                        View Code
+                      </a>
+                      <br />
+                      
+                    </div>
                   </div>
                 </div>
               </div>

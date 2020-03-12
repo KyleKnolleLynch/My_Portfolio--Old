@@ -9,12 +9,16 @@ import img3Vert from './assets/images/inertia-vert-sm.png';
 import img4Vert from './assets/images/projects/glitchLog-light.png';
 import img6Vert from './assets/images/projects/resortRental-vert.jpg';
 
+import iconJs from './assets/icons/js.svg';
+import iconReact from './assets/icons/react.svg';
+
 export const projectsData = [
   {
     id: 1,
     title: 'Central Texas Tours',
     subtitle: 'React',
     img: img1,
+    icon: iconReact,
     link: 'https://central-texas-tours.netlify.com/',
     gitLink: 'https://github.com/KyleKnolleLynch/central-texas-tours',
     desc:
@@ -25,6 +29,7 @@ export const projectsData = [
     title: 'Online Cart',
     subtitle: 'React',
     img: img2,
+    icon: iconReact,
     link: 'https://inertiapage.netlify.com/index.html',
     gitLink: 'https://github.com/KyleKnolleLynch/React-Online-Cart',
     desc: ''
@@ -35,6 +40,7 @@ export const projectsData = [
     subtitle: 'Javascript',
     img: img3,
     imgVert: img3Vert,
+    icon: iconJs,
     link: 'https://inertiapage.netlify.com/index.html',
     gitLink: 'https://github.com/KyleKnolleLynch/Inertia',
     desc:
@@ -46,6 +52,7 @@ export const projectsData = [
     subtitle: 'React',
     img: img4,
     imgVert: img4Vert,
+    icon: iconReact,
     link: 'https://kyleknollelynch.github.io/game-glitch-log',
     gitLink: 'https://github.com/KyleKnolleLynch/game-glitch-log',
     desc: 'Game method/glitch log using context API, hooks, and local storage. Toggleable light/dark theme.'
@@ -55,6 +62,7 @@ export const projectsData = [
     title: "Birder's Journal",
     subtitle: 'Javascript',
     img: img5,
+    icon: iconJs,
     link: 'https://birders-journal.web.app',
     gitLink: 'https://github.com/KyleKnolleLynch/birders-journal',
     desc:
@@ -66,6 +74,7 @@ export const projectsData = [
     subtitle: 'React',
     img: img6,
     imgVert: img6Vert,
+    icon: iconReact,
     link: 'https://resort-rentals.netlify.com/',
     gitLink: 'https://github.com/KyleKnolleLynch/Resort-Rentals',
     desc: ''

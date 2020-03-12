@@ -1,9 +1,9 @@
-@import './config.scss';
-@import './cursor.scss';
-@import './home/home.scss';
-@import './home/projects.scss';
-@import './profile.scss';
-@import './notFound.scss';
+@import 'config';
+@import 'cursor';
+@import 'home/home';
+@import 'home/projects';
+@import 'profile';
+@import 'notFound';
 
 /* Nav Links*/
 .nav-link {
@@ -122,4 +122,4 @@ footer {
   }
 }
 
-@import './mobile.scss';
+@import 'mobile';
