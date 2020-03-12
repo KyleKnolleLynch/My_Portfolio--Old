@@ -3,30 +3,39 @@ import React, { useState, useEffect } from 'react';
 const Cursor = () => {
   const cursor1 = document.querySelector('.cursor__inner--circle');
   const cursor2 = document.querySelector('.cursor__inner--dot');
+  const [posOne, setPosOne] = useState({ y: 0, x: 0 });
+  const [posTwo, setPosTwo] = useState({ y: 0, x: 0 });
   const [hoveredState, setHoveredState] = useState(
     'cursor__inner cursor__inner--circle'
   );
 
+  const setHovered = () => {
+    setHoveredState(prevState => (prevState += ' hovered'));
+  };
+
+  const setNotHovered = () => {
+    setHoveredState('cursor__inner cursor__inner--circle');
+  };
+
   useEffect(() => {
     const setCursor = e => {
+      setPosOne({ y: e.pageY - 10, x: e.pageX - 10 });
+      setPosTwo({ y: e.pageY - 3, x: e.pageX - 3 });
       cursor1.setAttribute(
         'style',
-        `top:${e.pageY - 10}px; left:${e.pageX - 10}px; opacity: 1`
+        `top:${posOne.y}px; left:${posOne.x}px; opacity: 1`
       );
       cursor2.setAttribute(
         'style',
-        `top:${e.pageY - 3}px; left:${e.pageX - 3}px; opacity: 1`
+        `top:${posTwo.y}px; left:${posTwo.x}px; opacity: 1`
       );
     };
 
     document.addEventListener('mousemove', setCursor);
     return () => document.removeEventListener('mousemove', setCursor);
-  }, [cursor1, cursor2]);
+  }, [cursor1, cursor2, posOne.y, posOne.x, posTwo.y, posTwo.x]);
 
   useEffect(() => {
-    const setHovered = () => {
-      setHoveredState(prevState => (prevState += ' hovered'));
-    };
     document.querySelectorAll('a').forEach(link => {
       link.addEventListener('mouseenter', setHovered);
       return () => link.removeEventListener('mouseenter', setHovered);
@@ -34,25 +43,25 @@ const Cursor = () => {
   }, []);
 
   useEffect(() => {
-    const setNotHovered = () => {
-      setHoveredState('cursor__inner cursor__inner--circle');
-    };
     document.querySelectorAll('a').forEach(link => {
       link.addEventListener('mouseleave', setNotHovered);
       return () => link.removeEventListener('mouseleave', setNotHovered);
     });
   }, []);
 
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener(
-      'mouseenter',
-      () => (cursor1.className += ' hovered')
-    );
-    card.addEventListener(
-      'mouseleave',
-      () => (cursor1.className = 'cursor__inner cursor__inner--circle')
-    );
-  });
+  useEffect(() => {
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mouseenter', setHovered);
+      return () => card.removeEventListener('mouseenter', setHovered);
+    });
+  }, []);
+
+  useEffect(() => {
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mouseleave', setNotHovered);
+      return () => card.removeEventListener('mouseleave', setNotHovered);
+    });
+  }, []);
 
   return (
     <div className='cursor'>

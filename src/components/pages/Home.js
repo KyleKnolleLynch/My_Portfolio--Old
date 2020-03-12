@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
@@ -10,19 +10,19 @@ import toursVert from '../../assets/images/projects/tours.jpg';
 import glitchLog from '../../assets/images/projects/glitchLog.png';
 
 const Home = () => {
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     const parallax = e => {
       const displays = document.querySelectorAll('.display');
-      if (displays) {
-        displays.forEach(display => {
-          display.style.transform = `translateX(${(e.clientX * 20) /
-            1000}px) translateY(${(e.clientY * 20) / 1000}px)`;
-        });
-      }
+      setPos({ x: (e.clientX * 20) / 1000, y: (e.clientY * 20) / 1000 });
+      displays.forEach(display => {
+        display.style.transform = `translateX(${pos.x}px) translateY(${pos.y}px)`;
+      });
     };
     document.addEventListener('mousemove', parallax);
     return () => document.removeEventListener('mousemove', parallax);
-  }, []);
+  }, [pos.x, pos.y]);
 
   return (
     <div>

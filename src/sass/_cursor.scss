@@ -13,8 +13,7 @@
   width: 20px;
   height: 20px;
   border: 1px solid $white-color;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
+  transition: 200ms ease-out;
 }
 
 .cursor__inner--dot {

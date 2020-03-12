@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
@@ -7,11 +7,12 @@ import ProfileImg from '../../assets/images/portrait1.jpg';
 import ProfileAbout from '../layout/ProfileAbout';
 
 const Profile = () => {
+  const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     const handleScroll = () => {
       const banner1 = document.querySelector('.hello1');
       const banner2 = document.querySelector('.hello2');
-
       if (window.scrollY > 1000) {
         banner1.style.transform = 'translateX(0)';
         banner2.style.transform = 'translateX(0)';
@@ -27,14 +28,12 @@ const Profile = () => {
   useEffect(() => {
     const parallax = e => {
       const imgDiv = document.querySelector('.profile-img-div');
-      if (imgDiv) {
-        imgDiv.style.transform = `translateX(${(e.clientX * 20) /
-          1000}px) translateY(${(e.clientY * 20) / 1000}px)`;
-      }
+      setImgPos({ x: (e.clientX * 20) / 1000, y: (e.clientY * 20) / 1000 });
+      imgDiv.style.transform = `translateX(${imgPos.x}px) translateY(${imgPos.y}px)`;
     };
     document.addEventListener('mousemove', parallax);
     return () => document.removeEventListener('mousemove', parallax);
-  }, []);
+  }, [imgPos.x, imgPos.y]);
 
   return (
     <div>

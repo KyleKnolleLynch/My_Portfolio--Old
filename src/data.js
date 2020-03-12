@@ -22,7 +22,7 @@ export const projectsData = [
     link: 'https://central-texas-tours.netlify.com/',
     gitLink: 'https://github.com/KyleKnolleLynch/central-texas-tours',
     desc:
-      "Welcome page built with vanilla Javascript. Local storage is used to let user save their name, daily focus, settings, and todo list as well. Background photos from Unsplash API are dynamically displayed to match user's time of day and refresh on page reload. Openweathermap API is utilized to display user's local weather. Random quotes are displayed upon page reload, brought in by the FavQ API. Impliments service worker and default local photos to allow offline use or in case of temporary Unsplash API server disruption. Icons by Font Awesome, weather icons by owfont/Deniz Fuchidzhiev."
+      "Mock local tours website using functional components with hooks. Allows user to filter through and delete tours from view. Includes multi-step form with native validation. Styled with Sass and Font Awesome icons."
   },
   {
     id: 2,
@@ -30,9 +30,9 @@ export const projectsData = [
     subtitle: 'React',
     img: img2,
     icon: iconReact,
-    link: 'https://inertiapage.netlify.com/index.html',
+    link: 'https://react-online-cart.netlify.com',
     gitLink: 'https://github.com/KyleKnolleLynch/React-Online-Cart',
-    desc: ''
+    desc: 'Shopping cart using context API, Sass, Paypal express checkout button, and Font Awesome icons. Context component is class based, all other components are functional. This app allows users to add or remove items from cart, edit or clear cart, and price totals stay matched up accordingly.'
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const projectsData = [
     img: img3,
     imgVert: img3Vert,
     icon: iconJs,
-    link: 'https://inertiapage.netlify.com/index.html',
+    link: 'https://inertiapage.netlify.com',
     gitLink: 'https://github.com/KyleKnolleLynch/Inertia',
     desc:
       "Welcome page built with vanilla Javascript. Local storage is used to let user save their name, daily focus, settings, and todo list as well. Background photos from Unsplash API are dynamically displayed to match user's time of day and refresh on page reload. Openweathermap API is utilized to display user's local weather. Random quotes are displayed upon page reload, brought in by the FavQ API. Impliments service worker and default local photos to allow offline use or in case of temporary Unsplash API server disruption. Icons by Font Awesome, weather icons by owfont/Deniz Fuchidzhiev."
