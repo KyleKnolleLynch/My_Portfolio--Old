@@ -62,44 +62,6 @@ body::-webkit-scrollbar-thumb {
   cursor: none;
 }
 
-/*  utilities  */
-
-.hovered {
-  transform: scale(2.8);
-  transition: scale both ease-in-out;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: $white-color;
-  cursor: none;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-section {
-  min-height: 100vh;
-}
-
 /*  mobile  */
 
 @mixin mediaSm {
