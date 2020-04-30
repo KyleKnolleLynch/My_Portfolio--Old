@@ -34,7 +34,7 @@ const Home = () => {
         />
       </header>
       <main>
-        <section className='section home-section-1'>
+        <section className='home-section-1'>
           <div className='projects-title'>
             Selected
             <br />
@@ -60,7 +60,7 @@ const Home = () => {
             )}
           </VisibilitySensor>
         </section>
-        <section className='section home-section-2'>
+        <section className='home-section-2'>
           <ProjectCards />
         </section>
         <article className='profile-link-bottom'>

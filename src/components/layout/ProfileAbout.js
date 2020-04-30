@@ -29,8 +29,8 @@ const ProfileAbout = () => {
       </div>
       <div className='coding-line' data-line-num='05'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>email:{' '}
-        <a href='mailto: kylelynch104@gmail.com'>
-          '<span className='coding-proper'>kylelynch104@gmail.com</span>'
+        <a href='mailto: email@kylelynch.me' className='hover-elem'>
+          '<span className='coding-proper'>email@kylelynch.me</span>'
         </a>
       </div>
       <div className='coding-line' data-line-num='06'>
@@ -49,14 +49,15 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='09'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>skills</span> = (comfortableWith) => {'{'}
+        <span className='coding-bright'>skills</span> = (comfortableWith) =>{' '}
+        {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='10'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          &apos;HTML5&apos;, &apos;CSS4&apos;, &apos;Javascript&apos;,
-          &apos;React&apos;, &apos;JSX&apos;, &apos;SASS&apos;,
-          &apos;Bootstrap/Materialize&apos;, &apos;HTTP/REST&apos;, &apos;GitHub&apos;, &apos;Service Workers&apos;
+          'HTML5', 'CSS4', 'Javascript', 'React', 'JSX', 'SASS', 'HTTP/REST',
+          'FetchAPI', 'Axios', 'Bootstrap', 'Materialize', 'Github', 'Service
+          Workers'
         </span>
       </div>
       <div className='coding-line' data-line-num='11'>
@@ -77,8 +78,8 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='14'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          &apos;NodeJS&apos;, &apos;MongoDB&apos;, &apos;Express&apos;,
-          &apos;Firebase&apos;, &apos;Redux&apos;, &apos;ReactNative&apos;, &apos;Gimp&apos;
+          'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux',
+          'React Native', 'Gimp'
         </span>
       </div>
       <div className='coding-line' data-line-num='15'>
@@ -98,9 +99,11 @@ const ProfileAbout = () => {
       </div>
       <div className='coding-line coding-data' data-line-num='18'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
-          'Modern Javascript from the Beginning by Brad Traversy', 'Modern React with Redux by Stephen Grider', 'React Front to Back by Brad Traversy', 'Updated React Front to Back by Brad Traversy'
+        'Modern Javascript from the Beginning by Brad Traversy', 'Modern React
+        with Redux by Stephen Grider', 'React Front to Back by Brad Traversy',
+        'Updated React Front to Back by Brad Traversy'
       </div>
-     
+
       <div className='coding-line' data-line-num='19'>
         <div className='dot'>&#8729; &#8729; </div>
         {'}'}
@@ -113,14 +116,13 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='21'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>interests</span> = () =>{' '}
-        {'{'}
+        <span className='coding-bright'>interests</span> = () => {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='22'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
-         'Working on Subarus and Hondas', 'Ancient History', 'Computer Hardware'
+        'Working on Subarus and Hondas', 'Ancient History', 'Computer Hardware'
       </div>
-     
+
       <div className='coding-line' data-line-num='23'>
         <div className='dot'>&#8729; &#8729; </div>
         {'}'}
@@ -129,7 +131,6 @@ const ProfileAbout = () => {
         {' '}
       </div>
       <br />
-
 
       <div className='coding-line' data-line-num='25'>
         <div className='dot'>&#8729; &#8729; </div>
@@ -146,6 +147,9 @@ const ProfileAbout = () => {
       </div>
       <div className='coding-line' data-line-num='28'>
         {'}'}
+      </div>
+      <div className='coding-title bio-title coding-line' data-line-point='&bull;'>
+        Bio
       </div>
     </article>
   );

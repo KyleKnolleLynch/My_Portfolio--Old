@@ -4,6 +4,7 @@ import img3 from './assets/images/projects/inertiaPage.jpg';
 import img4 from './assets/images/projects/glitchLog.png';
 import img5 from './assets/images/projects/birders-journal.png';
 import img6 from './assets/images/projects/resortRentals.jpg';
+import img7 from './assets/images/projects/vanilla-js-landing.png';
 
 import img3Vert from './assets/images/inertia-vert-sm.png';
 import img4Vert from './assets/images/projects/glitchLog-light.png';
@@ -44,7 +45,7 @@ export const projectsData = [
     link: 'https://inertiapage.netlify.com',
     gitLink: 'https://github.com/KyleKnolleLynch/Inertia',
     desc:
-      "Welcome page built with vanilla Javascript. Local storage is used to let user save their name, daily focus, settings, and todo list as well. Background photos from Unsplash API are dynamically displayed to match user's time of day and refresh on page reload. Openweathermap API is utilized to display user's local weather. Random quotes are displayed upon page reload, brought in by the FavQ API. Impliments service worker and default local photos to allow offline use or in case of temporary Unsplash API server disruption. Icons by Font Awesome, weather icons by owfont/Deniz Fuchidzhiev."
+      "Welcome page built with vanilla Javascript. Background photos from Unsplash API are dynamically displayed to match user's time of day and refresh on page reload. Openweathermap API is utilized to display user's local weather. Random quotes pulled from FavQ API. Impliments local storage, service worker, and fallback local photos for data retention and a smooth user experience. Icons by Font Awesome, weather icons by Deniz Fuchidzhiev."
   },
   {
     id: 4,
@@ -78,5 +79,15 @@ export const projectsData = [
     link: 'https://resort-rentals.netlify.com/',
     gitLink: 'https://github.com/KyleKnolleLynch/Resort-Rentals',
     desc: ''
-  }
+  },
+  {
+    id: 7,
+    title: 'Vanilla JS Projects',
+    subtitle: 'Javascript',
+    img: img7,
+    icon: iconJs,
+    link: 'https://kyleknollelynch.github.io/vanilla-js-landing-page',
+    gitLink: 'https://github.com/KyleKnolleLynch/vanilla-js-landing-page',
+    desc: 'Collection of small projects using vanilla Javascript.'
+  },
 ];

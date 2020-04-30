@@ -5,6 +5,7 @@ import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
 import ProfileImg from '../../assets/images/portrait1.jpg';
 import ProfileAbout from '../layout/ProfileAbout';
+import ProfileBio from '../layout/ProfileBio';
 
 const Profile = () => {
   const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
@@ -26,7 +27,7 @@ const Profile = () => {
   }, []);
 
   useEffect(() => {
-    const parallax = e => {
+    const parallax = (e) => {
       const imgDiv = document.querySelector('.profile-img-div');
       setImgPos({ x: (e.clientX * 20) / 1000, y: (e.clientY * 20) / 1000 });
       imgDiv.style.transform = `translateX(${imgPos.x}px) translateY(${imgPos.y}px)`;
@@ -41,7 +42,7 @@ const Profile = () => {
         <Navbar title1='HOME' title2='CERTS' linkName='/certs' />
       </header>
       <main className='profile-main'>
-        <section className='section profile-section-1'>
+        <section className='profile-section-1'>
           <div className='profile-img-div'>
             <img src={ProfileImg} alt='profile' />
           </div>
@@ -61,8 +62,11 @@ const Profile = () => {
             )}
           </VisibilitySensor>
         </section>
-        <section className='section profile-section-2'>
+        <section className='profile-section-2'>
           <ProfileAbout />
+        </section>
+        <section className='profile-section-3'>
+          <ProfileBio />
         </section>
       </main>
       <Footer />

@@ -10,7 +10,7 @@ const Cursor = () => {
   );
 
   const setHovered = () => {
-    setHoveredState(prevState => (prevState += ' hovered'));
+    setHoveredState((prevState) => (prevState += ' hovered'));
   };
 
   const setNotHovered = () => {
@@ -18,17 +18,19 @@ const Cursor = () => {
   };
 
   useEffect(() => {
-    const setCursor = e => {
+    const setCursor = (e) => {
       setPosOne({ y: e.pageY - 10, x: e.pageX - 10 });
       setPosTwo({ y: e.pageY - 3, x: e.pageX - 3 });
-      cursor1.setAttribute(
-        'style',
-        `top:${posOne.y}px; left:${posOne.x}px; opacity: 1`
-      );
-      cursor2.setAttribute(
-        'style',
-        `top:${posTwo.y}px; left:${posTwo.x}px; opacity: 1`
-      );
+      cursor1 &&
+        cursor1.setAttribute(
+          'style',
+          `top:${posOne.y}px; left:${posOne.x}px; opacity: 1`
+        );
+      cursor2 &&
+        cursor2.setAttribute(
+          'style',
+          `top:${posTwo.y}px; left:${posTwo.x}px; opacity: 1`
+        );
     };
 
     document.addEventListener('mousemove', setCursor);
@@ -36,30 +38,16 @@ const Cursor = () => {
   }, [cursor1, cursor2, posOne.y, posOne.x, posTwo.y, posTwo.x]);
 
   useEffect(() => {
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('mouseenter', setHovered);
-      return () => link.removeEventListener('mouseenter', setHovered);
+    document.querySelectorAll('.hover-elem').forEach((el) => {
+      el.addEventListener('mouseenter', setHovered);
+      return () => el.removeEventListener('mouseenter', setHovered);
     });
   }, []);
 
   useEffect(() => {
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('mouseleave', setNotHovered);
-      return () => link.removeEventListener('mouseleave', setNotHovered);
-    });
-  }, []);
-
-  useEffect(() => {
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('mouseenter', setHovered);
-      return () => card.removeEventListener('mouseenter', setHovered);
-    });
-  }, []);
-
-  useEffect(() => {
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('mouseleave', setNotHovered);
-      return () => card.removeEventListener('mouseleave', setNotHovered);
+    document.querySelectorAll('.hover-elem').forEach((el) => {
+      el.addEventListener('mouseleave', setNotHovered);
+      return () => el.removeEventListener('mouseleave', setNotHovered);
     });
   }, []);
 

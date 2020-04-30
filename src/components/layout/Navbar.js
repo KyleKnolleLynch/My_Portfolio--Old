@@ -8,14 +8,14 @@ const Navbar = ({ title1, title2, titleDisabled, linkName }) => {
       <ul>
         <li>
           <span>{titleDisabled}</span>
-          <Link to='/' className='nav-link'>
+          <Link to='/' className='nav-link hover-elem'>
             <span className='link-inner'>{title1}</span>
             <div className='link-inner-top'>{title1}</div>
             <div className='link-inner-bottom'>{title1}</div>
           </Link>
         </li>
         <li>
-          <Link to={linkName} className='nav-link'>
+          <Link to={linkName} className='nav-link hover-elem'>
             <span className='link-inner'>{title2}</span>
             <div className='link-inner-top'>{title2}</div>
             <div className='link-inner-bottom'>{title2}</div>
