@@ -13,11 +13,15 @@ const Home = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const parallax = e => {
+    const parallax = (e) => {
       const displays = document.querySelectorAll('.display');
-      setPos({ x: (e.clientX * 20) / 1000, y: (e.clientY * 20) / 1000 });
-      displays.forEach(display => {
-        display.style.transform = `translateX(${pos.x}px) translateY(${pos.y}px)`;
+      const displayStyle = {
+        x: (e.clientX * 20) / 1000,
+        y: (e.clientY * 20) / 1000,
+      };
+      setPos(displayStyle);
+      displays.forEach((display) => {
+        display.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
       });
     };
     document.addEventListener('mousemove', parallax);

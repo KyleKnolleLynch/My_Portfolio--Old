@@ -8,18 +8,16 @@ import ProfileAbout from '../layout/ProfileAbout';
 import ProfileBio from '../layout/ProfileBio';
 
 const Profile = () => {
+  const [banStyle, setBanStyle] = useState(0);
   const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleScroll = () => {
-      const banner1 = document.querySelector('.hello1');
-      const banner2 = document.querySelector('.hello2');
       if (window.scrollY > 1000) {
-        banner1.style.transform = 'translateX(0)';
-        banner2.style.transform = 'translateX(0)';
+        setBanStyle(0);
       } else {
-        banner1.style.transform = `translateX(-${window.scrollY / 2 + 100}px)`;
-        banner2.style.transform = `translateX(${window.scrollY / 2 + 100}px)`;
+        const slideStyle = window.scrollY / 2 + 100;
+        setBanStyle(slideStyle);
       }
     };
     document.addEventListener('scroll', handleScroll, { passive: true });
@@ -28,13 +26,15 @@ const Profile = () => {
 
   useEffect(() => {
     const parallax = (e) => {
-      const imgDiv = document.querySelector('.profile-img-div');
-      setImgPos({ x: (e.clientX * 20) / 1000, y: (e.clientY * 20) / 1000 });
-      imgDiv.style.transform = `translateX(${imgPos.x}px) translateY(${imgPos.y}px)`;
+      const imgDivStyle = {
+        x: (e.clientX * 20) / 1000,
+        y: (e.clientY * 20) / 1000,
+      };
+      setImgPos(imgDivStyle);
     };
     document.addEventListener('mousemove', parallax);
     return () => document.removeEventListener('mousemove', parallax);
-  }, [imgPos.x, imgPos.y]);
+  }, []);
 
   return (
     <div>
@@ -43,14 +43,27 @@ const Profile = () => {
       </header>
       <main className='profile-main'>
         <section className='profile-section-1'>
-          <div className='profile-img-div'>
+          <div
+            className='profile-img-div'
+            style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px)` }}
+          >
             <img src={ProfileImg} alt='profile' />
           </div>
           <div className='profile-banner-1 banner'>
-            <div className='hello1'>Hello Hello Hello Hello Hello Hello</div>
+            <div
+              className='hello1'
+              style={{ transform: `translateX(-${banStyle}px)` }}
+            >
+              Hello Hello Hello Hello Hello Hello
+            </div>
           </div>
           <div className='profile-banner-2 banner'>
-            <div className='hello2'>Hello Hello Hello Hello Hello Hello</div>
+            <div
+              className='hello2'
+              style={{ transform: `translateX(${banStyle}px)` }}
+            >
+              Hello Hello Hello Hello Hello Hello
+            </div>
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>

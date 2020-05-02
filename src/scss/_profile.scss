@@ -149,16 +149,18 @@
       color: #0f0;
     }
     .bio-title {
-      margin-top: 35%;
+      margin-top: 18%;
     }
   }
 }
 
 .profile-section-3 {
-  min-height: 100%;
-  max-width: 60rem;
-  margin: -10rem auto 50vh;
+  min-height: auto;
   p {
-    font-size: 2rem;
+    width: 90vw;
+    max-width: 70rem;
+    margin: -10rem auto 30rem;
+    font-size: 1.8rem;
+    text-align: left;
   }
 }

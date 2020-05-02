@@ -2,6 +2,11 @@
   .home-section-2 {
     grid-gap: 30rem 0;
     margin: 24rem 0 16rem;
+  } 
+  .profile-section-3 {
+    p {
+      padding: 0 6rem;
+    }
   }
   .certs-container {
     margin: 10vh 10vw;
@@ -124,6 +129,13 @@
     margin: 20vh 14vw;
   }
 
+  .profile-section-3 {
+    p {
+      font-size: 1.6rem;
+      padding: 0 4rem;
+    }
+  }
+
   .certs-container {
     margin: 14vh 10vw;
     &::before {
@@ -202,6 +214,13 @@
     }
   }
 
+  .profile-section-3 {
+    p {
+      margin: 0 auto 20rem;
+      font-size: 1.4rem;
+    }
+  }
+
   footer {
     left: 3rem;
   }
@@ -260,6 +279,12 @@
     }
     .profile-banner-2 div {
       left: -188vw;
+    }
+  }
+
+  .profile-section-3 {
+    p {
+      margin-top: 0;
     }
   }
 
