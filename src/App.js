@@ -6,17 +6,17 @@ import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import Certs from './components/pages/Certs';
 import NotFound from './components/pages/NotFound';
-import favBlue from './assets/icons/portfolio_logo_black_16.png';
-import favRed from './assets/icons/portfolio_logo_white_16.png';
 
 import './css/main.css';
 
 const App = () => {
+  const logoWhite = './logoIcons/logo_white_32.png';
+  const logoBlack = './logoIcons/logo_black_32.png';
   useEffect(() => {
-    const favicon = document.getElementById('favicon');
+    const logoPng = document.getElementById('favicon');
     const changeFavicon = () => {
-      favicon.setAttribute('href', favBlue);
-      setTimeout(() => favicon.setAttribute('href', favRed), 4000);
+      logoPng.setAttribute('href', logoBlack);
+      setTimeout(() => logoPng.setAttribute('href', logoWhite), 4000);
     };
 
     setInterval(changeFavicon, 8000);

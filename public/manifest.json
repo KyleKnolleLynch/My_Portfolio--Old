@@ -3,17 +3,42 @@
   "name": "Kyle Lynch's Portfolio",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "./logoIcons/logo_black_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "./logoIcons/logo_black_128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./logoIcons/logo_black_152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "./logoIcons/logo_black_167.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "./logoIcons/logo_black_180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "./logoIcons/logo_black_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "./logoIcons/logo_black_196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "./logoIcons/logo_black_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
