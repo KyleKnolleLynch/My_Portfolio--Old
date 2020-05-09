@@ -5,7 +5,7 @@ const ProfileAbout = () => {
     <article className='coding-wrap'>
       <div className='vert-line'></div>
       <div className='coding-title coding-line' data-line-point='&bull;'>
-        About
+        About/>
       </div>
       <br />
 
@@ -149,7 +149,7 @@ const ProfileAbout = () => {
         {'}'}
       </div>
       <div className='coding-title bio-title coding-line' data-line-point='&bull;'>
-        Bio
+        Bio/>
       </div>
     </article>
   );

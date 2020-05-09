@@ -1,11 +1,22 @@
 @include mediaLg {
+  .home-section-1 > .projects-title {
+    font-size: 16rem;
+  }
   .home-section-2 {
     grid-gap: 30rem 0;
-    margin: 24rem 0 16rem;
-  } 
+    margin: 26rem 0;
+  }
+  .project-card {
+    &:nth-child(3n) {
+      align-self: center;
+    }
+  }
+  .profile-link-bottom {
+    margin-top: 40rem;
+  }
   .profile-section-3 {
     p {
-      padding: 0 6rem;
+      max-width: 50rem;
     }
   }
   .certs-container {
@@ -27,12 +38,10 @@
 
   .home-section-1 {
     .projects-title {
-      font-size: 6rem;
+      font-size: 14rem;
       letter-spacing: 0.4rem;
       &::after {
-        font-size: 1rem;
-        margin-top: -6rem;
-        padding-right: 0.8rem;
+        font-size: 1.4rem;
       }
     }
     .img-dis-1 {
@@ -126,13 +135,13 @@
 
   .profile-section-2 {
     font-size: 1.6rem;
-    margin: 20vh 14vw;
+    margin: 20vh 14vw 10vh;
   }
 
   .profile-section-3 {
     p {
       font-size: 1.6rem;
-      padding: 0 4rem;
+      max-width: 60vw;
     }
   }
 
@@ -171,6 +180,14 @@
 
   .home-section-1 {
     min-height: 96vh;
+    .projects-title {
+      font-size: 8rem;
+      &::after {
+        font-size: 1rem;
+        right: 5%;
+        letter-spacing: 0.5px;
+      }
+    }
     .img-dis-1 {
       min-width: 13rem;
       top: 13vh;
@@ -185,6 +202,16 @@
       min-width: 10rem;
       bottom: 16vh;
       right: 10vw;
+    }
+  }
+
+  .profile-link-bottom {
+    margin-top: 0;
+    span {
+      font-size: 1rem;
+    }
+    a {
+      font-size: 4.5rem;
     }
   }
 
@@ -216,7 +243,7 @@
 
   .profile-section-3 {
     p {
-      margin: 0 auto 20rem;
+      margin-bottom: 20rem;
       font-size: 1.4rem;
     }
   }

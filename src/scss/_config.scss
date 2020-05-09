@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
+@font-face {
+  font-family: 'NimbusSanL';
+  src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2'),
+    url('../assets/fonts/NimbusSanL-Reg.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NimbusSanL-Bold';
+  src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2'),
+    url('../assets/fonts/NimbusSanL-Bold.otf') format('opentype');
+}
+
 /*  colors  */
 $white-color: #fff;
 $black-color: #000;
@@ -11,9 +23,11 @@ $scrollbarBG: #333;
 $thumbBG: #222;
 
 /*  font stacks */
-$font-anton: 'Anton', sans-serif;
+$font-anton: 'Anton', Helvetica, sans-serif;
 $font-bebas: 'Bebas Neue', cursive;
 $font-nanum: 'Nanum Gothic', Arial, Helvetica, sans-serif;
+$font-nimbus: 'NimbusSanL', Helvetica, sans-serif;
+$font-nimbus-bold: 'NimbusSanL-Bold', Helvetica, sans-serif;
 
 /*  html/body */
 * {

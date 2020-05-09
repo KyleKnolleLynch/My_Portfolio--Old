@@ -11,7 +11,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
     .profile-img-div {
       position: absolute;
       z-index: 1;
@@ -76,7 +75,7 @@
 
 .profile-section-2 {
   min-height: auto;
-  margin: 24vh 25vw;
+  margin: 24vh 25vw 10vh;
   font-family: $font-nanum;
   position: relative;
   text-align: left;
@@ -90,12 +89,13 @@
       position: absolute;
       top: 1.2rem;
       left: 0;
-      height: 98%;
+      height: 97%;
     }
 
     .coding-title {
       font-family: $font-bebas;
       margin: 0;
+      color: rgb(104, 98, 110);
 
       &::after {
         content: attr(data-line-point);
@@ -103,6 +103,7 @@
         top: -1.3rem;
         left: -0.55rem;
         font-size: 4rem;
+        color: #8a2be2;
       }
     }
 
@@ -156,10 +157,10 @@
 
 .profile-section-3 {
   min-height: auto;
+  font-family: $font-nimbus;
   p {
-    width: 90vw;
     max-width: 70rem;
-    margin: -10rem auto 30rem;
+    margin: 0 auto 30rem;
     font-size: 1.8rem;
     text-align: left;
   }

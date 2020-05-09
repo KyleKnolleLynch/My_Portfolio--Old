@@ -6,12 +6,12 @@
   position: relative;
 
   .projects-title {
-    font-size: 12rem;
+    font-size: 20rem;
     z-index: 1;
     line-height: 1.1;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
-
+    position: relative;
     p {
       color: $black-color;
       text-shadow: -1px -1px 0 $white-color, 1px -1px 0 $white-color,
@@ -32,11 +32,12 @@
 
     &::after {
       content: '(19-20)';
-      float: right;
-      font-size: 1.4rem;
-      margin-top: -12rem;
-      padding-right: 3rem;
-      letter-spacing: 1px;
+      font-size: 1.8rem;
+      position: absolute;
+      bottom: 42%;
+      right: 6%;
+      font-family: $font-nimbus-bold;
+      letter-spacing: 1.5px;
     }
   }
 
@@ -79,6 +80,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: $font-nimbus-bold;
   p {
     padding-bottom: 0.4rem;
     font-size: 1.5rem;
@@ -94,15 +96,16 @@
 .profile-link-bottom {
   text-align: center;
   text-transform: uppercase;
-  font-size: 5rem;
-  margin-bottom: 18rem;
+  margin: 18rem 0;
   letter-spacing: 0.1rem;
-
   span {
     font-size: 1.3rem;
     display: block;
+    font-family: $font-nimbus;
   }
-
+  a {
+    font-size: 7rem;
+  }
   a:hover {
     color: $black-color;
     text-shadow: -1px -1px 0 $white-color, 1px -1px 0 $white-color,
