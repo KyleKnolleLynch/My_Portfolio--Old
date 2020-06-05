@@ -10,12 +10,12 @@ import NotFound from './components/pages/NotFound';
 import './css/main.css';
 
 const App = () => {
-  const logoWhite = './logoIcons/logo_white_32.png';
-  const logoBlack = './logoIcons/logo_black_32.png';
+  const logoWhite = './logoIcons/white_icon_32.png';
+  const logoPurple = './logoIcons/purple_icon_32.png';
   useEffect(() => {
     const logoPng = document.getElementById('favicon');
     const changeFavicon = () => {
-      logoPng.setAttribute('href', logoBlack);
+      logoPng.setAttribute('href', logoPurple);
       setTimeout(() => logoPng.setAttribute('href', logoWhite), 4000);
     };
 

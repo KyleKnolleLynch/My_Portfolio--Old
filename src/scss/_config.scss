@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+@font-face {
+  font-family: 'Impact';
+  src: url('../assets/fonts/impact.woff2') format('woff2'),
+    url('../assets/fonts/impact.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'NimbusSanL';
@@ -23,11 +28,11 @@ $scrollbarBG: #333;
 $thumbBG: #222;
 
 /*  font stacks */
-$font-anton: 'Anton', Helvetica, sans-serif;
-$font-bebas: 'Bebas Neue', cursive;
-$font-nanum: 'Nanum Gothic', Arial, Helvetica, sans-serif;
-$font-nimbus: 'NimbusSanL', Helvetica, sans-serif;
-$font-nimbus-bold: 'NimbusSanL-Bold', Helvetica, sans-serif;
+$font-impact: 'Impact', Calibri, Tahoma, Roboto, sans-serif;
+$font-bebas: 'Bebas Neue', Helvetica, sans-serif;
+$font-nanum: 'Nanum Gothic', Helvetica, Arial, sans-serif;
+$font-nimbus: 'NimbusSanL', Helvetica, Arial, sans-serif;
+$font-nimbus-bold: 'NimbusSanL-Bold', Helvetica, Arial, sans-serif;
 
 /*  html/body */
 * {
@@ -40,7 +45,7 @@ body,
 html {
   background: $black-color;
   color: $white-color;
-  font-family: $font-anton;
+  font-family: $font-impact;
   font-size: 10px;
   overflow-y: scroll;
   overflow-x: hidden;
