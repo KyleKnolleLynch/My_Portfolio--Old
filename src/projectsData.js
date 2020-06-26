@@ -71,7 +71,7 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: 'Resort Rentals',
+    title: 'React Projects',
     subtitle: 'React',
     img: img6,
     imgVert: img6Vert,
@@ -86,7 +86,8 @@ export const projectsData = [
     subtitle: 'Javascript',
     img: img7,
     icon: iconJs,
-    link: 'https://kyleknollelynch.github.io/vanilla-js-landing-page',
+    // link: 'https://kyleknollelynch.github.io/vanilla-js-landing-page',
+    link: '/vanillaProjects',
     gitLink: 'https://github.com/KyleKnolleLynch/vanilla-js-landing-page',
     desc: 'Collection of small projects using vanilla Javascript.'
   },

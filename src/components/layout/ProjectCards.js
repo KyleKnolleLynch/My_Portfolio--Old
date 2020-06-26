@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import VisibilitySensor from './utils/VisibilitySensor';
-import { projectsData } from '../../data';
+import { Link } from 'react-router-dom';
+import { projectsData } from '../../projectsData';
 
 const ProjectCards = () => {
   const projects = projectsData;
@@ -17,7 +18,7 @@ const ProjectCards = () => {
 
   return (
     <Fragment>
-      {projects.map(project => (
+      {projects.map((project) => (
         <VisibilitySensor partialVisibility key={project.id} once>
           {({ isVisible }) => (
             <article
@@ -50,19 +51,25 @@ const ProjectCards = () => {
                     </div>
                   </div>
                   <div className='card-back'>
-                  <img src={project.icon} alt='icons' />
+                    <img src={project.icon} alt='icons' />
                     <h1>{project.title}</h1>
                     <br />
                     <p>{project.desc}</p>
                     <div className='card-btn-wrap'>
-                      <a href={project.link} className='card-btn'>
-                        View Project
-                      </a>
+                      {project.link === '/vanillaProjects' ? (
+                        <Link to='/vanillaProjects' className='card-btn'>
+                          Live Demo
+                        </Link>
+                      ) : (
+                        <a href={project.link} className='card-btn'>
+                          Live Demo
+                        </a>
+                      )}
+
                       <a href={project.gitLink} className='card-btn'>
                         View Code
                       </a>
                       <br />
-                      
                     </div>
                   </div>
                 </div>

@@ -30,7 +30,7 @@ Navbar.propTypes = {
   title1: PropTypes.string,
   title2: PropTypes.string,
   titleDisabled: PropTypes.string,
-  linkName: PropTypes.string
+  linkName: PropTypes.string,
 };
 
 export default Navbar;

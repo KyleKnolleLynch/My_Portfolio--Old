@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
 import ProjectCards from '../layout/ProjectCards';
+import Copyright from '../layout/Copyright';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
 import inertiaVert from '../../assets/images/inertia-vert-sm.png';
@@ -69,8 +70,11 @@ const Home = () => {
         </section>
         <article className='profile-link-bottom'>
           <span>Visit</span>
-          <Link to='/profile' className='hover-elem'>Profile</Link>
+          <Link to='/profile' className='hover-elem'>
+            Profile
+          </Link>
         </article>
+        <Copyright />
       </main>
       <Footer />
       <Cursor />

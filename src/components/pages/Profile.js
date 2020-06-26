@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import Navbar from '../layout/Navbar';
+import Copyright from '../layout/Copyright';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
 import ProfileImg from '../../assets/images/portrait1.jpg';
@@ -81,6 +82,7 @@ const Profile = () => {
         <section className='profile-section-3'>
           <ProfileBio />
         </section>
+        <Copyright />
       </main>
       <Footer />
       <Cursor />

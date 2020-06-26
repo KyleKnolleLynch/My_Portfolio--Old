@@ -5,7 +5,7 @@ const ProfileAbout = () => {
     <article className='coding-wrap'>
       <div className='vert-line'></div>
       <div className='coding-title coding-line' data-line-point='&bull;'>
-        About/>
+        {'About/>'}
       </div>
       <br />
 
@@ -49,7 +49,7 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='09'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>skills</span> = (comfortableWith) =>{' '}
+        <span className='coding-bright'>skills</span> = (comfortableWith) {'=>'}{' '}
         {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='10'>
@@ -72,14 +72,14 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='13'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>otherSkills</span> = (familiarWith) =>{' '}
-        {'{'}
+        <span className='coding-bright'>otherSkills</span> = (familiarWith){' '}
+        {'=>'} {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='14'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux',
-          'React Native', 'Gimp'
+          'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux', 'React
+          Native', 'Gimp'
         </span>
       </div>
       <div className='coding-line' data-line-num='15'>
@@ -94,7 +94,7 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='17'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>education</span> = (UdemyCourses) =>{' '}
+        <span className='coding-bright'>education</span> = (UdemyCourses) {'=>'}{' '}
         {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='18'>
@@ -116,7 +116,7 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='21'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>interests</span> = () => {'{'}
+        <span className='coding-bright'>interests</span> = () {'=>'} {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='22'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
@@ -148,8 +148,11 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='28'>
         {'}'}
       </div>
-      <div className='coding-title bio-title coding-line' data-line-point='&bull;'>
-        Bio/>
+      <div
+        className='coding-title bio-title coding-line'
+        data-line-point='&bull;'
+      >
+        {'Bio/>'}
       </div>
     </article>
   );

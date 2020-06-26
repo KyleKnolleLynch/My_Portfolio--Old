@@ -4,6 +4,7 @@
 @import 'home/home';
 @import 'home/projects';
 @import 'profile';
+@import 'vanilla';
 @import 'notFound';
 
 /* Nav Links*/
@@ -73,6 +74,15 @@ footer {
     padding: 0 0.8rem;
     font-size: 1.6rem;
   }
+}
+
+//  copyright
+.copyright {
+  padding: 0 4rem 1.2rem 0;
+  text-align: end;
+  font-size: 1.2rem;
+  font-family: $font-nanum;
+  letter-spacing: 0.1rem;
 }
 
 /*  Certs */

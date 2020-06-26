@@ -21,3 +21,8 @@
   height: 6px;
   background: $white-color;
 }
+
+.hovered {
+  transform: scale(2.8);
+  transition: scale both ease-in-out;
+}

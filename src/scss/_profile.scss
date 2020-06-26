@@ -1,7 +1,6 @@
 .profile-main {
   background: $profile-bg-color;
   text-align: center;
-  padding-bottom: 14rem;
   overflow-x: hidden;
 
   .profile-section-1 {
@@ -157,6 +156,7 @@
 
 .profile-section-3 {
   min-height: auto;
+  padding-bottom: 10rem;
   font-family: $font-nimbus;
   p {
     max-width: 70rem;

@@ -18,7 +18,7 @@ const Certs = () => {
     const container = document.querySelector('.certs-container');
     if (zoom && window.innerWidth > 768) {
       container.style.transform = 'scale(1.8)';
-      const handleMove = e => {
+      const handleMove = (e) => {
         const { clientX: x, clientY: y } = e;
         container.style.transformOrigin = `${x}px ${y}px`;
       };
