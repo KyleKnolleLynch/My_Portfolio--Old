@@ -56,20 +56,21 @@ const ProjectCards = () => {
                     <br />
                     <p>{project.desc}</p>
                     <div className='card-btn-wrap'>
-                      {project.link === '/vanillaProjects' ? (
-                        <Link to='/vanillaProjects' className='card-btn'>
-                          Live Demo
+                      {project.link === '/vanillaProjects' ||
+                      project.link === '/reactProjects' ? (
+                        <Link to={project.link} className='card-btn'>
+                          View Projects
                         </Link>
                       ) : (
-                        <a href={project.link} className='card-btn'>
-                          Live Demo
-                        </a>
+                        <div>
+                          <a href={project.link} className='card-btn'>
+                            Live Demo
+                          </a>
+                          <a href={project.gitLink} className='card-btn'>
+                            View Code
+                          </a>
+                        </div>
                       )}
-
-                      <a href={project.gitLink} className='card-btn'>
-                        View Code
-                      </a>
-                      <br />
                     </div>
                   </div>
                 </div>

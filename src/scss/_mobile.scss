@@ -152,6 +152,10 @@
     }
   }
 
+  .react-main > #react-section-2 > .react-project-grid {
+    margin-bottom: 10vh;
+  }
+
   .section-404 {
     margin-top: 8vh;
     p {
@@ -247,6 +251,12 @@
       margin-bottom: 20rem;
       font-size: 1.4rem;
     }
+  }
+
+  .copyright {
+    text-align: center;
+    padding-right: 0;
+    font-size: 1rem;
   }
 
   footer {

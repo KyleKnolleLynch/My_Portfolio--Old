@@ -1,0 +1,116 @@
+.react-main {
+  font-family: $font-nanum;
+  background: $darkgrey-color;
+  color: $offwhite-color;
+  #react-section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgb(91, 21, 55);
+    background-image: radial-gradient(
+      circle 1192px at 21.5% 49.5%,
+      rgba(91, 21, 55, 1) 0.1%,
+      rgba(0, 0, 0, 1) 100.2%
+    );
+    .react-logo-svg {
+      width: 16rem;
+      margin-bottom: 3rem;
+      animation: 30s spin infinite linear;
+    }
+    h1 {
+      font-size: 3.5rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #react-section-2 {
+    min-height: auto;
+    padding: 4rem 2rem;
+    .react-project-grid {
+      max-width: 1400px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 8rem;
+      place-items: center;
+      margin: 20vh auto;
+      .react-card-container {
+        width: 100%;
+        height: 100%;
+        padding: 3rem 0rem 2rem;
+        background: rgba(105, 24, 63, 0.2);
+        border-radius: 1rem;
+        transition: 300ms ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+        }
+        .react-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          .react-img-container {
+            width: 100%;
+          }
+          .react-card-content {
+            padding: 1rem;
+            h2 {
+              font-size: 2.4rem;
+              margin-bottom: 2.8rem;
+            }
+            a {
+              margin: 1.3rem;
+              font-size: 1.1rem;
+              padding: 0.7rem 1.6rem;
+              text-transform: uppercase;
+              border: 1px solid $offwhite-color;
+              border-radius: 3rem;
+              transition: 300ms ease-in-out;
+              &:hover {
+                text-shadow: 0px 0px 4px $offwhite-color;
+                box-shadow: 0px 0px 6px $offwhite-color;
+                background: rgba(91, 21, 55, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .home-link-bottom {
+    a {
+      color: $offwhite-color;
+      &:hover {
+        color: $darkgrey-color;
+        text-shadow: -1px -1px 0 $offwhite-color, 1px -1px 0 $offwhite-color,
+          -1px 1px 0 $offwhite-color, 1px 1px 0 $offwhite-color;
+      }
+      @supports (
+        (text-stroke: 1px $offwhite-color) or
+          (-webkit-text-stroke: 1px $offwhite-color)
+      ) {
+        &:hover {
+          color: transparent;
+          -webkit-text-stroke: 1px $offwhite-color;
+          text-stroke: 1px $offwhite-color;
+          text-shadow: none;
+        }
+      }
+    }
+    &:after {
+      background: $offwhite-color;
+    }
+  }
+}

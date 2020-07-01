@@ -74,25 +74,6 @@
   }
 }
 
-.scroll-div {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: $font-nimbus-bold;
-  p {
-    padding-bottom: 0.4rem;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
-  .scroll-vert {
-    border-left: 0.1rem solid;
-    height: 5rem;
-    animation: bounce 2s ease both infinite;
-  }
-}
-
 .profile-link-bottom {
   text-align: center;
   text-transform: uppercase;

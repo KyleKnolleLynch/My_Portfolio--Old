@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
 import Certs from './components/pages/Certs';
 import VanillaProjects from './components/pages/VanillaProjects';
+import ReactProjects from './components/pages/ReactProjects';
 import NotFound from './components/pages/NotFound';
 
 import './css/main.css';
@@ -38,6 +39,11 @@ const App = () => {
                     exact
                     path='/vanillaProjects'
                     component={VanillaProjects}
+                  />
+                  <Route
+                    exact
+                    path='/reactProjects'
+                    component={ReactProjects}
                   />
                   <Route component={NotFound} />
                 </Switch>

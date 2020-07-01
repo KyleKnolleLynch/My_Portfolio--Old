@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import VisibilitySensor from 'react-visibility-sensor';
 import { vanillaData } from '../../vanillaData';
+import ScrollDown from '../layout/utils/ScrollDown';
 import VanillaCard from '../layout/VanillaCard';
+import HomeLink from '../layout/utils/HomeLink';
 import Copyright from '../layout/Copyright';
 import Cursor from '../layout/utils/Cursor';
 
@@ -11,6 +13,11 @@ const VanillaProjects = () => {
       <main className='vanilla-main'>
         <section id='vanilla-section-1'>
           <h1>Vanilla Javascript Projects</h1>
+          <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
+            {({ isVisible }) => (
+              <ScrollDown fill='#000' isVisible={isVisible} />
+            )}
+          </VisibilitySensor>
         </section>
         <section id='vanilla-section-2'>
           <div className='vanilla-grid'>
@@ -19,12 +26,8 @@ const VanillaProjects = () => {
             ))}
           </div>
         </section>
-        <article className='home-link-bottom'>
-          <Link to='/' className='hover-elem'>
-           Go Home
-          </Link>
-        </article>
-        <Copyright color='#000' />
+        <HomeLink />
+        <Copyright />
       </main>
       <Cursor />
     </div>

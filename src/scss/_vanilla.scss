@@ -1,5 +1,6 @@
 .vanilla-main {
   background: $offwhite-color;
+  color: $black-color;
   #vanilla-section-1 {
     min-height: 90vh;
     display: flex;
@@ -29,7 +30,6 @@
       .vanilla-card {
         width: 100%;
         background: $white-color;
-        color: $black-color;
         box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
         word-break: break-all;
         transition: 400ms ease;
@@ -89,44 +89,6 @@
           box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
         }
       }
-    }
-  }
-  .home-link-bottom {
-    text-align: center;
-    margin: 10rem 0;
-    font-family: $font-nanum;
-    position: relative;
-    a {
-      font-size: 3.5rem;
-      color: $black-color;
-      transition: 500ms ease;
-      &:hover {
-        color: $offwhite-color;
-        text-shadow: -1px -1px 0 $black-color, 1px -1px 0 $black-color,
-          -1px 1px 0 $black-color, 1px 1px 0 $black-color;
-      }
-      @supports (
-        (text-stroke: 1px $black-color) or
-          (-webkit-text-stroke: 1px $black-color)
-      ) {
-        &:hover {
-          color: transparent;
-          -webkit-text-stroke: 1px $black-color;
-          text-stroke: 1px $black-color;
-          text-shadow: none;
-        }
-      }
-    }
-    &:after {
-      content: '';
-      width: 10rem;
-      height: 0.1rem;
-      position: absolute;
-      bottom: -0.7rem;
-      left: 0;
-      right: 0;
-      margin: auto;
-      background: $black-color;
     }
   }
 }

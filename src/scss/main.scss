@@ -5,6 +5,7 @@
 @import 'home/projects';
 @import 'profile';
 @import 'vanilla';
+@import 'reactProjects';
 @import 'notFound';
 
 /* Nav Links*/
@@ -83,6 +84,7 @@ footer {
   font-size: 1.2rem;
   font-family: $font-nanum;
   letter-spacing: 0.1rem;
+  color: inherit;
 }
 
 /*  Certs */
