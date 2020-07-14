@@ -1,9 +1,16 @@
 import React from 'react';
+import VisibilitySensor from '../layout/utils/VisibilitySensor';
 
 const ProfileAbout = () => {
   return (
     <article className='coding-wrap'>
       <div className='vert-line'></div>
+      <div
+        className='coding-title bio-title coding-line'
+        data-line-point='&bull;'
+      >
+        {'Bio/>'}
+      </div>
       <div className='coding-title coding-line' data-line-point='&bull;'>
         {'About/>'}
       </div>
@@ -55,9 +62,8 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='10'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'HTML5', 'CSS4', 'Javascript', 'React', 'JSX', 'SASS', 'HTTP/REST',
-          'FetchAPI', 'Axios', 'Bootstrap', 'Materialize', 'Github', 'Service
-          Workers'
+          'HTML5', 'CSS4', 'Javascript', 'React', 'SASS', 'HTTP/REST',
+          'FetchAPI', 'Axios', 'Bootstrap', 'Materialize', 'Github'
         </span>
       </div>
       <div className='coding-line' data-line-num='11'>
@@ -128,31 +134,40 @@ const ProfileAbout = () => {
         {'}'}
       </div>
       <div className='coding-line' data-line-num='24'>
-        {' '}
-      </div>
-      <br />
-
-      <div className='coding-line' data-line-num='25'>
-        <div className='dot'>&#8729; &#8729; </div>
-        {'return ('}
-      </div>
-      <div className='coding-line' data-line-num='26'>
-        {' '}
-      </div>
-      <br />
-
-      <div className='coding-line' data-line-num='27'>
-        <div className='dot'>&#8729; &#8729; </div>
-        {')'}
-      </div>
-      <div className='coding-line' data-line-num='28'>
         {'}'}
       </div>
+      {/* <br /> */}
+
+      {/* <div className='coding-line' data-line-num='25'>
+        <div className='dot'>&#8729; &#8729; </div>
+        {'return'}
+      </div>
+      <div className='coding-line' data-line-num='26'>
+        {'}'}
+      </div> */}
       <div
-        className='coding-title bio-title coding-line'
+        className='coding-title profile-contact coding-line'
         data-line-point='&bull;'
       >
-        {'Bio/>'}
+        {'Contact/>'}
+      </div>
+      <div className='profile-contact-email'>
+        <p>email me: </p>
+        <VisibilitySensor once>
+          {({ isVisible }) => (
+            <div
+              className={
+                isVisible
+                  ? 'profile-email-link slideIn enter'
+                  : 'profile-email-link slideIn'
+              }
+            >
+              <a href='mailto: email@kylelynch.me' className='hover-elem'>
+                email@kylelynch.me
+              </a>
+            </div>
+          )}
+        </VisibilitySensor>
       </div>
     </article>
   );

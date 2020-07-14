@@ -1,10 +1,11 @@
 import React from 'react';
+import githubSvgAlt from '../../assets/icons/githubLogo_alt.svg';
 
-const ReactCard = ({ project }) => {
+const ReactCard = ({ project, className }) => {
   const { img, title, projectLink, sourceLink } = project;
 
   return (
-    <div className='react-card-container'>
+    <div className={className}>
       <div className='react-card'>
         <div className='react-img-container'>
           <img src={img} alt='react-project-card' />
@@ -12,10 +13,13 @@ const ReactCard = ({ project }) => {
         <div className='react-card-content'>
           <h2>{title}</h2>
           <a href={projectLink} className='hover-elem'>
-            View Project
+            Live Demo
           </a>
           <a href={sourceLink} className='hover-elem'>
-            Source Code
+            Source Code{' '}
+            <span>
+              <img src={githubSvgAlt} alt='githubLogo_alt' />
+            </span>
           </a>
         </div>
       </div>

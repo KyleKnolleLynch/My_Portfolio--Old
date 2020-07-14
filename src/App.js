@@ -4,7 +4,6 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ScrollToTop from './components/layout/utils/ScrollToTop';
 import Home from './components/pages/Home';
 import Profile from './components/pages/Profile';
-import Certs from './components/pages/Certs';
 import VanillaProjects from './components/pages/VanillaProjects';
 import ReactProjects from './components/pages/ReactProjects';
 import NotFound from './components/pages/NotFound';
@@ -34,7 +33,6 @@ const App = () => {
                 <Switch location={location}>
                   <Route exact path='/' component={Home} />
                   <Route exact path='/profile' component={Profile} />
-                  <Route exact path='/certs' component={Certs} />
                   <Route
                     exact
                     path='/vanillaProjects'

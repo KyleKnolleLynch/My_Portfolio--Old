@@ -27,7 +27,7 @@ const VanillaProjects = () => {
           </div>
         </section>
         <HomeLink />
-        <Copyright />
+        <Copyright color='#000' />
       </main>
       <Cursor />
     </div>

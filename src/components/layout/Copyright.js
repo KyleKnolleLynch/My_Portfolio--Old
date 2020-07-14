@@ -10,7 +10,7 @@ const Copyright = ({ color }) => {
 
   return (
     <div className='copyright' style={{ color }}>
-      <p>All Rights Reserved &copy; Kyle Lynch {year}</p>
+      <p>&copy; {year}- Portfolio developed by Kyle Lynch </p>
     </div>
   );
 };

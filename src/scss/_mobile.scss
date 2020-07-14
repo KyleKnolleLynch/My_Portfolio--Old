@@ -12,18 +12,7 @@
     }
   }
   .profile-link-bottom {
-    margin-top: 40rem;
-  }
-  .profile-section-3 {
-    p {
-      max-width: 50rem;
-    }
-  }
-  .certs-container {
-    margin: 10vh 10vw;
-    &::before {
-      top: -2rem;
-    }
+    margin-top: 30rem;
   }
 }
 
@@ -115,40 +104,43 @@
     }
   }
 
-  .profile-main .profile-section-1 {
-    .profile-img-div img {
-      transform: scale(0.8);
+  .profile-main {
+    .profile-section-1 {
+      .profile-img-div img {
+        transform: scale(0.8);
+      }
+      .banner {
+        font-size: 14rem;
+        line-height: 14rem;
+        letter-spacing: 0.5rem;
+        word-spacing: -2rem;
+      }
+      .profile-banner-1 div {
+        left: -60vw;
+      }
+      .profile-banner-2 div {
+        left: -150vw;
+      }
     }
-    .banner {
-      font-size: 14rem;
-      line-height: 14rem;
-      letter-spacing: 0.5rem;
-      word-spacing: -2rem;
-    }
-    .profile-banner-1 div {
-      left: -60vw;
-    }
-    .profile-banner-2 div {
-      left: -150vw;
-    }
-  }
 
-  .profile-section-2 {
-    font-size: 1.6rem;
-    margin: 20vh 14vw 10vh;
-  }
+    .profile-section-2 {
+      margin: 20vh 12vw -14vh 19vw;
+      p {
+        font-size: 1.6rem;
+      }
+    }
 
-  .profile-section-3 {
-    p {
+    .profile-section-3 {
       font-size: 1.6rem;
-      max-width: 60vw;
+      margin: 0 18vw 0 10vw;
+      .coding-wrap > .profile-contact-email {
+        font-size: 2rem;
+      }
     }
-  }
 
-  .certs-container {
-    margin: 14vh 10vw;
-    &::before {
-      opacity: 0;
+    .test-icons img {
+      width: 2.4rem;
+      height: 2.4rem;
     }
   }
 
@@ -211,7 +203,7 @@
   }
 
   .profile-link-bottom {
-    margin-top: 0;
+    margin-top: 24rem;
     span {
       font-size: 1rem;
     }
@@ -224,32 +216,51 @@
     width: 60%;
   }
 
-  .profile-main .profile-section-1 {
-    min-height: 96vh;
-    .profile-img-div img {
-      transform: scale(0.5);
-    }
-    .banner {
-      font-size: 12rem;
-      line-height: 12rem;
-    }
-  }
-
-  .profile-section-2 {
-    font-size: 1.4rem;
-    margin: 18vh 10vw 10vh 14vw;
-    .coding-wrap .coding-line {
-      padding-left: 1rem;
-      &::before {
-        left: -2.4rem;
+  .profile-main {
+    .profile-section-1 {
+      min-height: 96vh;
+      .profile-img-div img {
+        transform: scale(0.5);
+      }
+      .banner {
+        font-size: 12rem;
+        line-height: 12rem;
       }
     }
-  }
 
-  .profile-section-3 {
-    p {
-      margin-bottom: 20rem;
+    .profile-section-2 {
+      margin: 20vh 4vw -28vh 12vw;
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    .profile-section-3 {
       font-size: 1.4rem;
+      margin: 0 4vw 0 8vw;
+      .coding-wrap {
+        .coding-line {
+          padding-left: 1.2rem;
+          &::before {
+            left: -2.4rem;
+          }
+        }
+        .bio-title {
+          margin-bottom: 38vh;
+        }
+        .profile-contact-email {
+          bottom: -4rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .test-icons {
+      margin: 20vh 10vw;
+      img {
+        width: 2.1rem;
+        height: 2.1rem;
+      }
     }
   }
 
@@ -261,10 +272,6 @@
 
   footer {
     left: 3rem;
-  }
-
-  .certs-container {
-    margin-bottom: 18vh;
   }
 
   .section-404 {
@@ -303,31 +310,23 @@
     width: 60%;
   }
 
-  .profile-main .profile-section-1 {
-    .profile-img-div img {
-      transform: scale(0.5);
+  .profile-main {
+    .profile-section-1 {
+      .profile-img-div img {
+        transform: scale(0.5);
+      }
+      .banner {
+        font-size: 10rem;
+        letter-spacing: 1.9rem;
+        line-height: 10rem;
+      }
+      .profile-banner-1 div {
+        left: -112vw;
+      }
+      .profile-banner-2 div {
+        left: -188vw;
+      }
     }
-    .banner {
-      font-size: 10rem;
-      letter-spacing: 1.9rem;
-      line-height: 10rem;
-    }
-    .profile-banner-1 div {
-      left: -112vw;
-    }
-    .profile-banner-2 div {
-      left: -188vw;
-    }
-  }
-
-  .profile-section-3 {
-    p {
-      margin-top: 0;
-    }
-  }
-
-  .certs-container {
-    margin: 25vh 16vw 35vh;
   }
 
   .section-404 {

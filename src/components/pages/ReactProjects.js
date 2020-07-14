@@ -1,5 +1,5 @@
 import React from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from '../layout/utils/VisibilitySensor';
 import { reactData } from '../../reactData';
 import ReactCard from '../layout/ReactCard';
 import reactSvg from '../../assets/icons/react.svg';
@@ -24,7 +24,18 @@ const Home = () => {
         <section id='react-section-2'>
           <div className='react-project-grid'>
             {reactData.map((project) => (
-              <ReactCard project={project} key={project.id} />
+              <VisibilitySensor partialVisibility once key={project.id}>
+                {({ isVisible }) => (
+                  <ReactCard
+                    project={project}
+                    className={
+                      isVisible
+                        ? 'slideDown enter react-card-container'
+                        : 'slideDown react-card-container'
+                    }
+                  />
+                )}
+              </VisibilitySensor>
             ))}
           </div>
         </section>

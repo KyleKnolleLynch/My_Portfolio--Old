@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from '../layout/utils/VisibilitySensor';
 import Navbar from '../layout/Navbar';
 import Copyright from '../layout/Copyright';
 import Footer from '../layout/Footer';
@@ -7,6 +7,7 @@ import Cursor from '../layout/utils/Cursor';
 import ProfileImg from '../../assets/images/portrait1.jpg';
 import ProfileAbout from '../layout/ProfileAbout';
 import ProfileBio from '../layout/ProfileBio';
+import { iconsData } from '../../iconsData';
 
 const Profile = () => {
   const [banStyle, setBanStyle] = useState(0);
@@ -40,7 +41,12 @@ const Profile = () => {
   return (
     <div>
       <header>
-        <Navbar title1='HOME' title2='CERTS' linkName='/certs' />
+        <Navbar
+          title1='HOME'
+          title2='Resume PDF'
+          linkName='/myResume.pdf'
+          target='_blank'
+        />
       </header>
       <main className='profile-main'>
         <section className='profile-section-1'>
@@ -76,12 +82,30 @@ const Profile = () => {
             )}
           </VisibilitySensor>
         </section>
-        <section className='profile-section-2'>
+        <VisibilitySensor partialVisibility once>
+          {({ isVisible }) => (
+            <section
+              className={
+                isVisible
+                  ? 'profile-section-2 slideDown enter'
+                  : 'profile-section-2 slideDown'
+              }
+            >
+              <ProfileBio />
+            </section>
+          )}
+        </VisibilitySensor>
+
+        <section className='profile-section-3'>
           <ProfileAbout />
         </section>
-        <section className='profile-section-3'>
-          <ProfileBio />
-        </section>
+        <ul className='test-icons'>
+          {iconsData.map((icon) => (
+            <li key={icon.id}>
+              <img src={icon.icon} alt='svg_icons' />
+            </li>
+          ))}
+        </ul>
         <Copyright />
       </main>
       <Footer />

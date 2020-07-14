@@ -35,7 +35,7 @@
         transition: 400ms ease;
         .vanilla-img-div {
           position: relative;
-          border-bottom: 1px solid #0099ff;
+          border-bottom: 1px solid lighten($code-bg-color, 16%);
           img {
             height: 350px;
             object-fit: cover;
@@ -46,12 +46,14 @@
             left: 0;
             padding: 0.5rem 1rem;
             color: $offwhite-color;
-            background: #0099ff;
+            // background: #0099ff;
+            background: lighten($code-bg-color, 16%);
             font-size: 1.2rem;
             transition: 300ms ease;
+            border-radius: 0 1rem 0 0;
           }
           span a:hover {
-            background: darken(#0099ff, 10%);
+            background: lighten($code-bg-color, 25%);
           }
         }
 
@@ -80,7 +82,8 @@
             transition: 300ms ease;
             &:hover {
               font-weight: bold;
-              box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+              box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+              background: $offwhite-color;
             }
           }
         }

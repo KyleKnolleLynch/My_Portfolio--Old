@@ -70,98 +70,125 @@
       }
     }
   }
-}
 
-.profile-section-2 {
-  min-height: auto;
-  margin: 24vh 25vw 10vh;
-  font-family: $font-nanum;
-  position: relative;
-  text-align: left;
-  font-size: 1.8rem;
-
-  .coding-wrap {
-    color: #8a2be2;
-
-    .vert-line {
-      border-left: 1px solid #542472;
-      position: absolute;
-      top: 1.2rem;
-      left: 0;
-      height: 97%;
-    }
-
-    .coding-title {
-      font-family: $font-bebas;
-      margin: 0;
-      color: rgb(104, 98, 110);
-
-      &::after {
-        content: attr(data-line-point);
-        position: absolute;
-        top: -1.3rem;
-        left: -0.55rem;
-        font-size: 4rem;
-        color: #8a2be2;
-      }
-    }
-
-    .coding-line {
-      position: relative;
-      padding-left: 1.8rem;
-
-      &::before {
-        content: attr(data-line-num);
-        position: absolute;
-        top: 0;
-        left: -3.5rem;
-        color: $code-bg-color;
-      }
-
-      a {
-        color: #8a2be2;
-      }
-
-      .dot {
-        display: inline;
-        vertical-align: middle;
-        color: $code-bg-color;
-      }
-      .coding-bright {
-        color: #ff0;
-        text-shadow: 0 0 2px $profile-bg-color, 0 0 4px #ff0;
-      }
-
-      .coding-decs {
-        color: #483d8b;
-      }
-
-      .coding-desc {
-        color: #f835f8;
-      }
-
-      .coding-proper {
-        color: #fcf1f1;
-        text-shadow: 0 0 2px $profile-bg-color, 0 0 4px #f00, 0 0 6px #f00;
-      }
-    }
-    .coding-data {
-      color: #0f0;
-    }
-    .bio-title {
-      margin-top: 18%;
+  .profile-section-2 {
+    min-height: auto;
+    margin: 24vh 24vw -14vh;
+    font-family: $font-nimbus;
+    p {
+      font-size: 1.8rem;
+      text-align: left;
     }
   }
-}
 
-.profile-section-3 {
-  min-height: auto;
-  padding-bottom: 10rem;
-  font-family: $font-nimbus;
-  p {
-    max-width: 70rem;
-    margin: 0 auto 30rem;
-    font-size: 1.8rem;
+  .profile-section-3 {
+    min-height: auto;
+    margin: 0 25vw 18vh 12vw;
+    font-family: $font-nanum;
+    position: relative;
     text-align: left;
+    font-size: 1.8rem;
+
+    .coding-wrap {
+      color: #8a2be2;
+      position: relative;
+      .vert-line {
+        border-left: 1px solid lighten($code-bg-color, 8%);
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        height: 98%;
+      }
+
+      .coding-title {
+        font-family: $font-bebas;
+        margin: 0;
+        color: #6d6a70;
+
+        &::after {
+          content: attr(data-line-point);
+          position: absolute;
+          top: -1.3rem;
+          left: -0.55rem;
+          font-size: 4rem;
+          color: lighten($code-bg-color, 20%);
+        }
+      }
+
+      .coding-line {
+        position: relative;
+        padding-left: 1.8rem;
+
+        &::before {
+          content: attr(data-line-num);
+          position: absolute;
+          top: 0;
+          left: -3.5rem;
+          color: $code-bg-color;
+        }
+
+        a {
+          color: #8a2be2;
+        }
+
+        .dot {
+          display: inline;
+          vertical-align: middle;
+          color: $code-bg-color;
+        }
+        .coding-bright {
+          color: #ff0;
+          text-shadow: 0 0 2px $profile-bg-color, 0 0 4px #ff0;
+        }
+
+        .coding-decs {
+          color: #483d8b;
+        }
+
+        .coding-desc {
+          color: #f835f8;
+        }
+
+        .coding-proper {
+          color: #fcf1f1;
+          text-shadow: 0 0 2px $profile-bg-color, 0 0 4px #f00, 0 0 6px #f00;
+        }
+      }
+      .coding-data {
+        color: #0f0;
+      }
+      .bio-title {
+        margin-bottom: 28vh;
+      }
+
+      .profile-contact {
+        margin-top: 14vh;
+      }
+      .profile-contact-email {
+        position: absolute;
+        left: 12vw;
+        bottom: -2rem;
+        display: flex;
+        align-items: center;
+        font-size: 2.3rem;
+        font-weight: bold;
+        .profile-email-link {
+          margin-left: 2rem;
+          font-family: $font-nimbus-bold;
+          color: $white-color;
+        }
+      }
+    }
+  }
+  .test-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+    gap: 2rem;
+    place-items: center;
+    margin: 10vh 18vw;
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
