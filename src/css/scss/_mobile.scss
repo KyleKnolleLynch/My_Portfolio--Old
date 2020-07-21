@@ -164,10 +164,14 @@
 }
 
 @include mediaSm {
-  // html {
-  //   height: 100vh;
-  //   min-height: 120%;
-  // }
+  html,
+  body {
+    height: 100%;
+  }
+
+  .container {
+    min-height: 100%;
+  }
 
   header nav ul {
     padding: 4.5rem 2.5rem 0;
@@ -180,7 +184,6 @@
 
   .home-section-1 {
     // min-height: 96vh;
-    min-height: calc(100% - 0);
     .projects-title {
       font-size: 8rem;
       &::after {
@@ -223,7 +226,6 @@
   .profile-main {
     .profile-section-1 {
       // min-height: 96vh;
-      min-height: calc(100% - 0);
       .profile-img-div img {
         transform: scale(0.5);
       }
@@ -294,9 +296,10 @@
     }
   }
 
-  .vanilla-main #vanilla-section-1 {
-    min-height: calc(100% - 0);
-  }
+  // .vanilla-main #vanilla-section-1,
+  // .react-main > #react-section-1 {
+  //   min-height: 100%;
+  // }
 }
 
 @include mediaVt {
