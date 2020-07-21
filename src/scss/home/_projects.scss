@@ -5,7 +5,7 @@
     minmax(8vw, 1fr) minmax(30rem, 40rem) minmax(4rem, 14rem)
     minmax(30rem, 40rem) minmax(8vw, 1fr);
   grid-template-rows: repeat(4, 60rem);
-  grid-gap: 50rem 0;
+  gap: 50rem 0;
   margin: 40rem 0;
 }
 

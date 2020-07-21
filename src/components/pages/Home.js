@@ -22,9 +22,12 @@ const Home = () => {
       };
       setPos(displayStyle);
       displays.forEach((display) => {
-        display.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+        if (window.pageYOffset < 1000) {
+          display.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+        }
       });
     };
+
     document.addEventListener('mousemove', parallax);
     return () => document.removeEventListener('mousemove', parallax);
   }, [pos.x, pos.y]);

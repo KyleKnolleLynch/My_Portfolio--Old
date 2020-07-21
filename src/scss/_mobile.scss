@@ -3,7 +3,7 @@
     font-size: 16rem;
   }
   .home-section-2 {
-    grid-gap: 30rem 0;
+    gap: 30rem 0;
     margin: 26rem 0;
   }
   .project-card {
@@ -57,7 +57,7 @@
   .home-section-2 {
     grid-template-columns: minmax(24rem, 30rem);
     grid-template-rows: auto;
-    grid-gap: 20rem 0;
+    gap: 20rem 0;
     place-content: center;
     margin: 16rem 4rem;
   }

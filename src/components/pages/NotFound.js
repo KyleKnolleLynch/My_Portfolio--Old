@@ -5,7 +5,7 @@ import Footer from '../layout/Footer';
 
 const NotFound = () => {
   return (
-    <div className='not-found'>
+    <div>
       <header>
         <Navbar title1='HOME' title2='PROFILE' linkName='/profile' />
       </header>

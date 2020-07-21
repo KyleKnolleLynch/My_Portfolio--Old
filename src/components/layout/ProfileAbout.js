@@ -136,15 +136,6 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='24'>
         {'}'}
       </div>
-      {/* <br /> */}
-
-      {/* <div className='coding-line' data-line-num='25'>
-        <div className='dot'>&#8729; &#8729; </div>
-        {'return'}
-      </div>
-      <div className='coding-line' data-line-num='26'>
-        {'}'}
-      </div> */}
       <div
         className='coding-title profile-contact coding-line'
         data-line-point='&bull;'

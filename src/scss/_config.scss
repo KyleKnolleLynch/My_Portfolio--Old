@@ -5,18 +5,21 @@
   font-family: 'Impact';
   src: url('../assets/fonts/impact.woff2') format('woff2'),
     url('../assets/fonts/impact.woff') format('woff');
+  display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL';
   src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2'),
     url('../assets/fonts/NimbusSanL-Reg.woff') format('woff');
+  display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL-Bold';
   src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2'),
     url('../assets/fonts/NimbusSanL-Bold.woff') format('woff');
+  display: swap;
 }
 
 /*  colors  */
@@ -65,6 +68,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
 
 body {
   cursor: none;

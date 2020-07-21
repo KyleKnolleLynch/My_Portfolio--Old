@@ -32,7 +32,9 @@ const Profile = () => {
         x: (e.clientX * 20) / 1000,
         y: (e.clientY * 20) / 1000,
       };
-      setImgPos(imgDivStyle);
+      if (window.pageYOffset < 850) {
+        setImgPos(imgDivStyle);
+      }
     };
     document.addEventListener('mousemove', parallax);
     return () => document.removeEventListener('mousemove', parallax);
