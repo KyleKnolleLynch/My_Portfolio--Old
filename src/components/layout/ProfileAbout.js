@@ -153,7 +153,7 @@ const ProfileAbout = () => {
       </div>
       <div className='profile-contact-email'>
         <p>email me: </p>
-        <VisibilitySensor once>
+        <VisibilitySensor partialVisibility once>
           {({ isVisible }) => (
             <div
               className={

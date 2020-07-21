@@ -5,23 +5,18 @@ import Footer from '../layout/Footer';
 
 const NotFound = () => {
   return (
-    <div>
+    <div className='not-found'>
       <header>
         <Navbar title1='HOME' title2='PROFILE' linkName='/profile' />
       </header>
-      <main>
-        <section className='section-404'>
-          <div>
-            <p>
-              404
-              <span>
-                404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404
-                404
-              </span>
-            </p>
-          </div>
-        </section>
-      </main>
+      <section className='section-404'>
+        <p>
+          404{' '}
+          <span>
+            404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404
+          </span>
+        </p>
+      </section>
       <Footer />
       <Cursor />
     </div>

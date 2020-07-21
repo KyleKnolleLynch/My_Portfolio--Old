@@ -4,19 +4,19 @@
 @font-face {
   font-family: 'Impact';
   src: url('../assets/fonts/impact.woff2') format('woff2'),
-    url('../assets/fonts/impact.ttf') format('truetype');
+    url('../assets/fonts/impact.woff') format('woff');
 }
 
 @font-face {
   font-family: 'NimbusSanL';
   src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2'),
-    url('../assets/fonts/NimbusSanL-Reg.otf') format('opentype');
+    url('../assets/fonts/NimbusSanL-Reg.woff') format('woff');
 }
 
 @font-face {
   font-family: 'NimbusSanL-Bold';
   src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2'),
-    url('../assets/fonts/NimbusSanL-Bold.otf') format('opentype');
+    url('../assets/fonts/NimbusSanL-Bold.woff') format('woff');
 }
 
 /*  colors  */

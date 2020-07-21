@@ -138,9 +138,12 @@
       }
     }
 
-    .test-icons img {
-      width: 2.4rem;
-      height: 2.4rem;
+    .test-icons {
+      margin: 16vh 18vw;
+      img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
     }
   }
 
@@ -149,7 +152,7 @@
   }
 
   .section-404 {
-    margin-top: 8vh;
+    padding-top: 8vh;
     p {
       font-size: 50rem;
       span {
@@ -161,10 +164,10 @@
 }
 
 @include mediaSm {
-  html {
-    height: 100vh;
-    min-height: 120%;
-  }
+  // html {
+  //   height: 100vh;
+  //   min-height: 120%;
+  // }
 
   header nav ul {
     padding: 4.5rem 2.5rem 0;
@@ -176,7 +179,8 @@
   }
 
   .home-section-1 {
-    min-height: 96vh;
+    // min-height: 96vh;
+    min-height: calc(100% - 0);
     .projects-title {
       font-size: 8rem;
       &::after {
@@ -218,7 +222,8 @@
 
   .profile-main {
     .profile-section-1 {
-      min-height: 96vh;
+      // min-height: 96vh;
+      min-height: calc(100% - 0);
       .profile-img-div img {
         transform: scale(0.5);
       }
@@ -242,21 +247,25 @@
         .coding-line {
           padding-left: 1.2rem;
           &::before {
-            left: -2.4rem;
+            left: -2.2rem;
           }
         }
         .bio-title {
           margin-bottom: 38vh;
         }
         .profile-contact-email {
+          left: 10vw;
           bottom: -4rem;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
+          .profile-email-link {
+            margin-left: 1.5rem;
+          }
         }
       }
     }
 
     .test-icons {
-      margin: 20vh 10vw;
+      margin: 18vh 10vw 22vh;
       img {
         width: 2.1rem;
         height: 2.1rem;
@@ -283,6 +292,10 @@
         border: 2px solid $white-color;
       }
     }
+  }
+
+  .vanilla-main #vanilla-section-1 {
+    min-height: calc(100% - 0);
   }
 }
 
@@ -330,7 +343,7 @@
   }
 
   .section-404 {
-    margin-top: 16vh;
+    padding-top: 16vh;
     p {
       font-size: 30rem;
       span {
