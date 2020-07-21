@@ -23,6 +23,27 @@ const App = () => {
     setInterval(changeFavicon, 8000);
   }, []);
 
+  const setDocHeight = () => {
+    document.documentElement.style.setProperty(
+      '--vh',
+      `${window.innerHeight / 100}px`
+    );
+  };
+
+  useEffect(() => {
+    setDocHeight();
+
+    window.addEventListener('resize', setDocHeight);
+    return () => window.removeEventListener('resize', setDocHeight);
+  }, []);
+
+  useEffect(() => {
+    setDocHeight();
+
+    window.addEventListener('orientationchange', setDocHeight);
+    return () => window.removeEventListener('orientationchange', setDocHeight);
+  }, []);
+
   return (
     <ScrollToTop>
       <Route
