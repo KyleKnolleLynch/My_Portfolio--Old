@@ -24,8 +24,8 @@ const ProjectCards = () => {
             <article
               className={
                 isVisible
-                  ? 'slideDown enter project-card hover-elem'
-                  : 'slideDown project-card hover-elem'
+                  ? 'slideUp enter project-card hover-elem'
+                  : 'slideUp project-card hover-elem'
               }
             >
               <div

@@ -73,11 +73,13 @@
 
   .profile-section-2 {
     min-height: auto;
-    margin: 24vh 24vw -14vh;
-    font-family: $font-nimbus;
-    p {
-      font-size: 1.8rem;
-      text-align: left;
+    .bio {
+      margin: 24vh 24vw -14vh;
+      font-family: $font-nimbus;
+      p {
+        font-size: 1.8rem;
+        text-align: left;
+      }
     }
   }
 

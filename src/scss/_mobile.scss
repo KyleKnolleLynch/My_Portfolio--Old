@@ -17,8 +17,8 @@
 }
 
 @include mediaMd {
-  .cursor__inner {
-    display: none;
+  .cursor {
+    opacity: 0;
   }
 
   nav ul {
@@ -149,6 +149,16 @@
 
   .react-main > #react-section-2 > .react-project-grid {
     margin-bottom: 10vh;
+    .react-card-container > .react-card > .react-card-content {
+      padding: 1rem 0.2rem 2rem;
+      h2 {
+        font-size: 2.4rem;
+      }
+      a {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+      }
+    }
   }
 
   .section-404 {
@@ -164,11 +174,10 @@
 }
 
 @include mediaSm {
-  // html,
-  // body {
-  //   height: 100vh;
-  //   min-height: 120%;
-  // }
+  html {
+    height: 100vh;
+    min-height: 120%;
+  }
 
   header nav ul {
     padding: 4.5rem 2.5rem 0;
@@ -180,8 +189,7 @@
   }
 
   .home-section-1 {
-    // min-height: 96vh;
-    height: vh(100);
+    min-height: 97vh;
     .projects-title {
       font-size: 8rem;
       &::after {
@@ -223,8 +231,7 @@
 
   .profile-main {
     .profile-section-1 {
-      // min-height: 96vh;
-      height: vh(100);
+      min-height: 97vh;
       .profile-img-div img {
         transform: scale(0.5);
       }
@@ -295,9 +302,12 @@
     }
   }
 
-  .vanilla-main #vanilla-section-1,
+  .vanilla-main #vanilla-section-1 {
+    min-height: 87vh;
+  }
+
   .react-main > #react-section-1 {
-    height: vh(90);
+    min-height: 105vh;
   }
 }
 

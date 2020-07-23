@@ -27,6 +27,7 @@ const ScrollDown = ({ fill, isVisible }) => {
             </g>
           </g>
         </g>
+        {/* <g></g>
         <g></g>
         <g></g>
         <g></g>
@@ -40,8 +41,7 @@ const ScrollDown = ({ fill, isVisible }) => {
         <g></g>
         <g></g>
         <g></g>
-        <g></g>
-        <g></g>
+        <g></g> */}
       </svg>
     </div>
   );

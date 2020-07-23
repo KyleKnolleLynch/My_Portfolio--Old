@@ -32,7 +32,7 @@ const Profile = () => {
         x: (e.clientX * 20) / 1000,
         y: (e.clientY * 20) / 1000,
       };
-      if (window.pageYOffset < 850) {
+      if (window.scrollY < 800) {
         setImgPos(imgDivStyle);
       }
     };
@@ -84,19 +84,9 @@ const Profile = () => {
             )}
           </VisibilitySensor>
         </section>
-        <VisibilitySensor partialVisibility once>
-          {({ isVisible }) => (
-            <section
-              className={
-                isVisible
-                  ? 'profile-section-2 slideDown enter'
-                  : 'profile-section-2 slideDown'
-              }
-            >
-              <ProfileBio />
-            </section>
-          )}
-        </VisibilitySensor>
+        <section className='profile-section-2'>
+          <ProfileBio />
+        </section>
 
         <section className='profile-section-3'>
           <ProfileAbout />

@@ -5,21 +5,21 @@
   font-family: 'Impact';
   src: url('../assets/fonts/impact.woff2') format('woff2'),
     url('../assets/fonts/impact.woff') format('woff');
-  display: swap;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL';
   src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2'),
     url('../assets/fonts/NimbusSanL-Reg.woff') format('woff');
-  display: swap;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL-Bold';
   src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2'),
     url('../assets/fonts/NimbusSanL-Bold.woff') format('woff');
-  display: swap;
+  font-display: swap;
 }
 
 /*  colors  */
@@ -57,6 +57,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: $thumbBG $scrollbarBG;
   scroll-behavior: smooth;
+  cursor: none;
 
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
@@ -67,11 +68,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
-}
-
-
-body {
-  cursor: none;
 }
 
 body::-webkit-scrollbar {

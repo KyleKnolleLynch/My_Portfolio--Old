@@ -24,7 +24,7 @@
       max-width: 1400px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(18rem, 40rem));
-      grid-gap: 7rem;
+      gap: 7rem;
       justify-content: center;
       margin: 20rem auto 10rem;
       .vanilla-card {
@@ -46,13 +46,13 @@
             left: 0;
             padding: 0.5rem 1rem;
             color: $offwhite-color;
-            background: lighten($code-bg-color, 16%);
+            background-color: lighten($code-bg-color, 16%);
             font-size: 1.2rem;
-            transition: 300ms ease;
+            transition: background-color 300ms ease-out;
             border-radius: 0 1rem 0 0;
           }
           span a:hover {
-            background: lighten($code-bg-color, 25%);
+            background-color: lighten($code-bg-color, 25%);
           }
         }
 
@@ -80,9 +80,8 @@
             text-transform: uppercase;
             transition: 300ms ease;
             &:hover {
-              font-weight: bold;
-              box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-              background: $offwhite-color;
+              box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.6);
+              transform: scale(1.04);
             }
           }
         }

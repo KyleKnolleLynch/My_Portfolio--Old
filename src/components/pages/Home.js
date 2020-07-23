@@ -22,7 +22,7 @@ const Home = () => {
       };
       setPos(displayStyle);
       displays.forEach((display) => {
-        if (window.pageYOffset < 1000) {
+        if (window.scrollY < 1000) {
           display.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
         }
       });

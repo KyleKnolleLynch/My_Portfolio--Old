@@ -30,8 +30,8 @@ const Home = () => {
                     project={project}
                     className={
                       isVisible
-                        ? 'slideDown enter react-card-container'
-                        : 'slideDown react-card-container'
+                        ? 'slideUp enter react-card-container'
+                        : 'slideUp react-card-container'
                     }
                   />
                 )}
@@ -39,7 +39,7 @@ const Home = () => {
             ))}
           </div>
         </section>
-        <HomeLink customClass='.home-link-reactPage' />
+        <HomeLink />
         <Copyright />
       </main>
       <Cursor />
