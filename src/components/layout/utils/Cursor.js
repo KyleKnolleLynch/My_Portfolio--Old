@@ -4,16 +4,14 @@ const Cursor = () => {
   const [posOne, setPosOne] = useState({ y: 0, x: 0 });
   const [posTwo, setPosTwo] = useState({ y: 0, x: 0 });
   const [newOpacity, setNewOpacity] = useState(0);
-  const [hoveredState, setHoveredState] = useState(
-    'cursor__inner cursor__inner--circle'
-  );
+  const [hoveredState, setHoveredState] = useState(false);
 
   const setHovered = () => {
-    setHoveredState((prevState) => (prevState += ' hovered'));
+    setHoveredState(true);
   };
 
   const setNotHovered = () => {
-    setHoveredState('cursor__inner cursor__inner--circle');
+    setHoveredState(false);
   };
 
   useEffect(() => {
@@ -45,21 +43,26 @@ const Cursor = () => {
     });
   }, []);
 
+  const styleHovered = {
+    transform: `translate(${posOne.x}px, ${posOne.y}px) scale(2.8)`,
+    opacity: newOpacity,
+  };
+
+  const styleNotHovered = {
+    transform: `translate(${posOne.x}px, ${posOne.y}px)`,
+    opacity: newOpacity,
+  };
+
   return (
     <div className='cursor'>
       <div
-        className={hoveredState}
-        style={{
-          top: `${posOne.y}px`,
-          left: `${posOne.x}px`,
-          opacity: newOpacity,
-        }}
+        className='cursor__inner cursor__inner--circle'
+        style={hoveredState ? styleHovered : styleNotHovered}
       ></div>
       <div
         className='cursor__inner cursor__inner--dot'
         style={{
-          top: `${posTwo.y}px`,
-          left: `${posTwo.x}px`,
+          transform: `translate(${posTwo.x}px, ${posTwo.y}px)`,
           opacity: newOpacity,
         }}
       ></div>
