@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 import { vanillaData } from '../../vanillaData';
 import ScrollDown from '../layout/utils/ScrollDown';
@@ -8,6 +8,17 @@ import Copyright from '../layout/Copyright';
 import Cursor from '../layout/utils/Cursor';
 
 const VanillaProjects = () => {
+  const [fill, setFill] = useState('#000');
+
+  useEffect(() => {
+    const changeColor = () => {
+      window.innerWidth > 600 ? setFill('#000') : setFill('#fff');
+    };
+    changeColor();
+    window.addEventListener('resize', changeColor);
+    return () => window.removeEventListener('resize', changeColor);
+  }, []);
+
   return (
     <div>
       <main className='vanilla-main'>
@@ -15,7 +26,7 @@ const VanillaProjects = () => {
           <h1>Vanilla Javascript Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
-              <ScrollDown fill='#000' isVisible={isVisible} />
+              <ScrollDown fill={fill} isVisible={isVisible} />
             )}
           </VisibilitySensor>
         </section>

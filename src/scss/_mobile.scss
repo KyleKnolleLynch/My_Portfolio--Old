@@ -59,7 +59,7 @@
     grid-template-rows: auto;
     gap: 20rem 0;
     place-content: center;
-    margin: 16rem 4rem;
+    margin: 14rem 4rem;
   }
 
   .project-card {
@@ -303,11 +303,17 @@
   }
 
   .vanilla-main #vanilla-section-1 {
-    min-height: 87vh;
+    min-height: 100vh;
+    h1 {
+      margin-bottom: 10rem;
+    }
   }
 
   .react-main > #react-section-1 {
     min-height: 105vh;
+    h1 {
+      margin-bottom: 14rem;
+    }
   }
 }
 
