@@ -100,14 +100,32 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='17'>
         <div className='dot'>&#8729; &#8729; </div>
         <span className='coding-decs'>const</span>{' '}
-        <span className='coding-bright'>education</span> = (UdemyCourses) {'=>'}{' '}
-        {'{'}
+        <span className='coding-bright'>education</span> =
+        (Udemy/YouTubeCoursesBy) {'=>'} {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='18'>
-        <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
-        'Modern Javascript from the Beginning by Brad Traversy', 'Modern React
-        with Redux by Stephen Grider', 'React Front to Back by Brad Traversy',
-        'Updated React Front to Back by Brad Traversy'
+        <ul>
+          <li>
+            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>'Brad
+            Traversy',
+          </li>
+          <li>
+            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>
+            'Stephen Grider',
+          </li>
+          <li>
+            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>
+            'The Net Ninja',
+          </li>
+          <li>
+            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>'John
+            Smilga',
+          </li>
+          <li>
+            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>'Florin
+            Pop'
+          </li>
+        </ul>
       </div>
 
       <div className='coding-line' data-line-num='19'>

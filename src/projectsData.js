@@ -16,7 +16,6 @@ export const projectsData = [
   {
     id: 1,
     title: 'Vanilla JS Projects',
-    subtitle: 'Javascript',
     img: img1,
     icon: iconJs,
     link: '/vanillaProjects',
@@ -25,7 +24,6 @@ export const projectsData = [
   {
     id: 2,
     title: 'React Projects',
-    subtitle: 'React',
     img: img2,
     icon: iconReact,
     link: '/reactProjects',

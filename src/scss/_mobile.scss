@@ -125,15 +125,12 @@
 
     .profile-section-2 > .bio {
       margin: 20vh 12vw -14vh 19vw;
-      p {
-        font-size: 1.6rem;
-      }
     }
 
     .profile-section-3 {
-      font-size: 1.6rem;
       margin: 0 18vw 0 10vw;
       .coding-wrap > .profile-contact-email {
+        bottom: -4rem;
         font-size: 2rem;
       }
     }
@@ -242,31 +239,30 @@
     }
 
     .profile-section-2 > .bio {
-      margin: 20vh 4vw -28vh 12vw;
+      margin: 20vh 4vw -34vh 13vw;
       p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
 
     .profile-section-3 {
-      font-size: 1.4rem;
-      margin: 0 4vw 0 8vw;
+      font-size: 1.6rem;
+      margin: 0 4vw 0 8.5vw;
       .coding-wrap {
         .coding-line {
           padding-left: 1.2rem;
           &::before {
-            left: -2.2rem;
+            left: -2.3rem;
           }
         }
         .bio-title {
           margin-bottom: 38vh;
         }
         .profile-contact-email {
-          left: 10vw;
-          bottom: -4rem;
-          font-size: 1.4rem;
+          left: 2vw;
+          bottom: -6rem;
           .profile-email-link {
-            margin-left: 1.5rem;
+            margin-left: 1.4rem;
           }
         }
       }
