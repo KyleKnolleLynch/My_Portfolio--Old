@@ -17,14 +17,20 @@ ul {
 }
 
 a {
-  display: inline-block;
-  transform: scale(1.2, 0.8);
   text-decoration: none;
   color: $white-color;
   cursor: none;
   &:focus {
     outline: none;
   }
+}
+
+header nav ul a,
+footer ul a,
+.profile-link-bottom a,
+.home-link-bottom a {
+  display: inline-block;
+  transform: scale(1.2, 0.8);
 }
 
 img {
@@ -99,11 +105,12 @@ section {
 .home-link-bottom {
   text-align: center;
   margin: 10rem 0;
-  font-family: $font-nanum;
+  font-family: $font-impact;
+  text-transform: uppercase;
   position: relative;
   a {
-    font-size: 3.5rem;
-    color: $black-color;
+    font-size: 4rem;
+    color: $darkgrey-color;
     transition: 500ms ease;
     &:hover {
       color: $offwhite-color;
@@ -130,6 +137,6 @@ section {
     left: 0;
     right: 0;
     margin: auto;
-    background: $black-color;
+    background: $darkgrey-color;
   }
 }

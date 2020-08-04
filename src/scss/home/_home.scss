@@ -89,7 +89,7 @@
   }
   a {
     margin-top: -1rem;
-    font-size: clamp(4.5rem, 7.5vw, 7rem);
+    font-size: clamp(4.5rem, 10vw, 7rem);
     transition: 500ms ease;
     &:hover {
       color: $black-color;

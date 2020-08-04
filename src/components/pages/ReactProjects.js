@@ -40,7 +40,7 @@ const Home = () => {
           </div>
         </section>
         <HomeLink />
-        <Copyright />
+        <Copyright color='#dfdfdf' />
       </main>
       <Cursor />
     </div>

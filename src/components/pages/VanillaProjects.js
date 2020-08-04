@@ -8,11 +8,11 @@ import Copyright from '../layout/Copyright';
 import Cursor from '../layout/utils/Cursor';
 
 const VanillaProjects = () => {
-  const [fill, setFill] = useState('#000');
+  const [fill, setFill] = useState('#454545');
 
   useEffect(() => {
     const changeColor = () => {
-      window.innerWidth > 600 ? setFill('#000') : setFill('#fff');
+      window.innerWidth > 600 ? setFill('#454545') : setFill('#fff');
     };
     changeColor();
     window.addEventListener('resize', changeColor);
@@ -38,7 +38,7 @@ const VanillaProjects = () => {
           </div>
         </section>
         <HomeLink />
-        <Copyright color='#000' />
+        <Copyright color='#454545' />
       </main>
       <Cursor />
     </div>

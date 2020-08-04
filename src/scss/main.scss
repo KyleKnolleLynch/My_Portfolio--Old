@@ -61,7 +61,7 @@ header {
     align-items: flex-end;
     padding: 4.5rem 5.5rem 0;
     text-transform: uppercase;
-    font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.5rem);
     .link-disabled {
       display: inline-block;
       transform: scale(1.2, 0.8);
@@ -94,7 +94,7 @@ footer {
   color: $darkgrey-color;
   transition: color 300ms ease-out;
   &:hover {
-    color: $offwhite-color;
+    color: $white-color;
   }
 }
 
