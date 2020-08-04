@@ -6,6 +6,7 @@ import icon5 from './assets/icons/sass.svg';
 import icon6 from './assets/icons/npm.svg';
 import icon7 from './assets/icons/git.svg';
 import icon8 from './assets/icons/bootstrap.svg';
+import icon9 from './assets/icons/tailwindcss.svg';
 
 export const iconsData = [
   {
@@ -39,5 +40,9 @@ export const iconsData = [
   {
     id: 8,
     icon: icon8,
+  },
+  {
+    id: 9,
+    icon: icon9,
   },
 ];

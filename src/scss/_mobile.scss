@@ -1,7 +1,4 @@
 @include mediaLg {
-  .home-section-1 > .projects-title {
-    font-size: 16rem;
-  }
   .home-section-2 {
     gap: 30rem 0;
     margin: 26rem 0;
@@ -21,14 +18,10 @@
     opacity: 0;
   }
 
-  nav ul {
-    font-size: 1.3rem;
-  }
-
   .home-section-1 {
     .projects-title {
-      font-size: 14rem;
-      letter-spacing: 0.4rem;
+      font-size: 12rem;
+      letter-spacing: 0.1rem;
       &::after {
         font-size: 1.4rem;
       }
@@ -128,11 +121,7 @@
     }
 
     .profile-section-3 {
-      margin: 0 18vw 0 10vw;
-      .coding-wrap > .profile-contact-email {
-        bottom: -4rem;
-        font-size: 2rem;
-      }
+      margin: 0 18vw 10vh 10vw;
     }
 
     .test-icons {
@@ -176,9 +165,11 @@
     min-height: 120%;
   }
 
-  header nav ul {
-    padding: 4.5rem 2.5rem 0;
+  header {
     letter-spacing: 1px;
+    nav ul {
+      padding: 4.5rem 2.5rem 0;
+    }
   }
 
   .scroll-div {
@@ -188,11 +179,12 @@
   .home-section-1 {
     min-height: 97vh;
     .projects-title {
-      font-size: 8rem;
+      font-size: 7rem;
       &::after {
         font-size: 1rem;
-        right: 5%;
-        letter-spacing: 0.5px;
+        bottom: 38%;
+        right: 2%;
+        letter-spacing: 0.7px;
       }
     }
     .img-dis-1 {
@@ -214,12 +206,6 @@
 
   .profile-link-bottom {
     margin-top: 24rem;
-    span {
-      font-size: 1rem;
-    }
-    a {
-      font-size: 4.5rem;
-    }
   }
 
   .project-card .project-content {
@@ -247,7 +233,7 @@
 
     .profile-section-3 {
       font-size: 1.6rem;
-      margin: 0 4vw 0 8.5vw;
+      margin: 0 4vw 8vh 8.5vw;
       .coding-wrap {
         .coding-line {
           padding-left: 1.2rem;
@@ -257,13 +243,6 @@
         }
         .bio-title {
           margin-bottom: 38vh;
-        }
-        .profile-contact-email {
-          left: 2vw;
-          bottom: -6rem;
-          .profile-email-link {
-            margin-left: 1.4rem;
-          }
         }
       }
     }

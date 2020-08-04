@@ -73,6 +73,7 @@ const Home = () => {
         </section>
         <article className='profile-link-bottom'>
           <span>Visit</span>
+          <br />
           <Link to='/profile' className='hover-elem'>
             Profile
           </Link>

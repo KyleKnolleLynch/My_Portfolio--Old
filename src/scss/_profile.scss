@@ -22,15 +22,19 @@
     }
 
     .banner {
+      display: inline-block;
       position: absolute;
-      font-size: 19rem;
-      font-weight: 400;
+      font-size: 24rem;
       text-transform: uppercase;
       letter-spacing: 0.8rem;
       word-spacing: -1.5rem;
-      line-height: 20rem;
+      line-height: 22rem;
       white-space: nowrap;
-      transform: skew(22deg) rotate(-7deg);
+      transform: skew(22deg) rotate(-7deg) scale(1.2, 0.8);
+      transform-origin: 0 0;
+      div {
+        transition: transform 0.3s ease-out;
+      }
     }
 
     .profile-banner-1 {
@@ -40,7 +44,6 @@
         position: absolute;
         bottom: 0;
         left: -55vw;
-        transition: transform 0.2s linear;
       }
     }
 
@@ -54,7 +57,6 @@
         color: $profile-bg-color;
         text-shadow: -1px -1px 0 $white-color, 1px -1px 0 $white-color,
           -1px 1px 0 $white-color, 1px 1px 0 $white-color;
-        transition: transform 0.2s linear;
       }
 
       @supports (
@@ -85,7 +87,7 @@
 
   .profile-section-3 {
     min-height: auto;
-    margin: 0 25vw 18vh 12vw;
+    margin: 0 25vw 10vh 12vw;
     font-family: $font-nanum;
     position: relative;
     text-align: left;
@@ -166,22 +168,18 @@
       .profile-contact {
         margin-top: 14vh;
       }
-      .profile-contact-email {
-        position: absolute;
-        left: 12vw;
-        bottom: -2rem;
-        display: flex;
-        align-items: center;
-        font-size: 2.3rem;
-        font-weight: bold;
-        .profile-email-link {
-          margin-left: 2rem;
-          font-family: $font-nimbus-bold;
-          color: $white-color;
-        }
-      }
     }
   }
+
+  .profile-contact-email {
+    margin: auto;
+    a {
+      margin-top: -0.5rem;
+      font-size: clamp(2.5rem, 4.5vw, 6rem);
+      text-transform: lowercase;
+    }
+  }
+
   .test-icons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));

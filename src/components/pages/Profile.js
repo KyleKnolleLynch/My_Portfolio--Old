@@ -18,7 +18,7 @@ const Profile = () => {
       if (window.scrollY > 1000) {
         setBanStyle(0);
       } else {
-        const slideStyle = window.scrollY / 2 + 100;
+        const slideStyle = window.scrollY / 100;
         setBanStyle(slideStyle);
       }
     };
@@ -61,7 +61,7 @@ const Profile = () => {
           <div className='profile-banner-1 banner'>
             <div
               className='hello1'
-              style={{ transform: `translateX(-${banStyle}px)` }}
+              style={{ transform: `translateX(-${banStyle}%)` }}
             >
               Hello Hello Hello Hello Hello Hello
             </div>
@@ -69,7 +69,7 @@ const Profile = () => {
           <div className='profile-banner-2 banner'>
             <div
               className='hello2'
-              style={{ transform: `translateX(${banStyle}px)` }}
+              style={{ transform: `translateX(${banStyle}%)` }}
             >
               Hello Hello Hello Hello Hello Hello
             </div>
@@ -91,6 +91,13 @@ const Profile = () => {
         <section className='profile-section-3'>
           <ProfileAbout />
         </section>
+        <article className='profile-link-bottom profile-contact-email'>
+          <span>email me</span>
+          <br />
+          <a href='mailto: email@kylelynch.me' className='hover-elem'>
+            email@kylelynch.me
+          </a>
+        </article>
         <ul className='test-icons'>
           {iconsData.map((icon) => (
             <li key={icon.id}>

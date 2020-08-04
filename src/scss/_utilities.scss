@@ -17,6 +17,8 @@ ul {
 }
 
 a {
+  display: inline-block;
+  transform: scale(1.2, 0.8);
   text-decoration: none;
   color: $white-color;
   cursor: none;
@@ -48,17 +50,17 @@ section {
 }
 
 //  visibility sensor slidein
-.slideIn {
-  opacity: 0;
-  transform: translateX(200px);
-}
+// .slideIn {
+//   opacity: 0;
+//   transform: translateX(200px);
+// }
 
-.slideIn.enter {
-  transition: opacity 1s ease-in-out,
-    transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  opacity: 1;
-  transform: translateX(0);
-}
+// .slideIn.enter {
+//   transition: opacity 1s ease-in-out,
+//     transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+//   opacity: 1;
+//   transform: translateX(0);
+// }
 
 // scroll-down div
 .scroll-div {
@@ -70,6 +72,8 @@ section {
   font-family: $font-nimbus-bold;
   transition: opacity 500ms ease-in-out;
   p {
+    display: inline-block;
+    transform: scale(1.2, 0.8);
     padding-bottom: 0.4rem;
     font-size: 1.5rem;
     letter-spacing: 1px;

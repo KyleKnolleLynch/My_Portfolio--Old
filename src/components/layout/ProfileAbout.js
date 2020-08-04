@@ -1,5 +1,4 @@
 import React from 'react';
-import VisibilitySensor from '../layout/utils/VisibilitySensor';
 
 const ProfileAbout = () => {
   return (
@@ -85,7 +84,7 @@ const ProfileAbout = () => {
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
           'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux', 'React
-          Native', 'Gimp'
+          Native', 'Gimp', 'Svelte', 'TailwindCSS'
         </span>
       </div>
       <div className='coding-line' data-line-num='15'>
@@ -104,28 +103,11 @@ const ProfileAbout = () => {
         (Udemy/YouTubeCoursesBy) {'=>'} {'{'}
       </div>
       <div className='coding-line coding-data' data-line-num='18'>
-        <ul>
-          <li>
-            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>'Brad
-            Traversy',
-          </li>
-          <li>
-            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>
-            'Stephen Grider',
-          </li>
-          <li>
-            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>
-            'The Net Ninja',
-          </li>
-          <li>
-            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>'John
-            Smilga',
-          </li>
-          <li>
-            <span className='dot'>&#8729; &#8729; &#8729; &#8729; </span>'Florin
-            Pop'
-          </li>
-        </ul>
+        <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
+        <span>
+          'Brad Traversy', 'Stephen Grider', 'The Net Ninja', 'John Smilga',
+          'Florin Pop'
+        </span>
       </div>
 
       <div className='coding-line' data-line-num='19'>
@@ -159,24 +141,6 @@ const ProfileAbout = () => {
         data-line-point='&bull;'
       >
         {'Contact/>'}
-      </div>
-      <div className='profile-contact-email'>
-        <p>email me: </p>
-        <VisibilitySensor partialVisibility once>
-          {({ isVisible }) => (
-            <div
-              className={
-                isVisible
-                  ? 'profile-email-link slideIn enter'
-                  : 'profile-email-link slideIn'
-              }
-            >
-              <a href='mailto: email@kylelynch.me' className='hover-elem'>
-                email@kylelynch.me
-              </a>
-            </div>
-          )}
-        </VisibilitySensor>
       </div>
     </article>
   );

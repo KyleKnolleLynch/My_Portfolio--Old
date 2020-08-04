@@ -7,7 +7,7 @@ const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
     <nav>
       <ul>
         <li>
-          <span>{titleDisabled}</span>
+          <span className='link-disabled'>{titleDisabled}</span>
           <Link to='/' className='nav-link hover-elem'>
             <span className='link-inner'>{title1}</span>
             <div className='link-inner-top'>{title1}</div>
