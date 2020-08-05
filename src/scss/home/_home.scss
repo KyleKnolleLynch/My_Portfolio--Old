@@ -82,13 +82,20 @@
   margin-bottom: 20rem;
   letter-spacing: 0.1rem;
   span {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     transform: scale(1.2, 0.8);
     font-size: clamp(1rem, 2.5vw, 1.6rem);
     font-family: $font-nimbus;
+    img {
+      width: clamp(1.6rem, 3vw, 2.2rem);
+      display: inline-block;
+      margin-left: 0.1rem;
+    }
   }
   a {
     margin-top: -1rem;
+    font-size: 7rem;
     font-size: clamp(4.5rem, 10vw, 7rem);
     transition: 500ms ease;
     &:hover {

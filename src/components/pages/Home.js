@@ -9,6 +9,7 @@ import Cursor from '../layout/utils/Cursor';
 import inertiaVert from '../../assets/images/inertia-vert-sm.png';
 import toursVert from '../../assets/images/projects/toursVert.jpg';
 import glitchLog from '../../assets/images/projects/glitchLog.png';
+import arrowSvg from '../../assets/icons/arrow-down-right.svg';
 
 const Home = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -72,7 +73,7 @@ const Home = () => {
           <ProjectCards />
         </section>
         <article className='profile-link-bottom'>
-          <span>Visit</span>
+          <span>Visit <img src={arrowSvg} alt="down right svg" /></span> 
           <br />
           <Link to='/profile' className='hover-elem'>
             Profile

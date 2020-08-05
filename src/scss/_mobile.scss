@@ -105,8 +105,7 @@
       .banner {
         font-size: 14rem;
         line-height: 14rem;
-        letter-spacing: 0.5rem;
-        word-spacing: -2rem;
+        letter-spacing: 0.3rem;
       }
       .profile-banner-1 div {
         left: -60vw;
@@ -122,6 +121,11 @@
 
     .profile-section-3 {
       margin: 0 18vw 10vh 10vw;
+    }
+
+    .profile-contact-email a {
+      font-size: 5rem;
+      font-size: clamp(2.5rem, 6.5vw, 6rem);
     }
 
     .test-icons {
@@ -204,12 +208,16 @@
     }
   }
 
-  .profile-link-bottom {
-    margin-top: 24rem;
-  }
-
   .project-card .project-content {
     width: 60%;
+  }
+
+  .profile-link-bottom {
+    margin-top: 24rem;
+    a {
+      font-size: 5rem;
+      font-size: clamp(5rem, 10vw, 7rem);
+    }
   }
 
   .profile-main {
@@ -245,6 +253,11 @@
           margin-bottom: 38vh;
         }
       }
+    }
+
+    .profile-contact-email a {
+      font-size: 2.5rem;
+      font-size: clamp(2.5rem, 6.5vw, 6rem);
     }
 
     .test-icons {
@@ -335,14 +348,15 @@
       }
       .banner {
         font-size: 10rem;
-        letter-spacing: 1.9rem;
+        letter-spacing: 0.3rem;
         line-height: 10rem;
       }
-      .profile-banner-1 div {
-        left: -112vw;
-      }
-      .profile-banner-2 div {
-        left: -188vw;
+    }
+    .test-icons {
+      margin: 18vh 10vw 30vh;
+      img {
+        width: 2.1rem;
+        height: 2.1rem;
       }
     }
   }

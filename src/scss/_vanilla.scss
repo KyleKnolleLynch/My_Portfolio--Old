@@ -44,10 +44,10 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            padding: 0.5rem 1rem;
+            padding: 0.7rem 1.2rem;
             color: $offwhite-color;
             background-color: lighten($code-bg-color, 16%);
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             transition: background-color 300ms ease-out;
             border-radius: 0 1rem 0 0;
           }
@@ -58,9 +58,12 @@
 
         .vanilla-sub-caption {
           padding: 1.5rem;
-          font-size: 1.5rem;
+          h4 {
+            font-size: 2rem;
+          }
           p {
             padding: 0.5rem 0 1rem;
+            font-size: 1.4rem;
           }
           div {
             display: flex;

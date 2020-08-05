@@ -7,6 +7,7 @@ import Cursor from '../layout/utils/Cursor';
 import ProfileImg from '../../assets/images/portrait1.jpg';
 import ProfileAbout from '../layout/ProfileAbout';
 import ProfileBio from '../layout/ProfileBio';
+import arrowSvg from '../../assets/icons/arrow-down-right.svg';
 import { iconsData } from '../../iconsData';
 
 const Profile = () => {
@@ -92,7 +93,7 @@ const Profile = () => {
           <ProfileAbout />
         </section>
         <article className='profile-link-bottom profile-contact-email'>
-          <span>email me</span>
+          <span>email me <img src={arrowSvg} alt="down right svg" /></span>
           <br />
           <a href='mailto: email@kylelynch.me' className='hover-elem'>
             email@kylelynch.me
