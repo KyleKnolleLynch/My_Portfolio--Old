@@ -214,6 +214,10 @@
 
   .profile-link-bottom {
     margin-top: 24rem;
+    span img {
+      width: 1.6rem;
+      width: clamp(1.6rem, 3vw, 2.2rem);
+    }
     a {
       font-size: 5rem;
       font-size: clamp(5rem, 10vw, 7rem);
