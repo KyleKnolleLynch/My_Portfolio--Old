@@ -83,8 +83,8 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='14'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux', 'React
-          Native', 'Gimp', 'Svelte', 'TailwindCSS'
+          'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux',
+          'TailwindCSS', 'Svelte', 'Gimp', 'React Native'
         </span>
       </div>
       <div className='coding-line' data-line-num='15'>
@@ -105,8 +105,8 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='18'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'Brad Traversy', 'Stephen Grider', 'The Net Ninja', 'John Smilga',
-          'Florin Pop'
+          'Brad Traversy', 'Stephen Grider', 'The Net Ninja', 'Florin Pop',
+          'John Smilga'
         </span>
       </div>
 

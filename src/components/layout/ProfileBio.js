@@ -7,12 +7,11 @@ const ProfileBio = () => {
       {({ isVisible }) => (
         <div className={isVisible ? 'bio slideUp enter' : 'bio slideUp'}>
           <p>
-            Hello, I'm Kyle. I am a front end developer with a passion for
-            learning new technologies and constantly growing my web development
-            skills. Becoming an expert full stack developer is one of my goals.
-            Challenging myself and learning new things is my way of life. I know
-            how to focus on details, time management, and positive interactions
-            with people.{' '}
+            Hello, my name is Kyle. I am a front end developer living in Austin
+            Texas. I'm very passionate about learning new technologies and
+            constantly growing my web development skills. Focus on best modern
+            coding practices and clean design for a smooth, clear user
+            experience is paramount in my work flow.{' '}
           </p>
         </div>
       )}
