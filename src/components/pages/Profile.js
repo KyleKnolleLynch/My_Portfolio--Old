@@ -93,7 +93,9 @@ const Profile = () => {
           <ProfileAbout />
         </section>
         <article className='profile-link-bottom profile-contact-email'>
-          <span>email me <img src={arrowSvg} alt="down right svg" /></span>
+          <span>
+            email me <img src={arrowSvg} alt='down right svg' />
+          </span>
           <br />
           <a href='mailto: email@kylelynch.me' className='hover-elem'>
             email@kylelynch.me

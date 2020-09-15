@@ -1,36 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Cursor = () => {
-  const [posOne, setPosOne] = useState({ y: 0, x: 0 });
-  const [posTwo, setPosTwo] = useState({ y: 0, x: 0 });
-  const [newOpacity, setNewOpacity] = useState(0);
+  const dotRef = useRef(null);
+  const circleRef = useRef(null);
   const [hoveredState, setHoveredState] = useState(false);
-
-  const setHovered = () => {
-    setHoveredState(true);
-  };
-
-  const setNotHovered = () => {
-    setHoveredState(false);
-  };
 
   useEffect(() => {
     const setCursor = (e) => {
-      const targetOneY = e.pageY - 10;
-      const targetOneX = e.pageX - 10;
-      const targetTwoY = e.pageY - 3;
-      const targetTwoX = e.pageX - 3;
-      setPosOne({ y: targetOneY, x: targetOneX });
-      setPosTwo({ y: targetTwoY, x: targetTwoX });
-      setNewOpacity(1);
+      const { pageX, pageY } = e;
+      const dotX = pageX - 3;
+      const dotY = pageY - 3;
+      const circleX = pageX - 10;
+      const circleY = pageY - 10;
+      dotRef.current.style.transform = `translate3d(${dotX}px, ${dotY}px, 0)`;
+      dotRef.current.style.opacity = 1;
+      circleRef.current.style.opacity = 1;
+      hoveredState
+        ? (circleRef.current.style.transform = `translate3d(${circleX}px, ${circleY}px, 0) scale(2.8)`)
+        : (circleRef.current.style.transform = `translate3d(${circleX}px, ${circleY}px, 0)`);
     };
 
     document.addEventListener('mousemove', setCursor);
     return () => document.removeEventListener('mousemove', setCursor);
-  }, []);
+  }, [hoveredState]);
 
   useEffect(() => {
     document.querySelectorAll('.hover-elem').forEach((el) => {
+      const setHovered = () => {
+        setHoveredState(true);
+      };
+
       el.addEventListener('mouseenter', setHovered);
       return () => el.removeEventListener('mouseenter', setHovered);
     });
@@ -38,34 +37,22 @@ const Cursor = () => {
 
   useEffect(() => {
     document.querySelectorAll('.hover-elem').forEach((el) => {
+      const setNotHovered = () => {
+        setHoveredState(false);
+      };
+
       el.addEventListener('mouseleave', setNotHovered);
       return () => el.removeEventListener('mouseleave', setNotHovered);
     });
   }, []);
 
-  const styleHovered = {
-    transform: `translate(${posOne.x}px, ${posOne.y}px) scale(2.8)`,
-    opacity: newOpacity,
-  };
-
-  const styleNotHovered = {
-    transform: `translate(${posOne.x}px, ${posOne.y}px)`,
-    opacity: newOpacity,
-  };
-
   return (
     <div className='cursor'>
       <div
         className='cursor__inner cursor__inner--circle'
-        style={hoveredState ? styleHovered : styleNotHovered}
+        ref={circleRef}
       ></div>
-      <div
-        className='cursor__inner cursor__inner--dot'
-        style={{
-          transform: `translate(${posTwo.x}px, ${posTwo.y}px)`,
-          opacity: newOpacity,
-        }}
-      ></div>
+      <div className='cursor__inner cursor__inner--dot' ref={dotRef}></div>
     </div>
   );
 };

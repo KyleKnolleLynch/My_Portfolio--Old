@@ -9,9 +9,7 @@ const ProfileBio = () => {
           <p>
             Hello, my name is Kyle. I am a front end developer living in Austin
             Texas. I'm very passionate about learning new technologies and
-            constantly growing my web development skills. Focus on best modern
-            coding practices and clean design for a smooth, clear user
-            experience is paramount in my work flow.{' '}
+            constantly growing my web development skills. My current focus is the Javascript ecosystem. Writing efficient, readable, and maintainable code that provides a smooth user experience makes me happy.{' '}
           </p>
         </div>
       )}

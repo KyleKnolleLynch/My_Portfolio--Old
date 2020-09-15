@@ -73,7 +73,9 @@ const Home = () => {
           <ProjectCards />
         </section>
         <article className='profile-link-bottom'>
-          <span>Visit <img src={arrowSvg} alt="down right svg" /></span> 
+          <span>
+            Visit <img src={arrowSvg} alt='down right svg' />
+          </span>
           <br />
           <Link to='/profile' className='hover-elem'>
             Profile
