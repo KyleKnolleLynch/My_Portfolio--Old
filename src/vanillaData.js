@@ -1,8 +1,8 @@
 import img1 from './assets/images/vanilla/menu.png'; 
-import img2 from './assets/images/vanilla/image-slider.png'; 
+import img2 from './assets/images/vanilla/image-slider.webp'; 
 import img3 from './assets/images/vanilla/glow_worm.png'; 
-import img4 from './assets/images/vanilla/miami.png'; 
-import img5 from './assets/images/vanilla/fluid-gallery.png';
+import img4 from './assets/images/vanilla/miami.webp'; 
+import img5 from './assets/images/vanilla/fluid-gallery.webp';
 
 export const vanillaData = [
   {
