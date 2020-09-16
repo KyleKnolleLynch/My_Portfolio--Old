@@ -176,7 +176,6 @@
   }
 
   .scroll-div {
-    // bottom: 1rem;
     display: none;
   }
 
@@ -310,6 +309,9 @@
 }
 
 @include mediaVt {
+  .scroll-div {
+    display: none;
+  }
   .home-section-1 {
     .projects-title {
       font-size: 8rem;
