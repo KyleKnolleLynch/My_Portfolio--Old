@@ -4,7 +4,7 @@ import Navbar from '../layout/Navbar';
 import Copyright from '../layout/Copyright';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
-import ProfileImg from '../../assets/images/portrait1.jpg';
+import ProfileImg from '../../assets/images/portrait1.webp';
 import ProfileAbout from '../layout/ProfileAbout';
 import ProfileBio from '../layout/ProfileBio';
 import arrowSvg from '../../assets/icons/arrow-down-right.svg';
@@ -45,7 +45,7 @@ const Profile = () => {
     <div>
       <header>
         <Navbar
-          title1='HOME'
+          title1='PROJECTS'
           title2='Resume PDF'
           linkName='/myResume.pdf'
           target='_blank'
@@ -57,7 +57,7 @@ const Profile = () => {
             className='profile-img-div'
             style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px)` }}
           >
-            <img src={ProfileImg} alt='profile' />
+            <img src={ProfileImg} alt='profile_portrait' />
           </div>
           <div className='profile-banner-1 banner'>
             <div

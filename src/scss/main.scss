@@ -58,13 +58,14 @@ header {
   nav ul {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 4.5rem 5.5rem 0;
     text-transform: uppercase;
     font-size: 1.5rem;
     .link-disabled {
       display: inline-block;
       transform: scale(1.2, 0.8);
+      font-size: 1.6rem;
     }
   }
 }

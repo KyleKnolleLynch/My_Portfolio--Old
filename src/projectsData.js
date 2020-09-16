@@ -1,13 +1,13 @@
-import img1 from './assets/images/projects/vanilla-js-landing.png';
-import img2 from './assets/images/projects/reactPage.png';
-import img3 from './assets/images/projects/inertiaPage.jpg';
-import img4 from './assets/images/projects/glitchLog.png';
-import img5 from './assets/images/projects/birders-journal.png';
+import img1 from './assets/images/projects/vanilla-js-landing.webp';
+import img2 from './assets/images/projects/reactPage.webp';
+import img3 from './assets/images/projects/inertiaPage.webp';
+import img4 from './assets/images/projects/glitchLog.webp';
+import img5 from './assets/images/projects/birders-journal.webp';
 import img6 from './assets/images/projects/tours.webp';
 
-import img3Vert from './assets/images/inertia-vert-sm.png';
-import img4Vert from './assets/images/projects/glitchLog-light.png';
-import img6Vert from './assets/images/projects/toursVert.jpg';
+import img3Vert from './assets/images/inertia-vert-sm.webp';
+import img4Vert from './assets/images/projects/glitchLog-light.webp';
+import img6Vert from './assets/images/projects/toursVert.webp';
 
 import iconJs from './assets/icons/js.svg';
 import iconReact from './assets/icons/react.svg';
