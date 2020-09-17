@@ -105,7 +105,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @mixin mediaVt {
-  @media screen and (max-height: 550px) {
+  @media screen and (max-height: 550px) and (max-width: 1020px) {
     @content;
   }
 }

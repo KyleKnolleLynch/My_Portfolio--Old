@@ -42,6 +42,7 @@
   }
   .feather-download {
     padding-left: 1rem;
+    line-height: 2.5;
   }
 }
 
@@ -65,7 +66,7 @@ header {
     .link-disabled {
       display: inline-block;
       transform: scale(1.2, 0.8);
-      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
     }
   }
 }
