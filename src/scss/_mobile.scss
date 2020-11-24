@@ -136,17 +136,19 @@
     }
   }
 
-  .react-main > #react-section-2 > .react-project-grid {
-    margin-bottom: 10vh;
-    .react-card-container > .react-card > .react-card-content {
-      padding: 1rem 0.2rem 2rem;
-      h2 {
-        font-size: 2.4rem;
-      }
-      a {
-        font-size: 1rem;
-        padding: 0.8rem 1.6rem;
-      }
+  .react-main
+    > #react-section-2
+    > .react-project-grid
+    > .react-card-container
+    > .react-card
+    > .react-card-content {
+    padding: 1rem 0.2rem 2rem;
+    h2 {
+      font-size: 2.4rem;
+    }
+    a {
+      font-size: 1rem;
+      padding: 0.8rem 1.6rem;
     }
   }
 

@@ -1,7 +1,7 @@
-import img1 from './assets/images/reactProjects/smoothie-mockup.webp';
-import img2 from './assets/images/reactProjects/miami-mockup.webp';
-import img3 from './assets/images/reactProjects/resort-mockup.webp';
-import img4 from './assets/images/reactProjects/onlineCart.webp';
+import img1 from './assets/images/reactProjects/smoothie-mockup.webp'
+import img2 from './assets/images/reactProjects/miami-mockup.webp'
+import img3 from './assets/images/reactProjects/onlineCart.webp'
+import img4 from './assets/images/reactProjects/resort-mockup.webp'
 
 export const reactData = [
   {
@@ -23,18 +23,18 @@ export const reactData = [
   {
     id: 3,
     img: img3,
-    title: 'Resort Rentals',
-    desc: '',
-    projectLink: 'https://resort-rentals.netlify.app',
-    sourceLink: 'https://github.com/KyleKnolleLynch/Resort-Rentals',
-  },
-  {
-    id: 4,
-    img: img4,
     title: 'Online Cart',
     desc:
       'Shopping cart using context API, Sass, Paypal express checkout button, and Font Awesome icons. Context component is class based, all other components are functional. This app allows users to add or remove items from cart, edit or clear cart, and price totals stay matched up accordingly.',
     projectLink: 'https://react-online-cart.netlify.app',
     sourceLink: 'https://github.com/KyleKnolleLynch/React-Online-Cart',
   },
-];
+  {
+    id: 4,
+    img: img4,
+    title: 'Resort Rentals',
+    desc: '',
+    projectLink: 'https://resort-rentals.netlify.app',
+    sourceLink: 'https://github.com/KyleKnolleLynch/Resort-Rentals',
+  },
+]
