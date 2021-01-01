@@ -1,5 +1,5 @@
-import React from 'react';
-import githubSvg from '../../assets/icons/githubLogo.svg';
+import React from 'react'
+import githubSvg from '../../assets/icons/githubLogo.svg'
 
 const VanillaCard = ({
   project: { img, demoLink, title, desc, sourceLink },
@@ -9,7 +9,12 @@ const VanillaCard = ({
       <div className='vanilla-img-div'>
         <img src={img} alt='vanilla-projects' />
         <span>
-          <a href={demoLink} className='hover-elem'>
+          <a
+            href={demoLink}
+            className='hover-elem'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             Demo
           </a>
         </span>
@@ -19,13 +24,18 @@ const VanillaCard = ({
         <p>{desc}</p>
         <div>
           <img src={githubSvg} alt='githubLogo' />
-          <a href={sourceLink} className='hover-elem'>
+          <a
+            href={sourceLink}
+            className='hover-elem'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             Source Code
           </a>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default VanillaCard;
+export default VanillaCard

@@ -23,7 +23,7 @@ const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
           >
             <span className='link-inner'>
               {title2}
-              {linkName === '/myResume.pdf' && (
+              {linkName === '/KyleLynchResume.pdf' && (
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +45,7 @@ const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
             </span>
             <div className='link-inner-top'>
               {title2}
-              {linkName === '/myResume.pdf' && (
+              {linkName === '/KyleLynchResume.pdf' && (
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -67,7 +67,7 @@ const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
             </div>
             <div className='link-inner-bottom'>
               {title2}
-              {linkName === '/myResume.pdf' && (
+              {linkName === '/KyleLynchResume.pdf' && (
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

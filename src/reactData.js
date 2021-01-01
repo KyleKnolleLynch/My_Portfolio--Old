@@ -1,6 +1,6 @@
 import img1 from './assets/images/reactProjects/smoothie-mockup.webp'
-import img2 from './assets/images/reactProjects/miami-mockup.webp'
-import img3 from './assets/images/reactProjects/onlineCart.webp'
+import img2 from './assets/images/reactProjects/onlineCart.webp'
+import img3 from './assets/images/reactProjects/tours-mockup.webp'
 import img4 from './assets/images/reactProjects/resort-mockup.webp'
 
 export const reactData = [
@@ -15,20 +15,21 @@ export const reactData = [
   {
     id: 2,
     img: img2,
-    title: 'Miami Travel',
-    desc: '',
-    projectLink: 'https://miami-travel.netlify.app',
-    sourceLink: 'https://github.com/kyleknollelynch/miami-travel',
-  },
-  {
-    id: 3,
-    img: img3,
     title: 'Online Cart',
     desc:
       'Shopping cart using context API, Sass, Paypal express checkout button, and Font Awesome icons. Context component is class based, all other components are functional. This app allows users to add or remove items from cart, edit or clear cart, and price totals stay matched up accordingly.',
     projectLink: 'https://react-online-cart.netlify.app',
     sourceLink: 'https://github.com/KyleKnolleLynch/React-Online-Cart',
   },
+  {
+    id: 3,
+    img: img3,
+    title: 'Central Texas Tours',
+    desc: '',
+    projectLink: 'https://central-texas-tours.netlify.app',
+    sourceLink: 'https://github.com/kyleknollelynch/central-texas-tours',
+  },
+
   {
     id: 4,
     img: img4,

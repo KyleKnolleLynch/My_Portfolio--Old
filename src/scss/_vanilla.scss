@@ -81,9 +81,9 @@
             padding: 0.4rem;
             border-radius: 5px;
             text-transform: uppercase;
-            transition: 300ms ease;
+            transition: 200ms ease;
             &:hover {
-              box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.6);
+              box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
               transform: scale(1.04);
             }
           }

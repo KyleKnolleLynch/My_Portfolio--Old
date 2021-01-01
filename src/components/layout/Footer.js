@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Footer = () => {
   return (
@@ -7,6 +7,8 @@ const Footer = () => {
         <li>
           <a
             href='https://github.com/KyleKnolleLynch'
+            target='_blank'
+            rel='noopener noreferrer'
             className='nav-link hover-elem'
           >
             <span className='link-inner'>GH</span>
@@ -14,19 +16,23 @@ const Footer = () => {
             <div className='link-inner-bottom'>GH</div>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href='https://github.com/KyleKnolleLynch'
+            target='_blank'
+            rel='noopener noreferrer'
             className='nav-link hover-elem'
           >
             <span className='link-inner'>TW</span>
             <div className='link-inner-top'>TW</div>
             <div className='link-inner-bottom'>TW</div>
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href='https://codepen.io/kyleknollelynch'
+            target='_blank'
+            rel='noopener noreferrer'
             className='nav-link hover-elem'
           >
             <span className='link-inner'>CP</span>
@@ -36,7 +42,7 @@ const Footer = () => {
         </li>
       </ul>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

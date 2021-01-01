@@ -1,8 +1,8 @@
-import React from 'react';
-import githubSvgAlt from '../../assets/icons/githubLogo_alt.svg';
+import React from 'react'
+import githubSvgAlt from '../../assets/icons/githubLogo_alt.svg'
 
 const ReactCard = ({ project, className }) => {
-  const { img, title, projectLink, sourceLink } = project;
+  const { img, title, projectLink, sourceLink } = project
 
   return (
     <div className={className}>
@@ -12,10 +12,20 @@ const ReactCard = ({ project, className }) => {
         </div>
         <div className='react-card-content'>
           <h2>{title}</h2>
-          <a href={projectLink} className='hover-elem'>
+          <a
+            href={projectLink}
+            className='hover-elem'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             Live Demo
           </a>
-          <a href={sourceLink} className='hover-elem'>
+          <a
+            href={sourceLink}
+            className='hover-elem'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             Source Code{' '}
             <span>
               <img src={githubSvgAlt} alt='githubLogo_alt' />
@@ -24,7 +34,7 @@ const ReactCard = ({ project, className }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ReactCard;
+export default ReactCard

@@ -6,7 +6,7 @@ import ProjectCards from '../layout/ProjectCards';
 import Copyright from '../layout/Copyright';
 import Footer from '../layout/Footer';
 import Cursor from '../layout/utils/Cursor';
-import inertiaVert from '../../assets/images/inertia-vert-sm.webp';
+import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp';
 import toursVert from '../../assets/images/projects/toursVert.webp';
 import glitchLog from '../../assets/images/projects/glitchLog.webp';
 import arrowSvg from '../../assets/icons/arrow-down-right.svg';

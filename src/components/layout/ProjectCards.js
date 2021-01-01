@@ -1,24 +1,23 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import VisibilitySensor from './utils/VisibilitySensor';
-import { Link } from 'react-router-dom';
-import { projectsData } from '../../projectsData';
+import React, { Fragment, useState, useEffect } from 'react'
+import VisibilitySensor from './utils/VisibilitySensor'
+import { Link } from 'react-router-dom'
+import { projectsData } from '../../projectsData'
 
 const ProjectCards = () => {
-  const projects = projectsData;
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = useState(false)
 
   useEffect(() => {
-    const card = document.querySelector('.flip-container');
+    const card = document.querySelector('.flip-container')
     const onTouchStart = () => {
-      setFlipped(!flipped);
-    };
-    card.addEventListener('onTouchStart', onTouchStart, { passive: true });
-    return () => card.removeEventListener('onTouchStart', onTouchStart);
-  }, [flipped]);
+      setFlipped(!flipped)
+    }
+    card.addEventListener('onTouchStart', onTouchStart, { passive: true })
+    return () => card.removeEventListener('onTouchStart', onTouchStart)
+  }, [flipped])
 
   return (
     <Fragment>
-      {projects.map((project) => (
+      {projectsData.map(project => (
         <VisibilitySensor partialVisibility key={project.id} once>
           {({ isVisible }) => (
             <article
@@ -63,10 +62,20 @@ const ProjectCards = () => {
                         </Link>
                       ) : (
                         <div>
-                          <a href={project.link} className='card-btn'>
+                          <a
+                            href={project.link}
+                            className='card-btn'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
                             Live Demo
                           </a>
-                          <a href={project.gitLink} className='card-btn'>
+                          <a
+                            href={project.gitLink}
+                            className='card-btn'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
                             View Code
                           </a>
                         </div>
@@ -80,7 +89,7 @@ const ProjectCards = () => {
         </VisibilitySensor>
       ))}
     </Fragment>
-  );
-};
+  )
+}
 
-export default ProjectCards;
+export default ProjectCards

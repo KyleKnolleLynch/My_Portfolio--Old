@@ -47,7 +47,7 @@ const Profile = () => {
         <Navbar
           title1='PROJECTS'
           title2='Resume PDF'
-          linkName='/myResume.pdf'
+          linkName='/KyleLynchResume.pdf'
           target='_blank'
         />
       </header>

@@ -1,16 +1,16 @@
-import img1 from './assets/images/projects/vanilla-js-landing.webp';
-import img2 from './assets/images/projects/reactPage.webp';
-import img3 from './assets/images/projects/inertiaPage.webp';
-import img4 from './assets/images/projects/glitchLog.webp';
-import img5 from './assets/images/projects/birders-journal.webp';
-import img6 from './assets/images/projects/tours.webp';
+import img1 from './assets/images/projects/vanilla-js-landing.webp'
+import img2 from './assets/images/projects/reactPage.webp'
+import img3 from './assets/images/projects/inertiaPage.webp'
+import img4 from './assets/images/projects/glitchLog.webp'
+import img5 from './assets/images/projects/birders-journal.webp'
+import img6 from './assets/images/projects/miami-travel.webp'
 
-import img3Vert from './assets/images/inertia-vert-sm.webp';
-import img4Vert from './assets/images/projects/glitchLog-light.webp';
-import img6Vert from './assets/images/projects/toursVert.webp';
+import img3Vert from './assets/images/projects/inertia-vert-sm.webp'
+import img4Vert from './assets/images/projects/glitchLog-light.webp'
+import img6Vert from './assets/images/projects/miami-travel-vert.webp'
 
-import iconJs from './assets/icons/js.svg';
-import iconReact from './assets/icons/react.svg';
+import iconJs from './assets/icons/js.svg'
+import iconReact from './assets/icons/react.svg'
 
 export const projectsData = [
   {
@@ -67,14 +67,14 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: 'Central Texas Tours',
+    title: 'Miami Travel',
     subtitle: 'React',
     img: img6,
     imgVert: img6Vert,
     icon: iconReact,
-    link: 'https://central-texas-tours.netlify.app/',
-    gitLink: 'https://github.com/KyleKnolleLynch/central-texas-tours',
+    link: 'https://miami-travel.netlify.app/',
+    gitLink: 'https://github.com/kyleknollelynch/miami-travel',
     desc:
-      'Mock local tours website using functional components with hooks. Allows user to filter through and delete tours from view. Includes multi-step form with native validation. Styled with Sass and Font Awesome icons.',
+      'Mock Miami travel website using functional components and hooks. Displays data from weather and livecam APIs. Implements intersection observer to style page sections image backgrounds with gradient overlays. Framer motion used for smooth react-router link transitions. Header image carousel built without frameworks.',
   },
-];
+]
