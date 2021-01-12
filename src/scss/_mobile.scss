@@ -298,6 +298,9 @@
 
   .vanilla-main #vanilla-section-1 {
     min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+      url('../assets/images/vanilla/bg-intro-sm.webp') center center / cover
+        no-repeat;
     h1 {
       margin-bottom: 10rem;
     }

@@ -1,24 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-
 @font-face {
   font-family: 'Impact';
-  src: url('../assets/fonts/impact.woff2') format('woff2'),
-    url('../assets/fonts/impact.woff') format('woff');
+  src: url('../assets/fonts/Impact.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/BebasNeue-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  src: url('../assets/fonts/NanumGothic-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL';
-  src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2'),
-    url('../assets/fonts/NimbusSanL-Reg.woff') format('woff');
+  src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL-Bold';
-  src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2'),
-    url('../assets/fonts/NimbusSanL-Bold.woff') format('woff');
+  src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2');
   font-display: swap;
 }
 
