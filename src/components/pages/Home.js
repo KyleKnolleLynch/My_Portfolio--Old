@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import VisibilitySensor from 'react-visibility-sensor';
-import Navbar from '../layout/Navbar';
-import ProjectCards from '../layout/ProjectCards';
-import Copyright from '../layout/Copyright';
-import Footer from '../layout/Footer';
-import Cursor from '../layout/utils/Cursor';
-import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp';
-import toursVert from '../../assets/images/projects/toursVert.webp';
-import glitchLog from '../../assets/images/projects/glitchLog.webp';
-import arrowSvg from '../../assets/icons/arrow-down-right.svg';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import VisibilitySensor from 'react-visibility-sensor'
+import Navbar from '../layout/Navbar'
+import ProjectCards from '../layout/ProjectCards'
+import Copyright from '../layout/Copyright'
+import Footer from '../layout/Footer'
+import Cursor from '../layout/utils/Cursor'
+import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp'
+import toursVert from '../../assets/images/projects/toursVert.webp'
+import glitchLog from '../../assets/images/projects/glitchLog.webp'
+import arrowSvg from '../../assets/icons/arrow-down-right.svg'
 
 const Home = () => {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [pos, setPos] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    const parallax = (e) => {
-      const displays = document.querySelectorAll('.display');
+    const parallax = e => {
+      const displays = document.querySelectorAll('.display')
       const displayStyle = {
         x: (e.clientX * 20) / 1000,
         y: (e.clientY * 20) / 1000,
-      };
-      setPos(displayStyle);
-      displays.forEach((display) => {
+      }
+      setPos(displayStyle)
+      displays.forEach(display => {
         if (window.scrollY < 1000) {
-          display.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+          display.style.transform = `translate(${pos.x}px, ${pos.y}px)`
         }
-      });
-    };
+      })
+    }
 
-    document.addEventListener('mousemove', parallax);
-    return () => document.removeEventListener('mousemove', parallax);
-  }, [pos.x, pos.y]);
+    document.addEventListener('mousemove', parallax)
+    return () => document.removeEventListener('mousemove', parallax)
+  }, [pos.x, pos.y])
 
   return (
     <div>
@@ -62,7 +62,7 @@ const Home = () => {
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
-              <div className={isVisible ? 'scroll-div hidden' : 'scroll-div'}>
+              <div className={`scroll-div ${isVisible && 'hidden'}`}>
                 <p>SCROLL</p>
                 <p className='scroll-vert'></p>
               </div>
@@ -86,7 +86,7 @@ const Home = () => {
       <Footer />
       <Cursor />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

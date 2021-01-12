@@ -1,45 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import VisibilitySensor from '../layout/utils/VisibilitySensor';
-import Navbar from '../layout/Navbar';
-import Copyright from '../layout/Copyright';
-import Footer from '../layout/Footer';
-import Cursor from '../layout/utils/Cursor';
-import ProfileImg from '../../assets/images/portrait1.webp';
-import ProfileAbout from '../layout/ProfileAbout';
-import ProfileBio from '../layout/ProfileBio';
-import arrowSvg from '../../assets/icons/arrow-down-right.svg';
-import { iconsData } from '../../iconsData';
+import React, { useState, useEffect } from 'react'
+import VisibilitySensor from '../layout/utils/VisibilitySensor'
+import Navbar from '../layout/Navbar'
+import Copyright from '../layout/Copyright'
+import Footer from '../layout/Footer'
+import Cursor from '../layout/utils/Cursor'
+import ProfileImg from '../../assets/images/portrait1.webp'
+import ProfileAbout from '../layout/ProfileAbout'
+import ProfileBio from '../layout/ProfileBio'
+import arrowSvg from '../../assets/icons/arrow-down-right.svg'
+import { iconsData } from '../../iconsData'
 
 const Profile = () => {
-  const [banStyle, setBanStyle] = useState(0);
-  const [imgPos, setImgPos] = useState({ x: 0, y: 0 });
+  const [banStyle, setBanStyle] = useState(0)
+  const [imgPos, setImgPos] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 1000) {
-        setBanStyle(0);
+        setBanStyle(0)
       } else {
-        const slideStyle = window.scrollY / 100;
-        setBanStyle(slideStyle);
+        const slideStyle = window.scrollY / 100
+        setBanStyle(slideStyle)
       }
-    };
-    document.addEventListener('scroll', handleScroll, { passive: true });
-    return () => document.removeEventListener('scroll', handleScroll);
-  }, []);
+    }
+    document.addEventListener('scroll', handleScroll, { passive: true })
+    return () => document.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
-    const parallax = (e) => {
+    const parallax = e => {
       const imgDivStyle = {
         x: (e.clientX * 20) / 1000,
         y: (e.clientY * 20) / 1000,
-      };
-      if (window.scrollY < 800) {
-        setImgPos(imgDivStyle);
       }
-    };
-    document.addEventListener('mousemove', parallax);
-    return () => document.removeEventListener('mousemove', parallax);
-  }, []);
+      if (window.scrollY < 800) {
+        setImgPos(imgDivStyle)
+      }
+    }
+    document.addEventListener('mousemove', parallax)
+    return () => document.removeEventListener('mousemove', parallax)
+  }, [])
 
   return (
     <div>
@@ -78,7 +78,7 @@ const Profile = () => {
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
-              <div className={isVisible ? 'scroll-div hidden' : 'scroll-div'}>
+              <div className={`scroll-div ${isVisible && 'hidden'}`}>
                 <p>SCROLL</p>
                 <p className='scroll-vert'></p>
               </div>
@@ -102,7 +102,7 @@ const Profile = () => {
           </a>
         </article>
         <ul className='test-icons'>
-          {iconsData.map((icon) => (
+          {iconsData.map(icon => (
             <li key={icon.id}>
               <img src={icon.icon} alt='svg_icons' />
             </li>
@@ -113,7 +113,7 @@ const Profile = () => {
       <Footer />
       <Cursor />
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

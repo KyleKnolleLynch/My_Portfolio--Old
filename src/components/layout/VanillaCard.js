@@ -20,7 +20,7 @@ const VanillaCard = ({
         </span>
       </div>
       <div className='vanilla-sub-caption'>
-        <h4>{title}</h4>
+        <h2>{title}</h2>
         <p>{desc}</p>
         <div>
           <img src={githubSvg} alt='githubLogo' />

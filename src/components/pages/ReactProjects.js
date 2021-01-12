@@ -1,12 +1,12 @@
-import React from 'react';
-import VisibilitySensor from '../layout/utils/VisibilitySensor';
-import { reactData } from '../../reactData';
-import ReactCard from '../layout/ReactCard';
-import reactSvg from '../../assets/icons/react.svg';
-import ScrollDown from '../layout/utils/ScrollDown';
-import HomeLink from '../layout/utils/HomeLink';
-import Copyright from '../layout/Copyright';
-import Cursor from '../layout/utils/Cursor';
+import React from 'react'
+import VisibilitySensor from '../layout/utils/VisibilitySensor'
+import { reactData } from '../../reactData'
+import ReactCard from '../layout/ReactCard'
+import reactSvg from '../../assets/icons/react.svg'
+import ScrollDown from '../layout/utils/ScrollDown'
+import HomeLink from '../layout/utils/HomeLink'
+import Copyright from '../layout/Copyright'
+import Cursor from '../layout/utils/Cursor'
 
 const Home = () => {
   return (
@@ -23,16 +23,14 @@ const Home = () => {
         </section>
         <section id='react-section-2'>
           <div className='react-project-grid'>
-            {reactData.map((project) => (
+            {reactData.map(project => (
               <VisibilitySensor partialVisibility once key={project.id}>
                 {({ isVisible }) => (
                   <ReactCard
                     project={project}
-                    className={
-                      isVisible
-                        ? 'slideUp enter react-card-container'
-                        : 'slideUp react-card-container'
-                    }
+                    className={`slideUp react-card-container ${
+                      isVisible && 'enter'
+                    }`}
                   />
                 )}
               </VisibilitySensor>
@@ -44,7 +42,7 @@ const Home = () => {
       </main>
       <Cursor />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

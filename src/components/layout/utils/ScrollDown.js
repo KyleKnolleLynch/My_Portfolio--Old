@@ -1,12 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 const ScrollDown = ({ fill, isVisible }) => {
   return (
-    <div
-      className={
-        isVisible ? 'scroll-div down-chev hidden' : 'scroll-div down-chev'
-      }
-    >
+    <div className={`scroll-div down-chev ${isVisible && 'hidden'}`}>
       <svg
         version='1.1'
         id='Capa_1'
@@ -27,24 +23,9 @@ const ScrollDown = ({ fill, isVisible }) => {
             </g>
           </g>
         </g>
-        {/* <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g>
-        <g></g> */}
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default ScrollDown;
+export default ScrollDown

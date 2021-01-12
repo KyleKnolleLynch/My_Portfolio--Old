@@ -5,7 +5,7 @@ const ProfileBio = () => {
   return (
     <VisibilitySensor partialVisibility once>
       {({ isVisible }) => (
-        <div className={isVisible ? 'bio slideUp enter' : 'bio slideUp'}>
+        <div className={`bio slideUp ${isVisible && 'enter'}`}>
           <p>
             Hello, my name is Kyle. I am a front end developer living in Austin
             Texas. I'm very passionate about learning new technologies and

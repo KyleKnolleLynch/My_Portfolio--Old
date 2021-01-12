@@ -21,11 +21,9 @@ const ProjectCards = () => {
         <VisibilitySensor partialVisibility key={project.id} once>
           {({ isVisible }) => (
             <article
-              className={
-                isVisible
-                  ? 'slideUp enter project-card hover-elem'
-                  : 'slideUp project-card hover-elem'
-              }
+              className={`slideUp project-card hover-elem ${
+                isVisible && 'enter'
+              }`}
             >
               <div
                 onClick={() => setFlipped(!flipped)}
@@ -35,12 +33,8 @@ const ProjectCards = () => {
                 <div className='flipper'>
                   <div className='card-front'>
                     <picture>
-                      <source
-                        media='(max-width: 768px)'
-                        srcSet={project.imgVert}
-                      />
-                      <source media='(min-width: 768px)' srcSet={project.img} />
-                      <img src={project.img} alt='project' />
+                      <source media='(min-width: 600px)' srcSet={project.img} />
+                      <img src={project.imgVert} alt='project' />
                     </picture>
                     <div className='overlay'></div>
                     <div className='project-content'>
