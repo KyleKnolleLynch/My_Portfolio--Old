@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
-import VisibilitySensor from 'react-visibility-sensor'
+import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import Navbar from '../layout/Navbar'
-import ProjectCards from '../layout/ProjectCards'
+// import ProjectCards from '../layout/ProjectCards'
 import Copyright from '../layout/Copyright'
-import Footer from '../layout/Footer'
-import Cursor from '../layout/utils/Cursor'
+// import Footer from '../layout/Footer'
+// import Cursor from '../layout/utils/Cursor'
 import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp'
 import toursVert from '../../assets/images/projects/toursVert.webp'
 import glitchLog from '../../assets/images/projects/glitchLog.webp'
 import arrowSvg from '../../assets/icons/arrow-down-right.svg'
+
+const ProjectCards = lazy(() => import('../layout/ProjectCards'))
+const Footer = lazy(() => import('../layout/Footer'))
+const Cursor = lazy(() => import('../layout/utils/Cursor'))
 
 const Home = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 })
@@ -70,7 +74,9 @@ const Home = () => {
           </VisibilitySensor>
         </section>
         <section className='home-section-2'>
-          <ProjectCards />
+          <Suspense fallback={<div>Loading...</div>}>
+            <ProjectCards />
+          </Suspense>
         </section>
         <article className='profile-link-bottom'>
           <span>
@@ -83,8 +89,10 @@ const Home = () => {
         </article>
         <Copyright />
       </main>
-      <Footer />
-      <Cursor />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
+        <Cursor />
+      </Suspense>
     </div>
   )
 }

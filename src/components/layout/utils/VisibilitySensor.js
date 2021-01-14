@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import VSensor from 'react-visibility-sensor';
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import VSensor from 'react-visibility-sensor'
 
 const VisibilitySensor = props => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(true)
 
-  const { once, children, ...theRest } = props;
+  const { once, children, ...theRest } = props
   return (
     <VSensor
       active={active}
@@ -14,16 +14,16 @@ const VisibilitySensor = props => {
     >
       {({ isVisible }) => children({ isVisible })}
     </VSensor>
-  );
-};
+  )
+}
 
 VisibilitySensor.propTypes = {
   once: PropTypes.bool,
-  children: PropTypes.func.isRequired
-};
+  children: PropTypes.func.isRequired,
+}
 
 VisibilitySensor.defaultProps = {
-  once: false
-};
+  once: false,
+}
 
-export default VisibilitySensor;
+export default VisibilitySensor

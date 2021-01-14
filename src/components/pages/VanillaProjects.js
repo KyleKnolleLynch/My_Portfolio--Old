@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from '../layout/utils/VisibilitySensor';
 import { vanillaData } from '../../vanillaData';
 import ScrollDown from '../layout/utils/ScrollDown';
 import VanillaCard from '../layout/VanillaCard';
