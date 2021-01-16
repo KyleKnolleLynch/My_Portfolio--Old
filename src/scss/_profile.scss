@@ -94,8 +94,8 @@
     font-size: 1.8rem;
 
     .coding-wrap {
-      color: #8a2be2;
       position: relative;
+      color: lighten($code-bg-color, 35%);
       .vert-line {
         border-left: 1px solid lighten($code-bg-color, 8%);
         position: absolute;
@@ -115,7 +115,7 @@
           top: -1.3rem;
           left: -0.55rem;
           font-size: 4rem;
-          color: lighten($code-bg-color, 20%);
+          color: lighten($code-bg-color, 40%);
         }
       }
 
@@ -128,25 +128,22 @@
           position: absolute;
           top: 0;
           left: -3.5rem;
-          color: lighten($code-bg-color, 3%);
+          color: lighten($code-bg-color, 20%);
         }
 
         a {
-          color: #8a2be2;
+          color: lighten($code-bg-color, 35%);
+          text-decoration: underline;
         }
 
         .dot {
           display: inline;
           vertical-align: middle;
-          color: lighten($code-bg-color, 3%);
+          color: lighten($code-bg-color, 15%);
         }
         .coding-bright {
           color: #ff0;
           text-shadow: 0 0 2px $profile-bg-color, 0 0 4px #ff0;
-        }
-
-        .coding-decs {
-          color: #4e4396;
         }
 
         .coding-desc {

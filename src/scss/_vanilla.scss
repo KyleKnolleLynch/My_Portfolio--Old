@@ -69,22 +69,19 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-          }
-          img {
-            width: 2rem;
-          }
-          a {
-            font-size: 0.9rem;
-            margin-left: 1rem;
-            color: $darkgrey-color;
-            border: 1px solid $darkgrey-color;
-            padding: 0.4rem;
-            border-radius: 5px;
-            text-transform: uppercase;
-            transition: 200ms ease;
-            &:hover {
-              box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
-              transform: scale(1.04);
+            a {
+              font-size: 0.9rem;
+              margin-left: 1rem;
+              color: $darkgrey-color;
+              border: 1px solid $darkgrey-color;
+              padding: 0.4rem;
+              border-radius: 5px;
+              text-transform: uppercase;
+              transition: 200ms ease;
+              &:hover {
+                box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
+                transform: scale(1.04);
+              }
             }
           }
         }

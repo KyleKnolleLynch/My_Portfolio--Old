@@ -20,7 +20,6 @@
 
   .copyright {
     opacity: 1;
-    font-size: 1rem;
   }
 }
 
@@ -51,7 +50,7 @@
   }
 
   .scroll-div p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .profile-main {
@@ -93,22 +92,6 @@
     }
   }
 
-  .react-main
-    > #react-section-2
-    > .react-project-grid
-    > .react-card-container
-    > .react-card
-    > .react-card-content {
-    padding: 1rem 0.2rem 2rem;
-    h2 {
-      font-size: 2.4rem;
-    }
-    a {
-      font-size: 1rem;
-      padding: 0.8rem 1.6rem;
-    }
-  }
-
   .section-404 {
     padding-top: 8vh;
     p {
@@ -130,8 +113,12 @@
   header {
     letter-spacing: 1px;
     nav ul {
-      padding: 4rem 2.5rem 0;
+      padding: 4rem 3rem 0;
     }
+  }
+
+  .nav-link .feather-download {
+    padding-left: 0.2rem;
   }
 
   .scroll-div {
@@ -283,6 +270,7 @@
 
   footer {
     left: 3rem;
+    letter-spacing: 0;
   }
 
   .section-404 {
@@ -306,10 +294,15 @@
     }
   }
 
-  .react-main > #react-section-1 {
-    min-height: 105vh;
-    h1 {
-      margin-bottom: 14rem;
+  .react-main {
+    #react-section-1 {
+      min-height: 105vh;
+      h1 {
+        margin-bottom: 14rem;
+      }
+    }
+    #react-section-2 {
+      padding: 4rem 1rem;
     }
   }
 }
@@ -368,10 +361,6 @@
         }
       }
     }
-  }
-
-  .scroll-div p {
-    font-size: 1rem;
   }
 
   .profile-main {
