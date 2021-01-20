@@ -95,7 +95,7 @@
 
     .coding-wrap {
       position: relative;
-      color: lighten($code-bg-color, 35%);
+      color: lighten($code-bg-color, 40%);
       .vert-line {
         border-left: 1px solid lighten($code-bg-color, 8%);
         position: absolute;
@@ -128,18 +128,17 @@
           position: absolute;
           top: 0;
           left: -3.5rem;
-          color: lighten($code-bg-color, 20%);
+          color: lighten($code-bg-color, 25%);
         }
 
         a {
-          color: lighten($code-bg-color, 35%);
-          text-decoration: underline;
+          color: lighten($code-bg-color, 40%);
         }
 
         .dot {
           display: inline;
           vertical-align: middle;
-          color: lighten($code-bg-color, 15%);
+          color: lighten($code-bg-color, 20%);
         }
         .coding-bright {
           color: #ff0;

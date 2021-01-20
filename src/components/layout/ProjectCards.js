@@ -62,7 +62,7 @@ const ProjectCards = () => {
                             target='_blank'
                             rel='noopener noreferrer'
                           >
-                            Live Demo
+                            Demo
                           </a>
                           <a
                             href={project.gitLink}
@@ -70,7 +70,7 @@ const ProjectCards = () => {
                             target='_blank'
                             rel='noopener noreferrer'
                           >
-                            View Code
+                            Code
                           </a>
                         </div>
                       )}
