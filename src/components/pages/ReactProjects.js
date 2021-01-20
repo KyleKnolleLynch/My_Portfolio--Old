@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <main className='react-main'>
-        <section id='react-section-1'>
+        <section className='react-section-1'>
           <img src={reactSvg} alt='react_logo' className='react-logo-svg' />
           <h1>React Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
@@ -21,7 +21,7 @@ const Home = () => {
             )}
           </VisibilitySensor>
         </section>
-        <section id='react-section-2'>
+        <section className='react-section-2'>
           <div className='react-project-grid'>
             {reactData.map(project => (
               <VisibilitySensor partialVisibility once key={project.id}>

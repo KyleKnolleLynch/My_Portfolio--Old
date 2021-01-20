@@ -1,7 +1,7 @@
 .vanilla-main {
   background: $offwhite-color;
   color: $darkgrey-color;
-  #vanilla-section-1 {
+  .vanilla-section-1 {
     min-height: 90vh;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
       font-family: $font-nanum;
     }
   }
-  #vanilla-section-2 {
+  .vanilla-section-2 {
     padding: 4rem 2rem;
     font-family: $font-nimbus;
     .vanilla-grid {

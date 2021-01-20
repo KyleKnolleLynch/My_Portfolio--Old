@@ -2,18 +2,15 @@ import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import Navbar from '../layout/Navbar'
-// import ProjectCards from '../layout/ProjectCards'
 import Copyright from '../layout/Copyright'
-// import Footer from '../layout/Footer'
-// import Cursor from '../layout/utils/Cursor'
+import Footer from '../layout/Footer'
+import Cursor from '../layout/utils/Cursor'
 import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp'
 import toursVert from '../../assets/images/projects/toursVert.webp'
 import glitchLog from '../../assets/images/projects/glitchLog.webp'
 import arrowSvg from '../../assets/icons/arrow-down-right.svg'
 
 const ProjectCards = lazy(() => import('../layout/ProjectCards'))
-const Footer = lazy(() => import('../layout/Footer'))
-const Cursor = lazy(() => import('../layout/utils/Cursor'))
 
 const Home = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 })
@@ -89,10 +86,8 @@ const Home = () => {
         </article>
         <Copyright />
       </main>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Footer />
-        <Cursor />
-      </Suspense>
+      <Footer />
+      <Cursor />
     </div>
   )
 }

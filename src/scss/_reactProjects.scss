@@ -2,7 +2,7 @@
   font-family: $font-nanum;
   background: $darkgrey-color;
   color: $offwhite-color;
-  #react-section-1 {
+  .react-section-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@
     }
   }
 
-  #react-section-2 {
+  .react-section-2 {
     min-height: auto;
     padding: 4rem 2rem;
     .react-project-grid {

@@ -22,7 +22,7 @@ const VanillaProjects = () => {
   return (
     <div>
       <main className='vanilla-main'>
-        <section id='vanilla-section-1'>
+        <section className='vanilla-section-1'>
           <h1>Vanilla Javascript Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
@@ -30,7 +30,7 @@ const VanillaProjects = () => {
             )}
           </VisibilitySensor>
         </section>
-        <section id='vanilla-section-2'>
+        <section className='vanilla-section-2'>
           <div className='vanilla-grid'>
             {vanillaData.map((project) => (
               <VanillaCard project={project} key={project.title} />

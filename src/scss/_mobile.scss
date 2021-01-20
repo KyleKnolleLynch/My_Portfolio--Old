@@ -284,7 +284,7 @@
     }
   }
 
-  .vanilla-main #vanilla-section-1 {
+  .vanilla-main .vanilla-section-1 {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
       url('../assets/images/vanilla/bg-intro-sm.webp') center center / cover
@@ -295,13 +295,13 @@
   }
 
   .react-main {
-    #react-section-1 {
+    .react-section-1 {
       min-height: 105vh;
       h1 {
         margin-bottom: 14rem;
       }
     }
-    #react-section-2 {
+    .react-section-2 {
       padding: 4rem 1rem;
     }
   }
