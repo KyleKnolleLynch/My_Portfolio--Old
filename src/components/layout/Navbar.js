@@ -1,14 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CursorContext } from '../../context/CursorContext'
 
 const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
+  const { setHoveredState } = useContext(CursorContext)
   return (
     <nav>
       <ul>
         <li>
-        <span className='link-disabled'>{titleDisabled}</span>
-          <Link to='/' className='nav-link hover-elem'>
+          <span className='link-disabled'>{titleDisabled}</span>
+          <Link
+            to='/'
+            className='nav-link'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
+          >
             <span className='link-inner'>{title1}</span>
             <div className='link-inner-top'>{title1}</div>
             <div className='link-inner-bottom'>{title1}</div>
@@ -17,7 +23,9 @@ const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
         <li>
           <Link
             to={linkName}
-            className='nav-link hover-elem'
+            className='nav-link'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
             target={target}
             download
           >
@@ -91,15 +99,7 @@ const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-Navbar.propTypes = {
-  title1: PropTypes.string,
-  title2: PropTypes.string,
-  titleDisabled: PropTypes.string,
-  linkName: PropTypes.string,
-  target: PropTypes.string,
-};
-
-export default Navbar;
+export default Navbar

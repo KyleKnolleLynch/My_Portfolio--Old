@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CursorContext } from '../../context/CursorContext'
 
 const VanillaCard = ({
   project: { img, demoLink, title, desc, sourceLink },
 }) => {
+  const { setHoveredState } = useContext(CursorContext)
   return (
     <div className='vanilla-card'>
       <div className='vanilla-img-div'>
@@ -10,7 +12,8 @@ const VanillaCard = ({
         <span>
           <a
             href={demoLink}
-            className='hover-elem'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -36,7 +39,8 @@ const VanillaCard = ({
           </svg>
           <a
             href={sourceLink}
-            className='hover-elem'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
             target='_blank'
             rel='noopener noreferrer'
           >

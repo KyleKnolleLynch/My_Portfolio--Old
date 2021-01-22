@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CursorContext } from '../../context/CursorContext'
 
 const ReactCard = ({ project, className }) => {
   const { img, title, projectLink, sourceLink } = project
+  const { setHoveredState } = useContext(CursorContext)
 
   return (
     <div className={className}>
@@ -13,7 +15,8 @@ const ReactCard = ({ project, className }) => {
           <h2>{title}</h2>
           <a
             href={projectLink}
-            className='hover-elem'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -21,7 +24,8 @@ const ReactCard = ({ project, className }) => {
           </a>
           <a
             href={sourceLink}
-            className='hover-elem'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
             target='_blank'
             rel='noopener noreferrer'
           >

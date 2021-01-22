@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CursorContext } from '../../context/CursorContext'
 
 const Footer = () => {
+  const { setHoveredState } = useContext(CursorContext)
   return (
     <footer>
       <ul>
@@ -9,7 +11,9 @@ const Footer = () => {
             href='https://github.com/KyleKnolleLynch'
             target='_blank'
             rel='noopener noreferrer'
-            className='nav-link hover-elem'
+            className='nav-link'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
           >
             <span className='link-inner'>GH</span>
             <div className='link-inner-top'>GH</div>
@@ -18,10 +22,13 @@ const Footer = () => {
         </li>
         {/* <li>
           <a
+          
             href='https://github.com/KyleKnolleLynch'
             target='_blank'
             rel='noopener noreferrer'
-            className='nav-link hover-elem'
+            className='nav-link'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
           >
             <span className='link-inner'>TW</span>
             <div className='link-inner-top'>TW</div>
@@ -33,7 +40,9 @@ const Footer = () => {
             href='https://codepen.io/kyleknollelynch'
             target='_blank'
             rel='noopener noreferrer'
-            className='nav-link hover-elem'
+            className='nav-link'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
           >
             <span className='link-inner'>CP</span>
             <div className='link-inner-top'>CP</div>

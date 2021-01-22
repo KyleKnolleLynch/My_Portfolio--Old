@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import Navbar from '../layout/Navbar'
 import Copyright from '../layout/Copyright'
 import Footer from '../layout/Footer'
 import Cursor from '../layout/utils/Cursor'
+import { CursorContext } from '../../context/CursorContext'
 import ProfileImg from '../../assets/images/portrait1.webp'
 import ProfileAbout from '../layout/ProfileAbout'
 import ProfileBio from '../layout/ProfileBio'
@@ -13,6 +14,7 @@ import { iconsData } from '../../iconsData'
 const Profile = () => {
   const [banStyle, setBanStyle] = useState(0)
   const [imgPos, setImgPos] = useState({ x: 0, y: 0 })
+  const { setHoveredState } = useContext(CursorContext)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,7 +99,11 @@ const Profile = () => {
             email me <img src={arrowSvg} alt='down right svg' />
           </span>
           <br />
-          <a href='mailto: email@kylelynch.me' className='hover-elem'>
+          <a
+            href='mailto: email@kylelynch.me'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
+          >
             email@kylelynch.me
           </a>
         </article>

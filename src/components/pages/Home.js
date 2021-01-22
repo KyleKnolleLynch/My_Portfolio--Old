@@ -1,10 +1,11 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react'
+import React, { useState, useEffect, lazy, Suspense, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import Navbar from '../layout/Navbar'
 import Copyright from '../layout/Copyright'
 import Footer from '../layout/Footer'
 import Cursor from '../layout/utils/Cursor'
+import { CursorContext } from '../../context/CursorContext'
 import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp'
 import toursVert from '../../assets/images/projects/toursVert.webp'
 import glitchLog from '../../assets/images/projects/glitchLog.webp'
@@ -14,6 +15,7 @@ const ProjectCards = lazy(() => import('../layout/ProjectCards'))
 
 const Home = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 })
+  const { setHoveredState } = useContext(CursorContext)
 
   useEffect(() => {
     const parallax = e => {
@@ -80,7 +82,11 @@ const Home = () => {
             Visit <img src={arrowSvg} alt='down right svg' />
           </span>
           <br />
-          <Link to='/profile' className='hover-elem'>
+          <Link
+            to='/profile'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
+          >
             Profile
           </Link>
         </article>

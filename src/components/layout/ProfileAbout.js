@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react'
+import { CursorContext } from '../../context/CursorContext'
 
 const ProfileAbout = () => {
+  const { setHoveredState } = useContext(CursorContext)
   return (
     <article className='coding-wrap'>
       <div className='vert-line'></div>
@@ -35,7 +37,11 @@ const ProfileAbout = () => {
       </div>
       <div className='coding-line' data-line-num='05'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>email:{' '}
-        <a href='mailto: email@kylelynch.me' className='hover-elem'>
+        <a
+          href='mailto: email@kylelynch.me'
+          onMouseEnter={() => setHoveredState(true)}
+          onMouseLeave={() => setHoveredState(false)}
+        >
           '<span className='coding-proper'>email@kylelynch.me</span>'
         </a>
       </div>
@@ -143,7 +149,7 @@ const ProfileAbout = () => {
         {'Contact/>'}
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default ProfileAbout;
+export default ProfileAbout

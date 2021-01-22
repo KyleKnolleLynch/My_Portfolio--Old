@@ -1,10 +1,12 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import VisibilitySensor from './utils/VisibilitySensor'
 import { Link } from 'react-router-dom'
 import { projectsData } from '../../projectsData'
+import { CursorContext } from '../../context/CursorContext'
 
 const ProjectCards = () => {
   const [flipped, setFlipped] = useState(false)
+  const { setHoveredState } = useContext(CursorContext)
 
   useEffect(() => {
     const card = document.querySelector('.flip-container')
@@ -16,22 +18,22 @@ const ProjectCards = () => {
   }, [flipped])
 
   return (
-    <Fragment>
+    <>
       {projectsData.map(project => (
         <VisibilitySensor partialVisibility key={project.id} once>
           {({ isVisible }) => (
-            <article
-              className={`slideUp project-card hover-elem ${
-                isVisible && 'enter'
-              }`}
-            >
+            <div className={`slideUp project-card ${isVisible && 'enter'}`}>
               <div
                 onClick={() => setFlipped(!flipped)}
                 className={flipped ? 'flip-container flip' : 'flip-container'}
                 onMouseEnter={() => flipped && setFlipped(!flipped)}
               >
                 <div className='flipper'>
-                  <div className='card-front'>
+                  <div
+                    className='card-front'
+                    onMouseEnter={() => setHoveredState(true)}
+                    onMouseLeave={() => setHoveredState(false)}
+                  >
                     <picture>
                       <source media='(min-width: 600px)' srcSet={project.img} />
                       <img src={project.imgVert} alt='project' />
@@ -51,7 +53,12 @@ const ProjectCards = () => {
                     <div className='card-btn-wrap'>
                       {project.link === '/vanillaProjects' ||
                       project.link === '/reactProjects' ? (
-                        <Link to={project.link} className='card-btn'>
+                        <Link
+                          to={project.link}
+                          className='card-btn'
+                          onMouseEnter={() => setHoveredState(true)}
+                          onMouseLeave={() => setHoveredState(false)}
+                        >
                           View Projects
                         </Link>
                       ) : (
@@ -59,6 +66,8 @@ const ProjectCards = () => {
                           <a
                             href={project.link}
                             className='card-btn'
+                            onMouseEnter={() => setHoveredState(true)}
+                            onMouseLeave={() => setHoveredState(false)}
                             target='_blank'
                             rel='noopener noreferrer'
                           >
@@ -67,6 +76,8 @@ const ProjectCards = () => {
                           <a
                             href={project.gitLink}
                             className='card-btn'
+                            onMouseEnter={() => setHoveredState(true)}
+                            onMouseLeave={() => setHoveredState(false)}
                             target='_blank'
                             rel='noopener noreferrer'
                           >
@@ -78,11 +89,11 @@ const ProjectCards = () => {
                   </div>
                 </div>
               </div>
-            </article>
+            </div>
           )}
         </VisibilitySensor>
       ))}
-    </Fragment>
+    </>
   )
 }
 
