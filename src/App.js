@@ -22,7 +22,7 @@ const App = () => {
         setTimeout(() => logoPng.setAttribute('href', logoWhite), 4000)
       }
 
-      let intv = setInterval(changeFavicon, 8000)
+      const intv = setInterval(changeFavicon, 8000)
       return () => clearInterval(intv)
     }
   }, [])
