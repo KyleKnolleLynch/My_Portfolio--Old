@@ -55,7 +55,7 @@ header {
   nav ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 4.5rem 5.5rem 0;
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -63,13 +63,12 @@ header {
       .link-disabled {
         display: inline-block;
         transform: scale(1.2, 0.8);
-        margin-bottom: 0.5rem;
       }
       .nav-link .feather-download {
         padding-left: 1rem;
       }
       .nav-link.nav-link1 {
-        margin-top: 0.3rem;
+        margin-top: 0.35rem;
       }
     }
   }
