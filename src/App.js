@@ -8,7 +8,7 @@ import VanillaProjects from './components/pages/VanillaProjects'
 import ReactProjects from './components/pages/ReactProjects'
 import NotFound from './components/pages/NotFound'
 
-import './css/main.css'
+import './css/main.min.css'
 
 const App = () => {
   const logoWhite = './logoIcons/white_icon_32.png'

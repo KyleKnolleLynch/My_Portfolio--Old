@@ -1,30 +1,40 @@
 @font-face {
   font-family: 'Impact';
-  src: url('../assets/fonts/Impact.woff2') format('woff2');
+  src: url('/fonts/Impact.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('../assets/fonts/BebasNeue-Regular.woff2') format('woff2');
+  src: url('/fonts/BebasNeue-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Nanum Gothic';
-  src: url('../assets/fonts/NanumGothic-Regular.woff2') format('woff2');
+  src: url('/fonts/NanumGothic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL';
-  src: url('../assets/fonts/NimbusSanL-Reg.woff2') format('woff2');
+  src: url('/fonts/NimbusSanL-Reg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'NimbusSanL-Bold';
-  src: url('../assets/fonts/NimbusSanL-Bold.woff2') format('woff2');
+  src: url('/fonts/NimbusSanL-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
   font-display: swap;
 }
 

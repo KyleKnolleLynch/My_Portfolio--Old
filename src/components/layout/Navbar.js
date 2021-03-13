@@ -2,16 +2,28 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CursorContext } from '../../context/CursorContext'
 
-const Navbar = ({ title1, title2, titleDisabled, linkName, target }) => {
+const Navbar = ({
+  title1,
+  title2,
+  titleDisabled,
+  noDisplay,
+  linkName,
+  target,
+}) => {
   const { setHoveredState } = useContext(CursorContext)
   return (
     <nav>
       <ul>
         <li>
-          <span className='link-disabled'>{titleDisabled}</span>
+          <span
+            className='link-disabled'
+            onMouseMove={() => setHoveredState(false)}
+          >
+            {titleDisabled}
+          </span>
           <Link
             to='/'
-            className='nav-link'
+            className={`nav-link nav-link1 ${noDisplay}`}
             onMouseEnter={() => setHoveredState(true)}
             onMouseLeave={() => setHoveredState(false)}
           >

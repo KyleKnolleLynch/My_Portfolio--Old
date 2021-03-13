@@ -38,11 +38,12 @@ const Home = () => {
 
   return (
     <div>
-      <header className='home-header'>
+      <header>
         <Navbar
           titleDisabled='KYLE LYNCH'
           title2='PROFILE'
           linkName='/profile'
+          noDisplay='no-display'
         />
       </header>
       <main>

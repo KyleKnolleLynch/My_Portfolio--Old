@@ -30,6 +30,7 @@
       letter-spacing: 0.1rem;
       &::after {
         font-size: 1.4rem;
+        transform: scale(1, 1.1);
       }
     }
     .img-dis-1 {
@@ -113,12 +114,11 @@
   header {
     letter-spacing: 1px;
     nav ul {
-      padding: 4rem 3rem 0;
+      padding: 4rem 2.8rem 0;
+      li .nav-link .feather-download {
+        padding-left: 0.1rem;
+      }
     }
-  }
-
-  .nav-link .feather-download {
-    padding-left: 0.1rem;
   }
 
   .scroll-div {
