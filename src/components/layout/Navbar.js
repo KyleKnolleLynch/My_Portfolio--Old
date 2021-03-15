@@ -23,7 +23,7 @@ const Navbar = ({
           </span>
           <Link
             to='/'
-            className={`nav-link nav-link1 ${noDisplay}`}
+            className={`nav-link ${noDisplay}`}
             onMouseEnter={() => setHoveredState(true)}
             onMouseLeave={() => setHoveredState(false)}
           >
@@ -47,8 +47,8 @@ const Navbar = ({
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='22'
+                    width='20'
+                    height='20'
                     viewBox='0 0 22 22'
                     fill='none'
                     stroke='currentColor'
@@ -69,8 +69,8 @@ const Navbar = ({
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='22'
+                    width='20'
+                    height='20'
                     viewBox='0 0 22 22'
                     fill='none'
                     stroke='currentColor'
@@ -91,8 +91,8 @@ const Navbar = ({
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    width='22'
-                    height='22'
+                    width='20'
+                    height='20'
                     viewBox='0 0 22 22'
                     fill='none'
                     stroke='currentColor'

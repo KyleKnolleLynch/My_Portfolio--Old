@@ -66,6 +66,9 @@ header {
       }
       .nav-link .feather-download {
         padding-left: 1rem;
+        svg {
+          vertical-align: top;
+        }
       }
     }
   }
