@@ -8,7 +8,7 @@ const VanillaCard = ({
   return (
     <div className='vanilla-card'>
       <div className='vanilla-img-div'>
-        <img src={img} alt='vanilla-projects' />
+        <img src={img} alt='vanilla-projects' width='400px' height='350px' />
         <span>
           <a
             href={demoLink}

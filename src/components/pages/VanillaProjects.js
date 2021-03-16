@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import VisibilitySensor from '../layout/utils/VisibilitySensor';
-import { vanillaData } from '../../vanillaData';
-import ScrollDown from '../layout/utils/ScrollDown';
-import VanillaCard from '../layout/VanillaCard';
-import HomeLink from '../layout/utils/HomeLink';
-import Copyright from '../layout/Copyright';
-import Cursor from '../layout/utils/Cursor';
+import React, { useState, useEffect } from 'react'
+import VisibilitySensor from '../layout/utils/VisibilitySensor'
+import { vanillaData } from '../../vanillaData'
+import ScrollDown from '../layout/utils/ScrollDown'
+import VanillaCard from '../layout/VanillaCard'
+import HomeLink from '../layout/utils/HomeLink'
+import Copyright from '../layout/Copyright'
+import Cursor from '../layout/utils/Cursor'
 
 const VanillaProjects = () => {
-  const [fill, setFill] = useState('#454545');
+  const [fill, setFill] = useState('#454545')
 
   useEffect(() => {
     const changeColor = () => {
-      window.innerWidth > 600 ? setFill('#454545') : setFill('#fff');
-    };
-    changeColor();
-    window.addEventListener('resize', changeColor);
-    return () => window.removeEventListener('resize', changeColor);
-  }, []);
+      window.innerWidth > 600 ? setFill('#454545') : setFill('#fff')
+    }
+    changeColor()
+    window.addEventListener('resize', changeColor)
+    return () => window.removeEventListener('resize', changeColor)
+  }, [])
 
   return (
     <div>
@@ -32,7 +32,7 @@ const VanillaProjects = () => {
         </section>
         <section className='vanilla-section-2'>
           <div className='vanilla-grid'>
-            {vanillaData.map((project) => (
+            {vanillaData.map(project => (
               <VanillaCard project={project} key={project.title} />
             ))}
           </div>
@@ -42,7 +42,7 @@ const VanillaProjects = () => {
       </main>
       <Cursor />
     </div>
-  );
-};
+  )
+}
 
-export default VanillaProjects;
+export default VanillaProjects

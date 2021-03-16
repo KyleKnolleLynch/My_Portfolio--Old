@@ -26,7 +26,7 @@
       grid-template-columns: repeat(auto-fit, minmax(18rem, 40rem));
       gap: 7rem;
       justify-content: center;
-      margin: 20rem auto 10rem;
+      margin: 20vh auto 10vh;
       .vanilla-card {
         width: 100%;
         background: $white-color;
@@ -37,7 +37,7 @@
           position: relative;
           border-bottom: 1px solid lighten($code-bg-color, 16%);
           img {
-            height: 350px;
+            width: 100%;
             object-fit: cover;
           }
           span a {

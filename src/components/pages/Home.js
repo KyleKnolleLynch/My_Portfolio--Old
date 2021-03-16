@@ -55,13 +55,28 @@ const Home = () => {
           </div>
 
           <div className='display img-dis-1'>
-            <img src={inertiaVert} alt='inertia-display' />
+            <img
+              src={inertiaVert}
+              alt='inertia-display'
+              width='260px'
+              height='340px'
+            />
           </div>
           <div className='display img-dis-2'>
-            <img src={glitchLog} alt='glitchLog-display' />
+            <img
+              src={glitchLog}
+              alt='glitchLog-display'
+              width='160px'
+              height='240px'
+            />
           </div>
           <div className='display img-dis-3'>
-            <img src={toursVert} alt='tours-display' />
+            <img
+              src={toursVert}
+              alt='tours-display'
+              width='220px'
+              height='300px'
+            />
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>

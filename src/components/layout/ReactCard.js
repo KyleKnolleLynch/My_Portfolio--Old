@@ -9,7 +9,12 @@ const ReactCard = ({ project, className }) => {
     <div className={className}>
       <div className='react-card'>
         <div className='react-img-container'>
-          <img src={img} alt='react-project-card' />
+          <img
+            src={img}
+            alt='react-project-card'
+            width='250px'
+            height='250px'
+          />
         </div>
         <div className='react-card-content'>
           <h2>{title}</h2>

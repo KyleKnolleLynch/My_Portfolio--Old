@@ -59,7 +59,12 @@ const Profile = () => {
             className='profile-img-div'
             style={{ transform: `translate(${imgPos.x}px, ${imgPos.y}px)` }}
           >
-            <img src={ProfileImg} alt='profile_portrait' />
+            <img
+              src={ProfileImg}
+              alt='profile_portrait'
+              width='500px'
+              height='400px'
+            />
           </div>
           <div className='profile-banner-1 banner'>
             <div
@@ -110,7 +115,7 @@ const Profile = () => {
         <ul className='test-icons'>
           {iconsData.map(icon => (
             <li key={icon.id}>
-              <img src={icon.icon} alt='svg_icons' />
+              <img src={icon.icon} alt='svg_icons' width='35px' height='35px' />
             </li>
           ))}
         </ul>

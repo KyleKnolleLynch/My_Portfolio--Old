@@ -13,7 +13,13 @@ const Home = () => {
     <div>
       <main className='react-main'>
         <section className='react-section-1'>
-          <img src={reactSvg} alt='react_logo' className='react-logo-svg' />
+          <img
+            src={reactSvg}
+            alt='react_logo'
+            className='react-logo-svg'
+            width='160px'
+            height='160px'
+          />
           <h1>React Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
