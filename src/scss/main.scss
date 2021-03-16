@@ -56,7 +56,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 4.7rem 5.5rem 0;
+    padding: 4.5rem 5.5rem 0;
     text-transform: uppercase;
     font-size: 1.6rem;
     li {
@@ -67,9 +67,6 @@ header {
       }
       .nav-link .feather-download {
         padding-left: 1rem;
-        svg {
-          vertical-align: -0.2rem;
-        }
       }
     }
   }
