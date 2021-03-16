@@ -87,16 +87,12 @@
     font-size: 1.6rem;
     font-family: $font-nimbus;
     img {
-      width: 2.2rem;
-      width: clamp(1.6rem, 3vw, 2.2rem);
-      display: inline-block;
       margin-left: 0.1rem;
     }
   }
   a {
     margin-top: -1rem;
     font-size: 7rem;
-    font-size: clamp(4.5rem, 10vw, 7rem);
     transition: 500ms ease;
     &:hover {
       color: $black-color;

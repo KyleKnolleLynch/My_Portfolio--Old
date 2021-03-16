@@ -36,7 +36,12 @@ const ProjectCards = () => {
                   >
                     <picture>
                       <source media='(min-width: 600px)' srcSet={project.img} />
-                      <img src={project.imgVert} alt='project' />
+                      <img
+                        src={project.imgVert}
+                        alt='project'
+                        width='400px'
+                        height='650px'
+                      />
                     </picture>
                     <div className='overlay'></div>
                     <div className='project-content'>
@@ -46,7 +51,12 @@ const ProjectCards = () => {
                     </div>
                   </div>
                   <div className='card-back'>
-                    <img src={project.icon} alt='icons' />
+                    <img
+                      src={project.icon}
+                      alt='icons'
+                      width='50px'
+                      height='50px'
+                    />
                     <h1>{project.title}</h1>
                     <br />
                     <p>{project.desc}</p>

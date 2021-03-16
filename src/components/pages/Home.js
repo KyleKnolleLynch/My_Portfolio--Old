@@ -95,7 +95,13 @@ const Home = () => {
         </section>
         <article className='profile-link-bottom'>
           <span>
-            Visit <img src={arrowSvg} alt='down right svg' />
+            Visit{' '}
+            <img
+              src={arrowSvg}
+              alt='down right svg'
+              width='22px'
+              height='22px'
+            />
           </span>
           <br />
           <Link

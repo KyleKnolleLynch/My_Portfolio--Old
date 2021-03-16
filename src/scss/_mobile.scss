@@ -180,6 +180,11 @@
         object-fit: contain;
       }
 
+      .card-back img {
+        width: 35px;
+        height: 35px;
+      }
+
       .overlay,
       &:hover .overlay {
         transform: scale(1);
@@ -250,8 +255,13 @@
       }
     }
 
-    .profile-contact-email a {
-      font-size: 2.8rem;
+    .profile-contact-email {
+      span img {
+        width: 1.6rem;
+      }
+      a {
+        font-size: 2.8rem;
+      }
     }
 
     .test-icons {
