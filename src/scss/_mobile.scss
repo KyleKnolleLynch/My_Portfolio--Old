@@ -11,11 +11,35 @@
       &:nth-child(3n) {
         align-self: center;
       }
+      .overlay,
+      &:hover .overlay {
+        transform: scale(1);
+        opacity: 0.4;
+      }
+      .project-content {
+        width: 60%;
+        max-width: 22rem;
+        transform: scale(1);
+        opacity: 1;
+        background: rgba(33, 33, 33, 0.8);
+        border: 1px solid $white-color;
+        border-radius: 5px;
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 
   .profile-link-bottom {
     margin-top: 30rem;
+  }
+
+  .profile-main .profile-contact-email a {
+    font-size: 5rem;
   }
 
   .copyright {
@@ -81,7 +105,7 @@
     }
 
     .profile-contact-email a {
-      font-size: 4.5rem;
+      font-size: 4.2rem;
     }
 
     .test-icons {
@@ -184,26 +208,6 @@
         width: 35px;
         height: 35px;
       }
-
-      .overlay,
-      &:hover .overlay {
-        transform: scale(1);
-        opacity: 0.4;
-      }
-      .project-content {
-        width: 60%;
-        transform: scale(1);
-        opacity: 1;
-        background: rgba(33, 33, 33, 0.8);
-        border: 1px solid $white-color;
-        border-radius: 5px;
-        h1 {
-          font-size: 2rem;
-        }
-        h2 {
-          font-size: 1.3rem;
-        }
-      }
     }
   }
 
@@ -256,9 +260,6 @@
     }
 
     .profile-contact-email {
-      span img {
-        width: 1.6rem;
-      }
       a {
         font-size: 2.8rem;
       }
@@ -274,7 +275,7 @@
   }
 
   .copyright {
-    text-align: center;
+    justify-content: center;
     padding-right: 0;
   }
 

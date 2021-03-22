@@ -1,24 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import { vanillaData } from '../../vanillaData'
-import ScrollDown from '../layout/utils/ScrollDown'
 import VanillaCard from '../layout/VanillaCard'
 import HomeLink from '../layout/utils/HomeLink'
 import Copyright from '../layout/Copyright'
 import Cursor from '../layout/utils/Cursor'
 
 const VanillaProjects = () => {
-  const [fill, setFill] = useState('#454545')
-
-  useEffect(() => {
-    const changeColor = () => {
-      window.innerWidth > 600 ? setFill('#454545') : setFill('#fff')
-    }
-    changeColor()
-    window.addEventListener('resize', changeColor)
-    return () => window.removeEventListener('resize', changeColor)
-  }, [])
-
   return (
     <div>
       <main className='vanilla-main'>
@@ -26,7 +14,9 @@ const VanillaProjects = () => {
           <h1>Vanilla Javascript Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
-              <ScrollDown fill={fill} isVisible={isVisible} />
+              <div className={`scroll-div ${isVisible && 'hidden'}`}>
+                <p className='scroll-vert'></p>
+              </div>
             )}
           </VisibilitySensor>
         </section>
@@ -38,7 +28,7 @@ const VanillaProjects = () => {
           </div>
         </section>
         <HomeLink />
-        <Copyright color='#454545' />
+        <Copyright color='#0e0016' />
       </main>
       <Cursor />
     </div>

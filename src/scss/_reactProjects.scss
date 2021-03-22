@@ -1,18 +1,17 @@
 .react-main {
   font-family: $font-nanum;
-  background: $darkgrey-color;
-  color: $offwhite-color;
+  background: $offwhite-color;
   .react-section-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgb(91, 21, 55);
+    background: $code-bg-color;
     background-image: radial-gradient(
       circle 1192px at 21.5% 49.5%,
-      rgba(91, 21, 55, 1) 0.1%,
-      rgba(0, 0, 0, 1) 100.2%
+      lighten($code-bg-color, 3%) 0.1%,
+      $profile-bg-color 100.2%
     );
     .react-logo-svg {
       margin-bottom: 3rem;
@@ -47,14 +46,13 @@
         width: 100%;
         height: 100%;
         padding: 3rem 0 2rem;
-        background: rgba(105, 24, 63, 0.2);
+        background: $code-bg-color;
         border-radius: 1rem;
-        transition: opacity 1s ease-in-out,
-          transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
           box-shadow 800ms ease-in-out;
         &:hover {
           transform: scale(1.05);
-          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
         }
         .react-card {
           display: flex;
@@ -80,54 +78,26 @@
               font-size: 1.2rem;
               padding: 0.8rem 1.6rem;
               text-transform: uppercase;
-              border: 1px solid $offwhite-color;
+              border: 1px solid $white-color;
               border-radius: 3rem;
               transition: 300ms ease-in-out;
               &:hover {
-                text-shadow: 0px 0px 4px $offwhite-color;
-                box-shadow: 0px 0px 6px $offwhite-color;
-                background: rgba(91, 21, 55, 0.5);
+                text-shadow: 0px 0px 6px $white-color;
+                box-shadow: 0px 0px 8px $white-color;
               }
-              span {
-                display: inline-block;
-                svg {
-                  margin: 0 0 -0.5rem 0.7rem;
-                  border-radius: 50%;
-                  transition: 300ms ease-in-out;
-                }
+              span svg {
+                margin: 0 0 -0.5rem 0.7rem;
+                border-radius: 50%;
+                transition: 300ms ease-in-out;
               }
+
               &:hover svg {
-                box-shadow: 0px 0px 6px $offwhite-color;
+                box-shadow: 0px 0px 6px $white-color;
               }
             }
           }
         }
       }
-    }
-  }
-
-  .home-link-bottom {
-    a {
-      color: $offwhite-color;
-      &:hover {
-        color: $darkgrey-color;
-        text-shadow: -1px -1px 0 $offwhite-color, 1px -1px 0 $offwhite-color,
-          -1px 1px 0 $offwhite-color, 1px 1px 0 $offwhite-color;
-      }
-      @supports (
-        (text-stroke: 1px $offwhite-color) or
-          (-webkit-text-stroke: 1px $offwhite-color)
-      ) {
-        &:hover {
-          color: transparent;
-          -webkit-text-stroke: 1px $offwhite-color;
-          text-stroke: 1px $offwhite-color;
-          text-shadow: none;
-        }
-      }
-    }
-    &:after {
-      background: $offwhite-color;
     }
   }
 }

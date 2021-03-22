@@ -132,6 +132,9 @@
 
         a {
           color: lighten($code-bg-color, 40%);
+          span {
+            text-decoration: underline;
+          }
         }
 
         .dot {
@@ -168,9 +171,6 @@
 
   .profile-contact-email {
     margin: auto;
-    span img {
-      width: 22px;
-    }
     a {
       margin-top: -0.5rem;
       font-size: 6rem;

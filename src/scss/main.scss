@@ -90,15 +90,18 @@ footer {
 
 //  copyright
 .copyright {
+  display: flex;
+  justify-content: flex-end;
   padding: 0 4rem 1.2rem 0;
-  text-align: end;
-  font-size: 1.2rem;
-  font-family: $font-nanum;
-  letter-spacing: 0.1rem;
-  opacity: 0.4;
-  transition: opacity 300ms ease-out;
-  &:hover {
-    opacity: 1;
+  p {
+    font-size: 1.2rem;
+    font-family: $font-nanum;
+    letter-spacing: 0.1rem;
+    opacity: 0.6;
+    transition: opacity 250ms ease-out;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 

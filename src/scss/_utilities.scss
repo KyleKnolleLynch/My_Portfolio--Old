@@ -83,17 +83,6 @@ section {
   }
 }
 
-//  scroll-down chevron
-.down-chev {
-  bottom: 2rem;
-  animation: bounce 2s ease both infinite;
-  transform: translateZ(0);
-  svg {
-    width: 4rem;
-    height: 4rem;
-  }
-}
-
 //  return home link
 .home-link-bottom {
   text-align: center;
@@ -103,20 +92,21 @@ section {
   position: relative;
   a {
     font-size: 4rem;
-    color: $darkgrey-color;
+    color: $profile-bg-color;
     transition: 500ms ease;
     &:hover {
       color: $offwhite-color;
-      text-shadow: -1px -1px 0 $black-color, 1px -1px 0 $black-color,
-        -1px 1px 0 $black-color, 1px 1px 0 $black-color;
+      text-shadow: -1px -1px 0 $profile-bg-color, 1px -1px 0 $profile-bg-color,
+        -1px 1px 0 $profile-bg-color, 1px 1px 0 $profile-bg-color;
     }
     @supports (
-      (text-stroke: 1px $black-color) or (-webkit-text-stroke: 1px $black-color)
+      (text-stroke: 1px $profile-bg-color) or
+        (-webkit-text-stroke: 1px $profile-bg-color)
     ) {
       &:hover {
         color: transparent;
-        -webkit-text-stroke: 1px $black-color;
-        text-stroke: 1px $black-color;
+        -webkit-text-stroke: 1px $profile-bg-color;
+        text-stroke: 1px $profile-bg-color;
         text-shadow: none;
       }
     }
@@ -130,6 +120,6 @@ section {
     left: 0;
     right: 0;
     margin: auto;
-    background: $darkgrey-color;
+    background: $profile-bg-color;
   }
 }

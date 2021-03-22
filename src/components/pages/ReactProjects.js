@@ -3,7 +3,6 @@ import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import { reactData } from '../../reactData'
 import ReactCard from '../layout/ReactCard'
 import reactSvg from '../../assets/icons/react.svg'
-import ScrollDown from '../layout/utils/ScrollDown'
 import HomeLink from '../layout/utils/HomeLink'
 import Copyright from '../layout/Copyright'
 import Cursor from '../layout/utils/Cursor'
@@ -23,7 +22,9 @@ const Home = () => {
           <h1>React Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
             {({ isVisible }) => (
-              <ScrollDown fill='#dfdfdf' isVisible={isVisible} />
+              <div className={`scroll-div ${isVisible && 'hidden'}`}>
+                <p className='scroll-vert'></p>
+              </div>
             )}
           </VisibilitySensor>
         </section>
@@ -44,7 +45,7 @@ const Home = () => {
           </div>
         </section>
         <HomeLink />
-        <Copyright color='#dfdfdf' />
+        <Copyright color='#0e0016' />
       </main>
       <Cursor />
     </div>
