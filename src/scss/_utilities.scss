@@ -123,3 +123,31 @@ section {
     background: $profile-bg-color;
   }
 }
+
+
+//  return home link negative colors
+.home-link-bottom-neg-colors {
+  margin: 5rem 0 10rem;
+  a {
+    color: $white-color;
+    &:hover {
+      color: $black-color;
+      text-shadow: -1px -1px 0 $white-color, 1px -1px 0 $white-color,
+        -1px 1px 0 $white-color, 1px 1px 0 $white-color;
+    }
+    @supports (
+      (text-stroke: 1px $white-color) or
+        (-webkit-text-stroke: 1px $white-color)
+    ) {
+      &:hover {
+        color: transparent;
+        -webkit-text-stroke: 1px $white-color;
+        text-stroke: 1px $white-color;
+        text-shadow: none;
+      }
+    }
+  }
+  &:after {
+    background: $white-color;
+  }
+}

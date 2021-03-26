@@ -7,7 +7,7 @@ import HomeLink from '../layout/utils/HomeLink'
 import Copyright from '../layout/Copyright'
 import Cursor from '../layout/utils/Cursor'
 
-const Home = () => {
+const ReactProjects = () => {
   return (
     <div>
       <main className='react-main'>
@@ -52,4 +52,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default ReactProjects

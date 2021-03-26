@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CursorContext } from '../../../context/CursorContext'
 
-const HomeLink = () => {
+const HomeLink = ({ classNames }) => {
   const { setHoveredState } = useContext(CursorContext)
   return (
-    <article className='home-link-bottom'>
+    <article className={`home-link-bottom ${classNames}`}>
       <Link
         to='/'
         onMouseEnter={() => setHoveredState(true)}

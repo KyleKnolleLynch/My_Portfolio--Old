@@ -1,0 +1,25 @@
+.summary-container {
+  max-width: 140rem;
+  margin: auto;
+  padding: 2rem;
+  font-family: $font-nimbus;
+  .summary-title {
+    font-size: 5rem;
+    text-align: center;
+    font-family: $font-nimbus-bold;
+  }
+  .summary-subtitle {
+    font-size: 4rem;
+    text-align: center;
+  }
+  article {
+    padding: 5rem 0;
+    h3 {
+      font-size: 3rem;
+      padding-bottom: 2rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}

@@ -19,7 +19,7 @@ export const projectsData = [
     img: img1,
     imgVert: img1,
     icon: iconJs,
-    link: '/vanillaProjects',
+    localLink: '/vanillaProjects',
     desc: 'Collection of small projects using vanilla Javascript.',
   },
   {
@@ -28,7 +28,7 @@ export const projectsData = [
     img: img2,
     imgVert: img2,
     icon: iconReact,
-    link: '/reactProjects',
+    localLink: '/reactProjects',
     desc: 'Collection of small projects using the React JS library.',
   },
 
@@ -79,5 +79,6 @@ export const projectsData = [
     gitLink: 'https://github.com/kyleknollelynch/miami-travel',
     desc:
       'Mock Miami travel website using functional components and hooks. Displays data from weather and livecam APIs. Implements intersection observer to style page sections image backgrounds with gradient overlays. Framer motion used for smooth react-router link transitions. Header image carousel built without frameworks.',
+    summary: '/projectSummaryOne',
   },
 ]

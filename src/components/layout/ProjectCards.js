@@ -60,11 +60,25 @@ const ProjectCards = () => {
                     <h1>{project.title}</h1>
                     <br />
                     <p>{project.desc}</p>
-                    <div className='card-btn-wrap'>
-                      {project.link === '/vanillaProjects' ||
-                      project.link === '/reactProjects' ? (
+
+                    {project.summary && (
+                      <div className='summary-link-div'>
+                        <h2>Read my Full Project Overview: </h2>
                         <Link
-                          to={project.link}
+                          to={project.summary}
+                          className='summary-btn'
+                          onMouseEnter={() => setHoveredState(true)}
+                          onMouseLeave={() => setHoveredState(false)}
+                        >
+                          Here
+                        </Link>
+                      </div>
+                    )}
+
+                    <div className='card-btn-wrap'>
+                      {project.localLink ? (
+                        <Link
+                          to={project.localLink}
                           className='card-btn'
                           onMouseEnter={() => setHoveredState(true)}
                           onMouseLeave={() => setHoveredState(false)}
