@@ -3,25 +3,7 @@
   src: url('/fonts/Impact.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  unicode-range: U+0020—007F;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  src: url('/fonts/BebasNeue-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  unicode-range: U+0020—007F;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Nanum Gothic';
-  src: url('/fonts/NanumGothic-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  unicode-range: U+0020—00B7;
+  unicode-range: U+0020 —007F;
   font-display: swap;
 }
 
@@ -30,7 +12,7 @@
   src: url('/fonts/NimbusSanL-Reg.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  unicode-range: U+0020—007F;
+  unicode-range: U+0020 —007F;
   font-display: swap;
 }
 
@@ -39,7 +21,7 @@
   src: url('/fonts/NimbusSanL-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  unicode-range: U+0020—007F;
+  unicode-range: U+0020 —007F;
   font-display: swap;
 }
 
@@ -55,8 +37,6 @@ $thumbBG: #222;
 
 /*  font stacks */
 $font-impact: 'Impact', Calibri, Tahoma, Roboto, sans-serif;
-$font-bebas: 'Bebas Neue', Helvetica, sans-serif;
-$font-nanum: 'Nanum Gothic', Helvetica, Arial, sans-serif;
 $font-nimbus: 'NimbusSanL', Helvetica, Arial, sans-serif;
 $font-nimbus-bold: 'NimbusSanL-Bold', Helvetica, Arial, sans-serif;
 
@@ -82,9 +62,7 @@ html {
 
   text-rendering: optimizeLegibility;
   text-rendering: geometricPrecision;
-  font-smooth: always;
 
-  font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

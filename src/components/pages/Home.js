@@ -58,24 +58,24 @@ const Home = () => {
             <img
               src={inertiaVert}
               alt='inertia-display'
-              width='260px'
-              height='340px'
+              width='260'
+              height='340'
             />
           </div>
           <div className='display img-dis-2'>
             <img
               src={glitchLog}
               alt='glitchLog-display'
-              width='160px'
-              height='240px'
+              width='160'
+              height='240'
             />
           </div>
           <div className='display img-dis-3'>
             <img
               src={toursVert}
               alt='tours-display'
-              width='220px'
-              height='300px'
+              width='220'
+              height='300'
             />
           </div>
 
@@ -99,8 +99,8 @@ const Home = () => {
             <img
               src={arrowSvg}
               alt='down right svg'
-              width='22px'
-              height='22px'
+              width='22'
+              height='22'
             />
           </span>
           <br />

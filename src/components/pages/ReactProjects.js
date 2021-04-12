@@ -16,8 +16,8 @@ const ReactProjects = () => {
             src={reactSvg}
             alt='react_logo'
             className='react-logo-svg'
-            width='160px'
-            height='160px'
+            width='160'
+            height='160'
           />
           <h1>React Projects</h1>
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>

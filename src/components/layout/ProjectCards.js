@@ -39,8 +39,8 @@ const ProjectCards = () => {
                       <img
                         src={project.imgVert}
                         alt='project'
-                        width='400px'
-                        height='650px'
+                        width='400'
+                        height='650'
                       />
                     </picture>
                     <div className='overlay'></div>
@@ -54,27 +54,29 @@ const ProjectCards = () => {
                     <img
                       src={project.icon}
                       alt='icons'
-                      width='50px'
-                      height='50px'
+                      width='50'
+                      height='50'
                     />
                     <h1>{project.title}</h1>
                     <br />
-                    <p>{project.desc}</p>
-
-                    {project.summary && (
-                      <div className='summary-link-div'>
-                        <h2>Read my Full Project Overview: </h2>
-                        <Link
-                          to={project.summary}
-                          className='summary-btn'
-                          onMouseEnter={() => setHoveredState(true)}
-                          onMouseLeave={() => setHoveredState(false)}
-                        >
-                          Here
-                        </Link>
-                      </div>
-                    )}
-
+                    <div>
+                      <p>{project.desc}</p>
+                      {project.summary && (
+                        <p>
+                          Take a minute to read my full project{' '}
+                          <span>
+                            <Link
+                              to={project.summary}
+                              className='summary-btn'
+                              onMouseEnter={() => setHoveredState(true)}
+                              onMouseLeave={() => setHoveredState(false)}
+                            >
+                              Summary
+                            </Link>
+                          </span>
+                        </p>
+                      )}
+                    </div>
                     <div className='card-btn-wrap'>
                       {project.localLink ? (
                         <Link

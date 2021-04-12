@@ -1,6 +1,7 @@
 .vanilla-main {
   background: $offwhite-color;
   color: $code-bg-color;
+  font-family: $font-nimbus;
   .vanilla-section-1 {
     min-height: 90vh;
     display: flex;
@@ -14,12 +15,11 @@
     h1 {
       font-size: 3.5rem;
       color: $white-color;
-      font-family: $font-nanum;
+      font-family: $font-nimbus-bold;
     }
   }
   .vanilla-section-2 {
     padding: 4rem 2rem;
-    font-family: $font-nimbus;
     .vanilla-grid {
       max-width: 1400px;
       display: grid;

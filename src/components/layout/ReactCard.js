@@ -12,8 +12,8 @@ const ReactCard = ({ project, className }) => {
           <img
             src={img}
             alt='react-project-card'
-            width='250px'
-            height='250px'
+            width='250'
+            height='250'
           />
         </div>
         <div className='react-card-content'>
@@ -37,8 +37,8 @@ const ReactCard = ({ project, className }) => {
             Source Code{' '}
             <span>
               <svg
-                width='20px'
-                height='20px'
+                width='20'
+                height='20'
                 viewBox='0 -3.5 256 256'
                 xmlns='http://www.w3.org/2000/svg'
                 preserveAspectRatio='xMinYMin meet'

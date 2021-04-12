@@ -1,5 +1,5 @@
 .react-main {
-  font-family: $font-nanum;
+  font-family: $font-nimbus;
   background: $offwhite-color;
   .react-section-1 {
     display: flex;
@@ -19,7 +19,7 @@
     }
     h1 {
       font-size: 3.5rem;
-      letter-spacing: 0.1rem;
+      font-family: $font-nimbus-bold;
     }
   }
 

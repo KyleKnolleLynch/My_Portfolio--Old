@@ -62,8 +62,8 @@ const Profile = () => {
             <img
               src={ProfileImg}
               alt='profile_portrait'
-              width='500px'
-              height='400px'
+              width='500'
+              height='400'
             />
           </div>
           <div className='profile-banner-1 banner'>
@@ -105,8 +105,8 @@ const Profile = () => {
             <img
               src={arrowSvg}
               alt='down right svg'
-              width='22px'
-              height='22px'
+              width='22'
+              height='22'
             />
           </span>
           <br />
@@ -121,7 +121,7 @@ const Profile = () => {
         <ul className='test-icons'>
           {iconsData.map(icon => (
             <li key={icon.id}>
-              <img src={icon.icon} alt='svg_icons' width='35px' height='35px' />
+              <img src={icon.icon} alt='svg_icons' width='35' height='35' />
             </li>
           ))}
         </ul>

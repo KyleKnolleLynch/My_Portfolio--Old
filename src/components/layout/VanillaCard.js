@@ -8,7 +8,7 @@ const VanillaCard = ({
   return (
     <div className='vanilla-card'>
       <div className='vanilla-img-container'>
-        <img src={img} alt='vanilla-projects' width='400px' height='350px' />
+        <img src={img} alt='vanilla-projects' width='400' height='350' />
       </div>
       <div className='vanilla-card-content'>
         <h2>{title}</h2>
@@ -33,8 +33,8 @@ const VanillaCard = ({
             Code{' '}
             <span>
               <svg
-                width='20px'
-                height='20px'
+                width='20'
+                height='20'
                 viewBox='0 -3.5 256 256'
                 xmlns='http://www.w3.org/2000/svg'
                 preserveAspectRatio='xMinYMin meet'

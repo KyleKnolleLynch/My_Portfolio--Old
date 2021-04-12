@@ -10,7 +10,7 @@
 
   .project-card {
     text-align: center;
-    font-family: $font-nanum;
+    font-family: $font-nimbus;
     .flip-container {
       position: relative;
       perspective: 1000px;
@@ -39,68 +39,60 @@
           left: 0;
           display: flex;
           flex-direction: column;
+          align-items: center;
           padding: 2.4rem;
           background: $white-color;
           color: $black-color;
           text-align: center;
           transform: rotateY(180deg);
-
           img {
-            margin: 0 auto 1rem;
+            margin-bottom: 1rem;
           }
           h1 {
             font-size: 2rem;
           }
           p {
             max-width: 400px;
-            margin: 0 auto;
             padding-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             text-align: left;
-            line-height: 1.4;
             &::first-letter {
               font-size: 3rem;
-              line-height: initial;
+              line-height: 1ch;
             }
           }
-          .summary-link-div {
-            max-width: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: auto;
-            h2 {
+          p:nth-of-type(2) {
+            padding-bottom: 0.5rem;
+            &::first-letter {
               font-size: 1.4rem;
             }
-            .summary-btn {
-              padding: 2rem;
-              font-size: 2.5rem;
-              color: $black-color;
-              text-decoration: underline;
-              &:hover {
-                opacity: 0.7;
-                color: $code-bg-color;
-              }
+          }
+          .summary-btn {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $black-color;
+            text-decoration: underline;
+            &:hover {
+              opacity: 0.7;
+              color: $code-bg-color;
             }
           }
-
           .card-btn-wrap {
             margin-top: auto;
             padding-bottom: 2rem;
           }
           .card-btn {
-            font-size: 1.7rem;
+            font-size: 1.3rem;
             color: $black-color;
             border: 1px solid $black-color;
             padding: 0.4rem 1.2rem;
             border-radius: 5px;
             margin: 2vw;
-            font-family: $font-bebas;
+            font-family: $font-nimbus-bold;
             &:hover {
               opacity: 0.7;
               color: $code-bg-color;
-              border: 1px solid $code-bg-color;
+              border-color: $code-bg-color;
             }
           }
         }
@@ -127,6 +119,7 @@
       right: 0;
       margin: auto;
       padding: 2rem 1.5rem;
+      font-family: $font-nimbus-bold;
       transform: scale(0);
       opacity: 0;
       transition: 0.5s linear;
@@ -136,7 +129,7 @@
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
     }
 

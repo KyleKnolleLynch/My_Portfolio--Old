@@ -74,9 +74,9 @@
 
   .profile-section-2 {
     min-height: auto;
+    font-family: $font-nimbus;
     .bio {
       margin: 24vh 24vw -14vh;
-      font-family: $font-nimbus;
       p {
         font-size: 1.8rem;
         text-align: left;
@@ -87,7 +87,8 @@
   .profile-section-3 {
     min-height: auto;
     margin: 0 25vw 10vh 12vw;
-    font-family: $font-nanum;
+    font-family: $font-nimbus;
+    line-height: 2.1ch;
     position: relative;
     text-align: left;
     font-size: 1.8rem;
@@ -104,17 +105,21 @@
       }
 
       .coding-title {
-        font-family: $font-bebas;
+        font-family: $font-nimbus-bold;
+        text-transform: uppercase;
+        font-size: 1.4rem;
         margin: 0;
-        color: #6d6a70;
-
+        color: #6e607b;
         &::after {
           content: attr(data-line-point);
           position: absolute;
-          top: -1.3rem;
-          left: -0.55rem;
+          top: -0.3rem;
+          left: -0.65rem;
           font-size: 4rem;
           color: lighten($code-bg-color, 40%);
+        }
+        &:nth-of-type(3) {
+          padding-bottom: 4rem;
         }
       }
 
