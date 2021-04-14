@@ -97,7 +97,7 @@
     }
 
     .profile-section-2 > .bio {
-      margin: 20vh 12vw -14vh 19vw;
+      margin: 20vh 12vw -22vh 19vw;
     }
 
     .profile-section-3 {
@@ -118,14 +118,7 @@
   }
 
   .summary-container article .code-snippet-wrap {
-    grid-template-columns: 1fr;
-    p {
-      grid-column: span 2;
-    }
-    code {
-      grid-column: span 2;
-      justify-self: center;
-    }
+    flex-direction: column;
   }
 
   .section-404 {
@@ -335,7 +328,7 @@
         font-size: 1.6rem;
       }
       .code-snippet-wrap code {
-        padding: 1.3rem;
+        padding: 1.5rem;
       }
     }
   }
@@ -417,6 +410,27 @@
         font-size: 10rem;
         letter-spacing: 0.3rem;
         line-height: 10rem;
+      }
+    }
+    .profile-section-2 {
+      .bio {
+        margin: 40vh 12vw -50vh 19vw;
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .profile-section-3 {
+      font-size: 1.6rem;
+      margin-right: 10vw;
+      .coding-wrap {
+        .coding-title {
+          font-size: 1.2rem;
+        }
+        .bio-title {
+          margin-bottom: 60vh;
+        }
       }
     }
     .test-icons {

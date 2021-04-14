@@ -15,7 +15,6 @@ const ProfileAbout = () => {
       <div className='coding-title coding-line' data-line-point='&bull;'>
         {'About/>'}
       </div>
-      <br />
 
       <div className='coding-line' data-line-num='01'>
         <span className='coding-decs'>const </span>{' '}
@@ -132,7 +131,7 @@ const ProfileAbout = () => {
       </div>
       <div className='coding-line coding-data' data-line-num='22'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
-        'Working on Subarus and Hondas', 'Ancient History', 'Computer Hardware'
+        'Working on Subarus', 'Ancient History', 'Computer Hardware'
       </div>
 
       <div className='coding-line' data-line-num='23'>
