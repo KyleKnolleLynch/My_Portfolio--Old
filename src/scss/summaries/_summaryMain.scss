@@ -22,28 +22,62 @@
       font-size: 1.8rem;
       padding-bottom: 2rem;
     }
-    code {
-      display: inline-block;
-      margin-bottom: 2rem;
-      padding: 2.5rem;
-      background: $thumbBG;
-      color: #0f0;
-      font-size: 1.6rem;
-      border-radius: 0.5rem;
-      p {
-        text-align: center;
-        margin: auto;
-        padding-bottom: 1rem;
-        font-size: 1.4rem;
+    ul li {
+      margin: 0 0 1rem 2ch;
+      font-size: 1.8rem;
+      &::marker {
+        content: '\2713 \0020';
+        font-style: italic;
         color: $white-color;
       }
     }
+    .code-snippet-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 2rem 0;
+      code {
+        display: inline-block;
+        margin-bottom: 2rem;
+        padding: 2.5rem;
+        background: $thumbBG;
+        color: #0f0;
+        font-size: 1.6rem;
+        border-radius: 0.5rem;
+        p {
+          text-align: center;
+          margin: auto;
+          padding-bottom: 1rem;
+          font-size: 1.4rem;
+          color: $white-color;
+        }
+      }
+    }
   }
-}
-
-.code-snippet-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 2rem 0;
+  .summary-link-prompt {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .summary-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto 6rem;
+    a {
+      font-size: 1.8rem;
+      font-family: $font-nimbus-bold;
+      position: relative;
+      &:after {
+        content: '';
+        width: 80%;
+        height: 0.1rem;
+        background: $white-color;
+        position: absolute;
+        bottom: -0.3rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
 }

@@ -6,15 +6,8 @@ const ProfileAbout = () => {
   return (
     <article className='coding-wrap'>
       <div className='vert-line'></div>
-      <div
-        className='coding-title bio-title coding-line'
-        data-line-point='&bull;'
-      >
-        {'Bio/>'}
-      </div>
-      <div className='coding-title coding-line' data-line-point='&bull;'>
-        {'About/>'}
-      </div>
+      <div className='coding-title bio-title coding-line'>{'Bio/>'}</div>
+      <div className='coding-title coding-line'>{'About/>'}</div>
 
       <div className='coding-line' data-line-num='01'>
         <span className='coding-decs'>const </span>{' '}
@@ -141,10 +134,7 @@ const ProfileAbout = () => {
       <div className='coding-line' data-line-num='24'>
         {'}'}
       </div>
-      <div
-        className='coding-title profile-contact coding-line'
-        data-line-point='&bull;'
-      >
+      <div className='coding-title profile-contact coding-line'>
         {'Contact/>'}
       </div>
     </article>

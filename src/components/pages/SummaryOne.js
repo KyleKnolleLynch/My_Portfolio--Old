@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import HomeLink from '../layout/utils/HomeLink'
 import Copyright from '../layout/Copyright'
 import Cursor from '../layout/utils/Cursor'
+import { CursorContext } from '../../context/CursorContext'
 
 const SummaryOne = () => {
+  const { setHoveredState } = useContext(CursorContext)
   return (
     <div>
       <main className='summary-container'>
@@ -11,31 +13,50 @@ const SummaryOne = () => {
         <h2 className='summary-subtitle'>Project Synopsis</h2>
         <section>
           <article>
-            <h3>Project Goals/Before the Project</h3>
+            <h3>Project Goals</h3>
             <p>
-              In this project I decided to build a fun, mock travel website that
+              In this project, I decided to build a mock travel website that
               would exercise my React skills in a variety of ways. I implemented
-              multiple built-in hooks such as useState, useEffect, and useRef,
-              as well as using the context api. I used Framer Motion mostly for
-              smooth page transitions, but chose to use sass for styling, as I
-              wanted to go with pure custom styling for this project, rather
-              than using a framework. I've always been intriged by southern
-              Florida, so I wanted to showcase the awesome city of Miami in this
-              project.
+              multiple React hooks such as useState, useEffect, and useRef for
+              data manipulation as well as styling. I used the Framer Motion
+              animation library mostly for smooth page transitions, but chose to
+              use sass for styling, as I wanted to go with pure custom styling
+              for this project rather than using a framework. I've always been
+              intriged by southern Florida, so I wanted to showcase the awesome
+              city of Miami in this project.
             </p>
           </article>
           <article>
-            <h3>During Development</h3>
+            <h3>Development Process</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-              accusantium repellendus nemo fugiat perspiciatis quibusdam soluta
-              exercitationem blanditiis? Blanditiis, dolores voluptas. Iure
-              voluptatem repudiandae fuga, necessitatibus dolorum, deserunt
-              expedita nulla magni perspiciatis dignissimos, alias natus?
+              I wanted the application to have solid functionality and a really
+              good look, and at the same time I focused very hard on performance
+              optimization. Listed below are some of the features I implemented.
             </p>
+            <ul>
+              <li>
+                Code splitting components with React lazy loading and suspense
+              </li>
+              <li>
+                Image carousel using React hooks and javascript only, no css
+                libraries/frameworks
+              </li>
+              <li>
+                HTTP fetch requests to Openweather API for live weather data and
+                Windy API for livecams/timelapse data
+              </li>
+              <li>
+                {`<iframe>`} and {`<video>`} elements
+              </li>
+              <li>
+                {`<picture>`} elements for displaying different images for
+                different screen sizes, improving performance
+              </li>
+              <li>Lazy loading all images and video/iframe elements</li>
+            </ul>
           </article>
           <article>
-            <h3>Cool Code Snippets Used</h3>
+            <h3>Interesting Code Snippets</h3>
             <p>
               Here, I used a combination of React hooks and IntersectionObserver
               API for styling, by creating a background gradient fade-in effect
@@ -60,66 +81,63 @@ const SummaryOne = () => {
                 <br />
                 <br />
                 {`useEffect(() => {`} <br />
-                &nbsp;&nbsp;{`const observer = new IntersectionObserver(`}{' '}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`([entry]) => {`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ensp;{`const observer = new IntersectionObserver(`} <br />
+                &emsp;{`([entry]) => {`} <br />
+                &ensp;&emsp;
                 {`entry.isIntersecting`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`? setOpacity(0.6)`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`: setOpacity(0)`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`},`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`{`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`root: null,`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ensp;&emsp;{`? setOpacity(0.6)`} <br />
+                &ensp;&emsp;{`: setOpacity(0)`} <br />
+                &emsp;{`},`} <br />
+                &emsp;{`{`} <br />
+                &ensp;&emsp;{`root: null,`} <br />
+                &ensp;&emsp;
                 {`rootMargin: '500px 0px 0px 0px',`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`threshold: 0.7,`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`}`} <br />
-                &nbsp;&nbsp;{`)`} <br />
-                &nbsp;&nbsp;{`setNode(ref.current)`} <br />
-                &nbsp;&nbsp;{`if (node) {`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`observer.observe(node)`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                &ensp;&emsp;{`threshold: 0.7,`} <br />
+                &emsp;{`}`} <br />
+                &ensp;{`)`} <br />
+                &ensp;{`setNode(ref.current)`} <br />
+                &ensp;{`if (node) {`} <br />
+                &emsp;{`observer.observe(node)`} <br />
+                &emsp;
                 {`return () => observer.unobserve(node)`} <br />
-                &nbsp;&nbsp;{`}`} <br />
+                &ensp;{`}`} <br />
                 {`}, [node])`} <br />
                 <br />
                 <br />
                 {`return (`} <br />
-                &nbsp;&nbsp;{`<section>`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`<div className='overlay'></div>`}{' '}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`<div`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &ensp;{`<section>`} <br />
+                &emsp;{`<div className='overlay'></div>`} <br />
+                &emsp;{`<div`} <br />
+                &ensp;&emsp;
                 {`className='overlay blended'`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`ref={ref}`} <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`style={{ opacity }}`}{' '}
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{`></div>`} <br />
-                {`{/*`}&nbsp;&nbsp;{`Section Content Here...`}&nbsp;&nbsp;
+                &ensp;&emsp;{`ref={ref}`} <br />
+                &ensp;&emsp;{`style={{ opacity }}`} <br />
+                &emsp;{`></div>`} <br />
+                {`{/*`}&ensp;{`Section Content Here...`}&nbsp;&nbsp;
                 {`*/}`} <br />
-                &nbsp;&nbsp;{`</section`} <br />
+                &ensp;{`</section`} <br />
                 {`)`}
               </code>
 
               <code>
                 <p>CSS</p>
                 {`.overlay {`} <br />
-                {`width: 100%;`} <br />
-                {`height: 100%;`} <br />
-                {`position: absolute;`} <br />
-                {`top: 0;`} <br />
-                {`left: 0;`} <br />
-                {`background: url(`} <br />
-                {`'../images/example_image.webp'`} <br />
-                {`) no-repeat center center / cover;`} <br />
+                &ensp;{`width: 100%;`} <br />
+                &ensp;{`height: 100%;`} <br />
+                &ensp;{`position: absolute;`} <br />
+                &ensp;{`top: 0;`} <br />
+                &ensp;{`left: 0;`} <br />
+                &ensp;{`background: url`} <br />
+                &ensp;{`('../images/example_image.webp')`} <br />
+                &ensp;{`no-repeat center center / cover;`} <br />
                 {`}`} <br />
+                <br />
                 {`.overlay.blended {`} <br />
-                {`background: linear-gradient(`} <br />
-                {`to bottom right,`} <br />
-                {`rgb(255, 110, 57),`} <br />
-                {`rgb(46, 0, 130)`} <br />
-                {`);`} <br />
-                {`transition: opacity 500ms ease;`} <br />
+                &ensp;{`background: linear-gradient`} <br />
+                &ensp;{`(to bottom right,`} <br />
+                &ensp;{`rgb(255, 110, 57),`} <br />
+                &ensp;{`rgb(46, 0, 130));`} <br />
+                &ensp;{`transition: opacity 500ms ease;`} <br />
                 {`}`}
               </code>
             </div>
@@ -176,13 +194,56 @@ const SummaryOne = () => {
           <article>
             <h3>Take-aways from the Project</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-              optio nesciunt quia quidem nam maxime temporibus quaerat.
-              Voluptate numquam natus, iure voluptas praesentium itaque, sint
-              eveniet dolorum debitis vitae nostrum.
+              The main thing I learned from this project is to absolutely
+              understand and keep track of the freshness of your state in React.
+              Using and keeping the most up-to-date data is critical in letting
+              React function properly as it was/is designed to do. Dealing with
+              out of date iterations of state can and will quickly cause
+              problems.
             </p>
+            <p>
+              I chose to locally host a very high number of images and even
+              video files in this project, something I would probably not do in
+              a production app. A third party host for image uploading would be
+              a better solution for that case to keep the app file size low, and
+              improve performance, such as initial loading time. That being
+              said, I learned a lot about optimizing images to improve
+              performance, while keeping good browser support. Proper sizing,
+              proper formats, use of the {`<picture>`} element with different
+              source images, and video encoding using Handbrake all were
+              utilized to optimize performace by saving bandwidth and decreasing
+              load speeds.
+            </p>
+            <p>
+              Building this project was very fun, and I gained a lot of
+              real-world, applicable, general modern web devolopment as well as
+              React, Javascript, and sass/css knowledge in the process.
+            </p>
+            <p>If you made it this far, thanks for reading!</p>
           </article>
         </section>
+        <p className='summary-link-prompt'>Check out the project {`:)`}</p>
+        <div className='summary-links'>
+          <a
+            href='https://miami-travel.netlify.app/'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Demo
+          </a>
+
+          <a
+            href='https://github.com/kyleknollelynch/miami-travel'
+            onMouseEnter={() => setHoveredState(true)}
+            onMouseLeave={() => setHoveredState(false)}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Code
+          </a>
+        </div>
       </main>
       <HomeLink classNames='home-link-bottom-neg-colors' />
       <Copyright />
