@@ -112,14 +112,14 @@
         color: #6e607b;
         &::after {
           content: '';
-          width: 7px;
-          height: 7px;
+          width: 6px;
+          height: 6px;
           border-radius: 50%;
           border: 2px solid lighten($code-bg-color, 25%);
           background: $profile-bg-color;
           position: absolute;
           top: 0.4rem;
-          left: -0.56rem;
+          left: -0.4rem;
         }
       }
 

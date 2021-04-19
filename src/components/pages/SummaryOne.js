@@ -6,6 +6,29 @@ import { CursorContext } from '../../context/CursorContext'
 
 const SummaryOne = () => {
   const { setHoveredState } = useContext(CursorContext)
+  const list = [
+    {
+      id: 1,
+      text: 'Code splitting components with React lazy loading and suspense',
+    },
+    {
+      id: 2,
+      text:
+        'Image carousel using React hooks and javascript only, no css libraries/frameworks',
+    },
+    {
+      id: 3,
+      text:
+        'HTTP fetch requests to Openweather API for live weather data and Windy API for livecams/timelapse data',
+    },
+    { id: 4, text: '<iframe> and <video> elements' },
+    {
+      id: 5,
+      text:
+        '<picture> elements for displaying different images for different screen sizes, improving performance',
+    },
+    { id: 6, text: 'Lazy loading all images and video/iframe elements' },
+  ]
   return (
     <div>
       <main className='summary-container'>
@@ -34,25 +57,26 @@ const SummaryOne = () => {
               optimization. Listed below are some of the features I implemented.
             </p>
             <ul>
-              <li>
-                Code splitting components with React lazy loading and suspense
-              </li>
-              <li>
-                Image carousel using React hooks and javascript only, no css
-                libraries/frameworks
-              </li>
-              <li>
-                HTTP fetch requests to Openweather API for live weather data and
-                Windy API for livecams/timelapse data
-              </li>
-              <li>
-                {`<iframe>`} and {`<video>`} elements
-              </li>
-              <li>
-                {`<picture>`} elements for displaying different images for
-                different screen sizes, improving performance
-              </li>
-              <li>Lazy loading all images and video/iframe elements</li>
+              {list.map(item => (
+                <li key={item.id}>
+                  <span>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='24'
+                      height='24'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      stroke='currentColor'
+                      strokeWidth='2'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                    >
+                      <polyline points='20 6 9 17 4 12'></polyline>
+                    </svg>
+                  </span>
+                  {item.text}
+                </li>
+              ))}
             </ul>
           </article>
           <article>

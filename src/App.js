@@ -48,7 +48,11 @@ const App = () => {
                     path='/reactProjects'
                     component={ReactProjects}
                   />
-                  <Route exact path='/projectSummaryOne' component={SummaryOne} />
+                  <Route
+                    exact
+                    path='/projectSummaryOne'
+                    component={SummaryOne}
+                  />
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
