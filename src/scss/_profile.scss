@@ -109,7 +109,7 @@
         text-transform: uppercase;
         font-size: 1.4rem;
         margin-bottom: 10vh;
-        color: #6e607b;
+        color: #746f79;
         &::after {
           content: '';
           width: 6px;
@@ -118,7 +118,7 @@
           border: 2px solid lighten($code-bg-color, 25%);
           background: $profile-bg-color;
           position: absolute;
-          top: 0.4rem;
+          top: 0.5rem;
           left: -0.4rem;
         }
       }

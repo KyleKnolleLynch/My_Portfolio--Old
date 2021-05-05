@@ -4,7 +4,7 @@ import Copyright from '../layout/Copyright'
 import Cursor from '../layout/utils/Cursor'
 import { CursorContext } from '../../context/CursorContext'
 
-const SummaryOne = () => {
+const SummaryMiami = () => {
   const { setHoveredState } = useContext(CursorContext)
   const list = [
     {
@@ -276,4 +276,4 @@ const SummaryOne = () => {
   )
 }
 
-export default SummaryOne
+export default SummaryMiami

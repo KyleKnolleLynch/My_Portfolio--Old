@@ -6,7 +6,8 @@ import Home from './components/pages/Home'
 import Profile from './components/pages/Profile'
 import VanillaProjects from './components/pages/VanillaProjects'
 import ReactProjects from './components/pages/ReactProjects'
-import SummaryOne from './components/pages/SummaryOne'
+import SummaryBlog from './components/pages/SummaryBlog'
+import SummaryMiami from './components/pages/SummaryMiami'
 import NotFound from './components/pages/NotFound'
 
 import './css/main.min.css'
@@ -50,8 +51,13 @@ const App = () => {
                   />
                   <Route
                     exact
-                    path='/projectSummaryOne'
-                    component={SummaryOne}
+                    path='/projectSummaryBlog'
+                    component={SummaryBlog}
+                  />
+                  <Route
+                    exact
+                    path='/projectSummaryMiami'
+                    component={SummaryMiami}
                   />
                   <Route component={NotFound} />
                 </Switch>

@@ -8,6 +8,10 @@
     margin: 26rem 0;
 
     .project-card {
+      .flip-container .flipper .card-back .card-btn-wrap {
+        margin: auto;
+      }
+
       &:nth-child(3n) {
         align-self: center;
       }
@@ -64,7 +68,7 @@
     }
     .img-dis-2 {
       min-width: 18rem;
-      top: 25vh;
+      top: 60vh;
       left: 67vw;
     }
     .img-dis-3 {

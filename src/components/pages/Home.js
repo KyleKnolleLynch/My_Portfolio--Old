@@ -7,8 +7,11 @@ import Footer from '../layout/Footer'
 import Cursor from '../layout/utils/Cursor'
 import { CursorContext } from '../../context/CursorContext'
 import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp'
-import toursVert from '../../assets/images/projects/toursVert.webp'
-import glitchLog from '../../assets/images/projects/glitchLog.webp'
+import miamiDisplaySm from '../../assets/images/projects/miami-travel-vert-sm.webp'
+import miamiDisplayMd from '../../assets/images/projects/miami-travel-vert-md.webp'
+import miamiDisplayLg from '../../assets/images/projects/miami-travel-vert-lg.webp'
+import blogDisplaySm from '../../assets/images/projects/blog-vert-sm.webp'
+import blogDisplayMd from '../../assets/images/projects/blog-vert-md.webp'
 import arrowSvg from '../../assets/icons/arrow-down-right.svg'
 
 const ProjectCards = lazy(() => import('../layout/ProjectCards'))
@@ -63,20 +66,27 @@ const Home = () => {
             />
           </div>
           <div className='display img-dis-2'>
-            <img
-              src={glitchLog}
-              alt='glitchLog-display'
-              width='160'
-              height='240'
-            />
+            <picture>
+              <source media='(min-width: 600px)' srcSet={blogDisplayMd} />
+              <img
+                src={blogDisplaySm}
+                alt='blog-display'
+                width='200'
+                height='385'
+              />
+            </picture>
           </div>
           <div className='display img-dis-3'>
-            <img
-              src={toursVert}
-              alt='tours-display'
-              width='220'
-              height='300'
-            />
+            <picture>
+              <source media='(min-width: 1024px)' srcSet={miamiDisplayLg} />
+              <source media='(min-width: 600px)' srcSet={miamiDisplayMd} />
+              <img
+                src={miamiDisplaySm}
+                alt='miami-travel-display'
+                width='200'
+                height='320'
+              />
+            </picture>
           </div>
 
           <VisibilitySensor offset={{ bottom: 100, top: -400 }}>
@@ -96,12 +106,7 @@ const Home = () => {
         <article className='profile-link-bottom'>
           <span>
             Visit{' '}
-            <img
-              src={arrowSvg}
-              alt='down right svg'
-              width='22'
-              height='22'
-            />
+            <img src={arrowSvg} alt='down right svg' width='22' height='22' />
           </span>
           <br />
           <Link
