@@ -60,11 +60,11 @@ const SummaryBlog = () => {
               along with meta tags, greatly improving SEO performance for the
               blog site. And by using the 'revalidate' prop from Next.js, a
               cached version of the site is served and behind the scenes Next
-              rebuilds only sections that have been changed, say by the blogger
-              updating posts in Contentful CMS, then a fresh up-to-date version
-              is served and cached. This is incremental static regeneration and
-              it generates new pages and regenerates current pages when any data
-              is updated. 
+              will detect any changes made and rebuild only sections that have
+              been changed, say by the blogger updating posts in Contentful CMS,
+              then a fresh up-to-date version is served and cached. This is
+              incremental static regeneration, it generates new pages and
+              regenerates current pages on the fly when any data is updated.
             </p>
             <p>
               This is great for allowing a blogger to make content changes and
@@ -97,87 +97,106 @@ const SummaryBlog = () => {
           <article>
             <h3>Interesting Code Snippets</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              ipsa rem ullam obcaecati quos! Inventore nemo commodi mollitia
-              beatae nostrum.
+              Here is a fairly simple but effective way to implement a 'show
+              more' functionality to initially display only a certain number of
+              blog posts on the homepage, then as the reader scrolls down the
+              page and clicks a 'show more' button, a set number of additional
+              posts will be shown. This can be repeated until all of the posts
+              are displayed, then the button will cease to appear.
+            </p>
+
+            <p>
+              We've received all blog posts from Contentful CMS through the
+              Next.js getStaticProps function and set them to a variable named
+              articles. Now we pass them as props into our homepage component,
+              named Articles in this case, shown below. We then utilize useState
+              to keep track of and update our number of articles we want to be
+              visible.
+            </p>
+
+            <p>
+              We map through our articles and pass them as props into our
+              premade ArticleCard component, which displays each article on its
+              own card. But before we map them, we use the slice method to
+              display only the number we set with our 'visible' useState state.
+            </p>
+
+            <p>
+              We then use a conditional to check if our 'visible' useState count
+              is less than our total articles count, if so, the 'show more'
+              button is rendered. This ensures our button will show if there are
+              more articles to be loaded, and if all articles are shown, our
+              button will not be rendered.
             </p>
 
             <div className='code-snippet-wrap'>
               <code>
                 <p>JS & JSX</p>
-                {`const ref = useRef()`} <br />
-                {`const [opacity, setOpacity] = useState(0)`} <br />
-                {`const [node, setNode] = useState(null)`} <br />
+                {`export default function Articles({ articles, ...otherProps }) {`}{' '}
                 <br />
-                <br />
-                {`useEffect(() => {`} <br />
-                &ensp;{`const observer = new IntersectionObserver(`} <br />
-                &emsp;{`([entry]) => {`} <br />
-                &ensp;&emsp;
-                {`entry.isIntersecting`} <br />
-                &ensp;&emsp;{`? setOpacity(0.6)`} <br />
-                &ensp;&emsp;{`: setOpacity(0)`} <br />
-                &emsp;{`},`} <br />
-                &emsp;{`{`} <br />
-                &ensp;&emsp;{`root: null,`} <br />
-                &ensp;&emsp;
-                {`rootMargin: '500px 0px 0px 0px',`} <br />
-                &ensp;&emsp;{`threshold: 0.7,`} <br />
-                &emsp;{`}`} <br />
-                &ensp;{`)`} <br />
-                &ensp;{`setNode(ref.current)`} <br />
-                &ensp;{`if (node) {`} <br />
-                &emsp;{`observer.observe(node)`} <br />
+                &ensp;{`const [visible, setVisible] = useState(4)`} <br />
+                &ensp;{`const showMoreItems = () => {`} <br />
                 &emsp;
-                {`return () => observer.unobserve(node)`} <br />
+                {`visible < articles.length && setVisible(prev => prev + 4)`}{' '}
+                <br />
                 &ensp;{`}`} <br />
-                {`}, [node])`} <br />
                 <br />
+                &ensp;{`return (`} <br />
+                &emsp;{`<>`} <br />
+                &emsp;&ensp;{`// more code here...`} <br />
                 <br />
-                {`return (`} <br />
-                &ensp;{`<section>`} <br />
-                &emsp;{`<div className='overlay'></div>`} <br />
-                &emsp;{`<div`} <br />
-                &ensp;&emsp;
-                {`className='overlay blended'`} <br />
-                &ensp;&emsp;{`ref={ref}`} <br />
-                &ensp;&emsp;{`style={{ opacity }}`} <br />
-                &emsp;{`></div>`} <br />
-                {`{/*`}&ensp;{`Section Content Here...`}&nbsp;&nbsp;
-                {`*/}`} <br />
-                &ensp;{`</section`} <br />
-                {`)`}
-              </code>
-
-              <code>
-                <p>CSS</p>
-                {`.overlay {`} <br />
-                &ensp;{`width: 100%;`} <br />
-                &ensp;{`height: 100%;`} <br />
-                &ensp;{`position: absolute;`} <br />
-                &ensp;{`top: 0;`} <br />
-                &ensp;{`left: 0;`} <br />
-                &ensp;{`background: url`} <br />
-                &ensp;{`('../images/example_image.webp')`} <br />
-                &ensp;{`no-repeat center center / cover;`} <br />
-                {`}`} <br />
+                &emsp;{`{articles.slice(0, visible).map(article => (`} <br />
+                &emsp;&ensp;
+                {`<ArticleCard key={article.sys.id} article={article} />`}{' '}
                 <br />
-                {`.overlay.blended {`} <br />
-                &ensp;{`background: linear-gradient`} <br />
-                &ensp;{`(to bottom right,`} <br />
-                &ensp;{`rgb(255, 110, 57),`} <br />
-                &ensp;{`rgb(46, 0, 130));`} <br />
-                &ensp;{`transition: opacity 500ms ease;`} <br />
+                &emsp;{`))}`} <br />
+                &emsp;{`{visible < articles.length && (`} <br />
+                &emsp;&ensp;
+                {`<button onClick={showMoreItems} className='showMore-btn'>`}{' '}
+                <br />
+                &emsp;&emsp;{`Show More`} <br />
+                &emsp;&ensp;{`</button>`} <br />
+                &emsp;{`)}`} <br />
+                <br />
+                &emsp;&ensp;{`// more code here...`} <br />
+                &emsp;{`</>`} <br />
+                &ensp;{`)`} <br />
                 {`}`}
               </code>
             </div>
+
+            <p>
+              When a reader clicks the 'show more' button, a function is fired
+              wherein we have another conditional set to ensure our useState
+              count never exceeds or equals the total number of articles, this
+              ensures our button never renders if the total number of articles
+              are displayed. If that conditional is passed, we take the previous
+              count in our 'visible' useState state and add a set number to it,
+              in this case 4.
+            </p>
+
+            <p>
+              Since we are pumping in the 'visible' state count as a parameter
+              into our slice method before we use the map method on the
+              articles, we control the number of articles additionally displayed
+              each time a reader clicks the 'show more' button. Now we have the
+              proper behavior desired and a cool UI feature for our blog.
+            </p>
           </article>
           <article>
             <h3>Take-aways from the Project</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestiae excepturi laboriosam atque cumque. Corporis animi ea
-              itaque excepturi accusamus exercitationem!
+              My biggest take-away here is how powerful and absolutly awesome
+              Next.js is. I believe it's the cutting edge of Javascript/React
+              frameworks and even front-end development in general. Next's
+              static site generation seems to be ideal for a blog like this
+              project. I feel the Next image component would greatly benefit a
+              blogger as they could upload non-optimized images to the CMS and
+              Next image component will automatically optimize the images for
+              the web without the blogger having to worry about it. The SEO
+              optimizations and outright speed/low latency of a Next site is
+              fantastic as well. I look forward to learning much more about
+              Next.js and working with it as much as possible in the future.
             </p>
 
             <p>If you made it this far, thanks for reading!</p>
