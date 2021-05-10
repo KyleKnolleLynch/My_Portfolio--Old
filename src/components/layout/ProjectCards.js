@@ -39,8 +39,8 @@ const ProjectCards = () => {
                       <img
                         src={project.imgVert}
                         alt='project'
-                        width='400'
-                        height='650'
+                        width='300'
+                        height='480'
                       />
                     </picture>
                     <div className='overlay'></div>

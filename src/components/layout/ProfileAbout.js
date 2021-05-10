@@ -59,7 +59,7 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='10'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'HTML5', 'CSS4', 'Javascript', 'React', 'SASS', 'HTTP/REST',
+          'HTML5', 'CSS4', 'Javascript', 'React', 'Next.js', 'SASS', 'HTTP/REST',
           'FetchAPI', 'Axios', 'Bootstrap', 'Materialize', 'Github'
         </span>
       </div>

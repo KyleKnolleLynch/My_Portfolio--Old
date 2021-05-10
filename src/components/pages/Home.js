@@ -72,7 +72,7 @@ const Home = () => {
                 src={blogDisplaySm}
                 alt='blog-display'
                 width='200'
-                height='385'
+                height='325'
               />
             </picture>
           </div>
