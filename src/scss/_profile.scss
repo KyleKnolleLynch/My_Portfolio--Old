@@ -88,7 +88,7 @@
     min-height: auto;
     margin: 0 25vw 10vh 12vw;
     font-family: $font-nimbus;
-    line-height: 2.1ch;
+    line-height: 1.27;
     position: relative;
     text-align: left;
     font-size: 1.8rem;
@@ -118,7 +118,7 @@
           border: 2px solid lighten($code-bg-color, 25%);
           background: $profile-bg-color;
           position: absolute;
-          top: 0.5rem;
+          top: 0.3rem;
           left: -0.4rem;
         }
       }
