@@ -6,10 +6,12 @@ import Copyright from '../layout/Copyright'
 import Footer from '../layout/Footer'
 import Cursor from '../layout/utils/Cursor'
 import { CursorContext } from '../../context/CursorContext'
-import inertiaVert from '../../assets/images/projects/inertia-vert-sm.webp'
+import techshopDisplaySm from '../../assets/images/projects/techshop-vert-sm.webp'
+import techshopDisplayMd from '../../assets/images/projects/techshop-vert-md.webp'
+import techshopDisplayLg from '../../assets/images/projects/techshop-vert-lg.webp'
 import miamiDisplaySm from '../../assets/images/projects/miami-travel-vert-sm.webp'
 import miamiDisplayMd from '../../assets/images/projects/miami-travel-vert-md.webp'
-import miamiDisplayLg from '../../assets/images/projects/miami-travel-vert-lg.webp'
+import miamiDisplayLg from '../../assets/images/projects/miami-travel-vert-xl.webp'
 import blogDisplaySm from '../../assets/images/projects/blog-vert-sm.webp'
 import blogDisplayMd from '../../assets/images/projects/blog-vert-md.webp'
 import arrowSvg from '../../assets/icons/arrow-down-right.svg'
@@ -58,12 +60,16 @@ const Home = () => {
           </div>
 
           <div className='display img-dis-1'>
-            <img
-              src={inertiaVert}
-              alt='inertia-display'
-              width='260'
-              height='340'
-            />
+            <picture>
+              <source media='(min-width: 1025px)' srcSet={miamiDisplayLg} />
+              <source media='(min-width: 600px)' srcSet={miamiDisplayMd} />
+              <img
+                src={miamiDisplaySm}
+                alt='inertia-display'
+                width='200'
+                height='320'
+              />
+            </picture>
           </div>
           <div className='display img-dis-2'>
             <picture>
@@ -78,11 +84,11 @@ const Home = () => {
           </div>
           <div className='display img-dis-3'>
             <picture>
-              <source media='(min-width: 1024px)' srcSet={miamiDisplayLg} />
-              <source media='(min-width: 600px)' srcSet={miamiDisplayMd} />
+              <source media='(min-width: 1025px)' srcSet={techshopDisplayLg} />
+              <source media='(min-width: 600px)' srcSet={techshopDisplayMd} />
               <img
-                src={miamiDisplaySm}
-                alt='miami-travel-display'
+                src={techshopDisplaySm}
+                alt='techshop-display'
                 width='200'
                 height='320'
               />

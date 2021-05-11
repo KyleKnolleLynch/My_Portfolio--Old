@@ -3,6 +3,7 @@ import img2 from './assets/images/vanilla/image-slider.webp';
 import img3 from './assets/images/vanilla/glow_worm.webp'; 
 import img4 from './assets/images/vanilla/miami.webp'; 
 import img5 from './assets/images/vanilla/fluid-gallery.webp';
+import img6 from './assets/images/vanilla/inertia.webp';
 
 export const vanillaData = [
   {
@@ -41,5 +42,12 @@ export const vanillaData = [
     title: 'Fluid Image Gallery',
     desc: 'Responsive design with pop-in full size image modal',
     sourceLink: 'https://github.com/kyleknollelynch/fluid-image-gallery',
+  },
+  {
+    img: img6,
+    demoLink: 'https://inertiapage.netlify.app/',
+    title: 'Inertia Welcome Page',
+    desc: 'Dynamic personal dashboard with weather, todos, and daily quote',
+    sourceLink: 'https://github.com/kyleknollelynch/inertia',
   },
 ];

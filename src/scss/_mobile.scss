@@ -220,6 +220,10 @@
         width: 100%;
       }
 
+      .card-front img {
+        min-height: 100%; 
+      }
+
       .card-back img {
         width: 35px;
         height: 35px;
