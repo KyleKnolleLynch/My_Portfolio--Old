@@ -166,18 +166,41 @@
       grid-column: span 5;
     }
 
+    &:nth-child(n + 4) {
+      .card-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65rem;
+        img {
+          width: 12rem;
+        }
+      }
+      .project-content h1 {
+        font-size: 3rem;
+      }
+    }
+
     &:nth-child(4) {
       grid-column: 2 / 3;
       margin-top: 10rem;
-      h1 {
-        font-size: 3rem;
+      .card-front {
+        background: linear-gradient(
+          107deg,
+          rgb(72, 81, 86) 11.2%,
+          rgb(187, 187, 187) 90.7%
+        );
       }
     }
 
     &:nth-child(5) {
       grid-column: 4 / 5;
-      h1 {
-        font-size: 3rem;
+      .card-front {
+        background: linear-gradient(
+          to top left,
+          rgb(148, 142, 153),
+          rgb(46, 20, 55)
+        );
       }
     }
 

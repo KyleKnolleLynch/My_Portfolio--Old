@@ -20,9 +20,6 @@
         line-height: initial;
       }
 
-      &:nth-child(3n) {
-        align-self: center;
-      }
       .overlay,
       &:hover .overlay {
         transform: scale(1);
@@ -41,6 +38,17 @@
         }
         h2 {
           font-size: 1.4rem;
+        }
+      }
+      &:nth-child(n + 4) {
+        .card-front {
+          align-items: flex-start;
+          img {
+            margin-top: 6rem;
+          }
+        }
+        .project-content h1 {
+          font-size: 2.3rem;
         }
       }
     }
@@ -88,6 +96,15 @@
       min-width: 18rem;
       bottom: 14vh;
       right: 60vw;
+    }
+  }
+
+  .home-section-2 .project-card:nth-child(n + 4) {
+    .card-front {
+      height: 55rem;
+      img {
+        width: 10rem;
+      }
     }
   }
 
@@ -210,8 +227,6 @@
       .flip-container,
       .card-front,
       .card-back {
-        width: 100%;
-        min-width: 100%;
         height: 48rem;
       }
       &:nth-child(n) {
@@ -220,8 +235,8 @@
         width: 100%;
       }
 
-      .card-front img {
-        min-height: 100%; 
+      &:nth-child(-n + 3) .card-front img {
+        min-height: 100%;
       }
 
       .card-back img {
@@ -305,16 +320,6 @@
   footer {
     left: 3rem;
     letter-spacing: 0;
-  }
-
-  .vanilla-main .vanilla-section-1 {
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-      url('../assets/images/vanilla/bg-intro-sm.webp') center center / cover
-        no-repeat;
-    h1 {
-      margin-bottom: 10rem;
-    }
   }
 
   .react-main {

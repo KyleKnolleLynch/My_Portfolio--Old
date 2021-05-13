@@ -1,13 +1,12 @@
 import img1 from './assets/images/projects/blog.webp'
 import img2 from './assets/images/projects/miami-travel.webp'
 import img3 from './assets/images/projects/techshop.webp'
-import img4 from './assets/images/projects/vanilla-js-landing.webp'
-import img5 from './assets/images/projects/reactPage.webp'
 import img1Vert from './assets/images/projects/blog-vert-lg.webp'
 import img2Vert from './assets/images/projects/miami-travel-vert-lg.webp'
 import img3Vert from './assets/images/projects/techshop-vert-lg.webp'
 
 import iconJs from './assets/icons/js.svg'
+import iconJsAlt from './assets/icons/javascript_alt.svg'
 import iconReact from './assets/icons/react.svg'
 
 export const projectsData = [
@@ -37,20 +36,20 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: 'Techshop',
-    subtitle: 'React',
+    title: 'Techshop Cart',
+    subtitle: 'MERN',
     img: img3,
     imgVert: img3Vert,
     icon: iconReact,
     link: 'https://techshopv1.herokuapp.com',
     gitLink: 'https://github.com/KyleKnolleLynch/techshop',
     desc: 'E-commerce tech store shopping cart built with the MERN stack. ',
+    summary: '/projectSummaryTechshop',
   },
   {
     id: 4,
     title: 'Vanilla JS Projects',
-    img: img4,
-    imgVert: img4,
+    imgVert: iconJsAlt,
     icon: iconJs,
     localLink: '/vanillaProjects',
     desc: 'Collection of small projects using vanilla Javascript.',
@@ -58,8 +57,7 @@ export const projectsData = [
   {
     id: 5,
     title: 'React Projects',
-    img: img5,
-    imgVert: img5,
+    imgVert: iconReact,
     icon: iconReact,
     localLink: '/reactProjects',
     desc: 'Collection of small projects using the React JS library.',

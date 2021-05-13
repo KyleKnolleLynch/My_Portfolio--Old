@@ -34,15 +34,20 @@ const ProjectCards = () => {
                     onMouseEnter={() => setHoveredState(true)}
                     onMouseLeave={() => setHoveredState(false)}
                   >
-                    <picture>
-                      <source media='(min-width: 600px)' srcSet={project.img} />
-                      <img
-                        src={project.imgVert}
-                        alt='project'
-                        width='300'
-                        height='480'
-                      />
-                    </picture>
+                    {project.imgVert && (
+                      <picture>
+                        <source
+                          media='(min-width: 600px)'
+                          srcSet={project.img}
+                        />
+                        <img
+                          src={project.imgVert}
+                          alt='project'
+                          width='300'
+                          height='480'
+                        />
+                      </picture>
+                    )}
                     <div className='overlay'></div>
                     <div className='project-content'>
                       <h1>{project.title}</h1>

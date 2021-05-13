@@ -3,16 +3,23 @@
   color: $code-bg-color;
   font-family: $font-nimbus;
   .vanilla-section-1 {
-    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-      url('../assets/images/vanilla/bg-intro.webp') center center / cover
-        no-repeat;
+    // background: linear-gradient(
+    //   107deg,
+    //   rgb(72, 81, 86) 11.2%,
+    //   rgb(187, 187, 187) 90.7%
+    // );
+    background: linear-gradient(
+      to bottom,
+      rgb(72, 81, 86) 11.2%,
+      rgb(200, 200, 200) 90.7%
+    );
     h1 {
+      margin-bottom: 10rem;
       font-size: 3.5rem;
       color: $white-color;
       font-family: $font-nimbus-bold;

@@ -11,7 +11,7 @@ import techshopDisplayMd from '../../assets/images/projects/techshop-vert-md.web
 import techshopDisplayLg from '../../assets/images/projects/techshop-vert-lg.webp'
 import miamiDisplaySm from '../../assets/images/projects/miami-travel-vert-sm.webp'
 import miamiDisplayMd from '../../assets/images/projects/miami-travel-vert-md.webp'
-import miamiDisplayLg from '../../assets/images/projects/miami-travel-vert-xl.webp'
+import miamiDisplayXl from '../../assets/images/projects/miami-travel-vert-xl.webp'
 import blogDisplaySm from '../../assets/images/projects/blog-vert-sm.webp'
 import blogDisplayMd from '../../assets/images/projects/blog-vert-md.webp'
 import arrowSvg from '../../assets/icons/arrow-down-right.svg'
@@ -61,7 +61,7 @@ const Home = () => {
 
           <div className='display img-dis-1'>
             <picture>
-              <source media='(min-width: 1025px)' srcSet={miamiDisplayLg} />
+              <source media='(min-width: 1025px)' srcSet={miamiDisplayXl} />
               <source media='(min-width: 600px)' srcSet={miamiDisplayMd} />
               <img
                 src={miamiDisplaySm}

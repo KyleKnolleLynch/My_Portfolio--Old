@@ -8,6 +8,7 @@ import VanillaProjects from './components/pages/VanillaProjects'
 import ReactProjects from './components/pages/ReactProjects'
 import SummaryBlog from './components/pages/SummaryBlog'
 import SummaryMiami from './components/pages/SummaryMiami'
+import SummaryTechshop from './components/pages/SummaryTechshop'
 import NotFound from './components/pages/NotFound'
 
 import './css/main.min.css'
@@ -58,6 +59,11 @@ const App = () => {
                     exact
                     path='/projectSummaryMiami'
                     component={SummaryMiami}
+                  />
+                  <Route
+                    exact
+                    path='/projectSummaryTechshop'
+                    component={SummaryTechshop}
                   />
                   <Route component={NotFound} />
                 </Switch>
