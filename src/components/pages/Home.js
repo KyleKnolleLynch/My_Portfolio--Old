@@ -6,9 +6,9 @@ import Copyright from '../layout/Copyright'
 import Footer from '../layout/Footer'
 import Cursor from '../layout/utils/Cursor'
 import { CursorContext } from '../../context/CursorContext'
-import techshopDisplaySm from '../../assets/images/projects/techshop-vert-sm.webp'
-import techshopDisplayMd from '../../assets/images/projects/techshop-vert-md.webp'
-import techshopDisplayLg from '../../assets/images/projects/techshop-vert-lg.webp'
+import techcartDisplaySm from '../../assets/images/projects/tech-cart-vert-sm.webp'
+import techcartDisplayMd from '../../assets/images/projects/tech-cart-vert-md.webp'
+import techcartDisplayLg from '../../assets/images/projects/tech-cart-vert-lg.webp'
 import miamiDisplaySm from '../../assets/images/projects/miami-travel-vert-sm.webp'
 import miamiDisplayMd from '../../assets/images/projects/miami-travel-vert-md.webp'
 import miamiDisplayXl from '../../assets/images/projects/miami-travel-vert-xl.webp'
@@ -84,11 +84,11 @@ const Home = () => {
           </div>
           <div className='display img-dis-3'>
             <picture>
-              <source media='(min-width: 1025px)' srcSet={techshopDisplayLg} />
-              <source media='(min-width: 600px)' srcSet={techshopDisplayMd} />
+              <source media='(min-width: 1025px)' srcSet={techcartDisplayLg} />
+              <source media='(min-width: 600px)' srcSet={techcartDisplayMd} />
               <img
-                src={techshopDisplaySm}
-                alt='techshop-display'
+                src={techcartDisplaySm}
+                alt='techcart-display'
                 width='200'
                 height='320'
               />

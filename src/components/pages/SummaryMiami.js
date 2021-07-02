@@ -33,7 +33,7 @@ const SummaryMiami = () => {
     <div>
       <main className='summary-container'>
         <h1 className='summary-title'>Miami Travel Project</h1>
-        <h2 className='summary-subtitle'>Project Synopsis</h2>
+        <h2 className='summary-subtitle'>Project Summary</h2>
         <section>
           <article>
             <h3>Project Goals</h3>

@@ -1,9 +1,10 @@
 import img1 from './assets/images/projects/blog.webp'
-import img2 from './assets/images/projects/miami-travel.webp'
-import img3 from './assets/images/projects/techshop.webp'
+import img2 from './assets/images/projects/tech-cart.webp'
+import img3 from './assets/images/projects/miami-travel.webp'
+
 import img1Vert from './assets/images/projects/blog-vert-lg.webp'
-import img2Vert from './assets/images/projects/miami-travel-vert-lg.webp'
-import img3Vert from './assets/images/projects/techshop-vert-lg.webp'
+import img2Vert from './assets/images/projects/tech-cart-vert-lg.webp'
+import img3Vert from './assets/images/projects/miami-travel-vert-lg.webp'
 
 import iconJs from './assets/icons/js.svg'
 import iconJsAlt from './assets/icons/javascript_alt.svg'
@@ -19,32 +20,32 @@ export const projectsData = [
     icon: iconReact,
     link: 'https://kylelynch-blog.vercel.app',
     gitLink: 'https://github.com/KyleKnolleLynch/my_contentful_blog',
-    desc: 'My new blog engineered using the Next.js framework of the React library with static generation. Contentful headless CMS is implemented for handling the backend/data storage.',
+    desc: 'My new blog engineered using the Next.js framework for the React library with static generation. Contentful headless CMS is implemented for handling the backend/data storage and adding blog content.',
     summary: '/projectSummaryBlog',
   },
   {
     id: 2,
-    title: 'Miami Travel',
-    subtitle: 'React',
+    title: 'Tech Cart',
+    subtitle: 'React/Next.js',
     img: img2,
     imgVert: img2Vert,
+    icon: iconReact,
+    link: 'https://next-tech-cart.vercel.app',
+    gitLink: 'https://github.com/KyleKnolleLynch/next-tech-cart',
+    desc: 'E-commerce shopping cart for a mock tech shop. Frontend constructed with Next.js, along with Commerce.js headless commerce backend, and styled with TailwindCSS.',
+    summary: '/projectSummaryTechCart',
+  },
+  {
+    id: 3,
+    title: 'Miami Travel',
+    subtitle: 'React',
+    img: img3,
+    imgVert: img3Vert,
     icon: iconReact,
     link: 'https://miami-travel.netlify.app/',
     gitLink: 'https://github.com/kyleknollelynch/miami-travel',
     desc: 'Mock Miami travel website using React functional components and hooks. Displays data from weather and livecam APIs. Implements intersection observer to style page sections image backgrounds with gradient overlays. Framer Motion library used for smooth page transitions.',
     summary: '/projectSummaryMiami',
-  },
-  {
-    id: 3,
-    title: 'Techshop Cart',
-    subtitle: 'MERN',
-    img: img3,
-    imgVert: img3Vert,
-    icon: iconReact,
-    link: 'https://techshopv1.herokuapp.com',
-    gitLink: 'https://github.com/KyleKnolleLynch/techshop',
-    desc: 'E-commerce tech store shopping cart built with the MERN stack. ',
-    summary: '/projectSummaryTechshop',
   },
   {
     id: 4,

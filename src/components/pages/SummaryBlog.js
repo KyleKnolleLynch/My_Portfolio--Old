@@ -9,11 +9,11 @@ const SummaryBlog = () => {
   const list = [
     {
       id: 1,
-      text: 'Static page generation',
+      text: 'Static page generation with incremental static regeneration',
     },
     {
       id: 2,
-      text: 'Incremental static regeneration',
+      text: 'Contentful Content Management System',
     },
     {
       id: 3,
@@ -30,12 +30,12 @@ const SummaryBlog = () => {
     <div>
       <main className='summary-container'>
         <h1 className='summary-title'>My Blog</h1>
-        <h2 className='summary-subtitle'>Project Synopsis</h2>
+        <h2 className='summary-subtitle'>Project Summary</h2>
         <section>
           <article>
             <h3>Project Goals</h3>
             <p>
-              My plan was to create a blog for a user that would be easy for
+              My idea was to create a blog for a user that would be easy for
               them to add or delete their own content as needed, as well as look
               nice, clean, and be responsive. I felt Next.js and a headless
               content management system would be an ideal choice for this use
@@ -49,7 +49,7 @@ const SummaryBlog = () => {
               Building out the front end UI was made fun and straighforward with
               the power of Next.js. The headless CMS I chose to use is
               Contentful, as the rich text editor, image uploader, and overall
-              data input system is very user friendly. This is important if I
+              content input system is very user friendly. This is important if I
               engineer this project for a blogger that isn't proficient in
               coding or knowledgeable in markdown language.
             </p>
