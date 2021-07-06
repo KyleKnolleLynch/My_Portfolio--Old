@@ -50,10 +50,10 @@ const SummaryTechCart = () => {
             <p>
               I implemented Stripe checkout, but in the end, I created a mock
               checkout confirmation instead. I did this to keep things simple
-              for the mock user, saving them from having to enter mock credit
-              card info, and kept the main focus on cart functionality. However,
-              I commented out the Stripe checkout associated code and left it
-              for reference.
+              for the user, saving them from having to enter mock credit card
+              info, and kept the main focus on cart functionality. However, I
+              commented out the Stripe checkout associated code and left it for
+              reference.
             </p>
             <ul>
               {list.map(item => (
@@ -88,10 +88,11 @@ const SummaryTechCart = () => {
             </p>
             <p>
               Because async functions take some time to complete, this clean-up
-              function will run a check to permit the async function to finish
-              only while the component is mounted. So if the component unmounts,
-              say the user quickly leaves the page for example, we will not be
-              updating the state on an unmounted component or using stale data.
+              function will run a check to see if the component is still mounted
+              when the async function is finished running. So if the component
+              unmounts, say the user quickly leaves the page for example, we
+              will not be updating the state on an unmounted component or using
+              stale data.
             </p>
 
             <div className='code-snippet-wrap'>
@@ -119,10 +120,39 @@ const SummaryTechCart = () => {
                 {`}, [])`} <br />
               </code>
             </div>
+            <p>
+              We set a variable to a true boolean value when our component mounts and
+              the useEffect runs. Before the async function is invoked, an if
+              statement is run to check that the boolean variable is true,
+              ensuring our component is mounted.
+            </p>
+            <p>
+              At any point our component unmounts or any useEffect dependency
+              changes, in this case we have no dependencies, the useEffect
+              clean-up function will run and change our boolean variable value to
+              false. This will prevent our async function in the useEffect from
+              running, therefore preventing state change on an unmounted
+              component and prevent throwing a catch error in the try/catch
+              around the async function. The current state will be set to the
+              last data update received from the useEffect when it was properly
+              mounted.
+            </p>
           </article>
           <article>
             <h3>Take-aways from the Project</h3>
-            <p>P</p>
+            <p>
+              Very quickly, the advantages of using a headless CMS with Next.js
+              for an e-commerce application became apparent to me. It takes less
+              code and is relatively more straight forward to engineer an
+              e-shopping app than using full stacks, such as MERN, which I have
+              used on a few other projects. You would have more control and
+              customization using the MERN stack, but for a less experienced
+              programmer like myself, or if the CMS provides all the
+              functionality your specific app needs, headless CMS backend
+              implementaion is a great option to go with. Combined with Next.js,
+              you can engineer a feature rich and fantastically performing app
+              in a short amount of time.
+            </p>
 
             <p>If you made it this far, thanks for reading!</p>
           </article>
@@ -130,7 +160,7 @@ const SummaryTechCart = () => {
         <p className='summary-link-prompt'>Check out the project {`:)`}</p>
         <div className='summary-links'>
           <a
-            href='https://techshopv1.herokuapp.com'
+            href='https://next-tech-cart.vercel.app'
             onMouseEnter={() => setHoveredState(true)}
             onMouseLeave={() => setHoveredState(false)}
             target='_blank'
@@ -140,7 +170,7 @@ const SummaryTechCart = () => {
           </a>
 
           <a
-            href='https://github.com/kyleknollelynch/techshop'
+            href='https://github.com/KyleKnolleLynch/next-tech-cart'
             onMouseEnter={() => setHoveredState(true)}
             onMouseLeave={() => setHoveredState(false)}
             target='_blank'

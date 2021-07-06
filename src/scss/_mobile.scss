@@ -61,6 +61,9 @@
   .profile-main {
     .profile-section-3 {
       line-height: 1.28;
+      .coding-wrap .vert-line {
+        height: 99%;
+      }
     }
     .profile-contact-email a {
       font-size: 5rem;

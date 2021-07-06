@@ -59,8 +59,9 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='10'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'HTML5', 'CSS4', 'Javascript', 'React', 'Next.js', 'SASS', 'HTTP/REST',
-          'FetchAPI', 'Axios', 'Bootstrap', 'Materialize', 'Github'
+          'HTML', 'CSS', 'Javascript', 'React', 'Next.js', 'ContextAPI',
+          'HTTP/REST', 'FetchAPI', 'Axios', 'SASS', 'TailwindCSS', 'Bootstrap',
+          'Github'
         </span>
       </div>
       <div className='coding-line' data-line-num='11'>
@@ -82,7 +83,7 @@ const ProfileAbout = () => {
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
           'NodeJS', 'Express', 'MongoDB', 'Firebase/Firestore', 'Redux',
-          'TailwindCSS', 'Svelte', 'Gimp', 'React Native'
+          'MaterialUI', 'Framer Motion', 'MaterializeCSS', 'Svelte', 'Gimp'
         </span>
       </div>
       <div className='coding-line' data-line-num='15'>
@@ -103,8 +104,8 @@ const ProfileAbout = () => {
       <div className='coding-line coding-data' data-line-num='18'>
         <div className='dot'>&#8729; &#8729; &#8729; &#8729; </div>
         <span>
-          'Brad Traversy', 'Stephen Grider', 'The Net Ninja', 'Florin Pop',
-          'John Smilga'
+          'Brad Traversy/Traversy Media', 'Stephen Grider', 'The Net Ninja/Shaun
+          Pelling', 'Akshay Saini', 'John Smilga'
         </span>
       </div>
 
