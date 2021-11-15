@@ -13,19 +13,16 @@ const SummaryMiami = () => {
     },
     {
       id: 2,
-      text:
-        'Image carousel using React hooks and javascript only, no css libraries/frameworks',
+      text: 'Image carousel using React hooks and javascript only, no css libraries/frameworks',
     },
     {
       id: 3,
-      text:
-        'HTTP fetch requests to Openweather API for live weather data and Windy API for livecams/timelapse data',
+      text: 'HTTP fetch requests to Openweather API for live weather data and Windy API for livecams/timelapse data',
     },
     { id: 4, text: '<iframe> and <video> elements' },
     {
       id: 5,
-      text:
-        '<picture> elements for displaying different images for different screen sizes, improving performance',
+      text: '<picture> elements for displaying different images for different screen sizes, improving performance',
     },
     { id: 6, text: 'Lazy loading all images and video/iframe elements' },
   ]
@@ -189,13 +186,12 @@ const SummaryMiami = () => {
               If subsequent rerenders occur, like a user navigating to a
               different page then returning for instance, our ref will get
               recreated and not keep its current instance value. So we use
-              useState to update the state value directly by passing the
-              setState function as a callback to the ref object. This will
-              ensure a rerender and keep our ref's current object instance fresh
-              and up to date. Now we get the behavior we want with the observer,
-              and when we run the return clean up function to stop the observer
-              when the component unmounts, everything works correctly, ensuring
-              good performance.
+              useState to update the state value directly by passing the ref
+              object into the setState function. This will ensure a rerender and
+              keep our ref's current object instance fresh and up to date. Now
+              we get the behavior we want with the observer, and when we run the
+              return clean up function to stop the observer when the component
+              unmounts, everything works correctly, ensuring good performance.
             </p>
 
             <p>
