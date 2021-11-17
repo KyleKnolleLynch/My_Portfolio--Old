@@ -11,6 +11,7 @@ const Navbar = ({
   target,
 }) => {
   const { setHoveredState } = useContext(CursorContext)
+  const resumeLink = '/KYLE_LYNCH_RESUME.pdf'
   return (
     <nav>
       <ul>
@@ -43,7 +44,7 @@ const Navbar = ({
           >
             <span className='link-inner'>
               {title2}
-              {linkName === '/KyleLynchResume.pdf' && (
+              {linkName === resumeLink && (
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -65,7 +66,7 @@ const Navbar = ({
             </span>
             <div className='link-inner-top'>
               {title2}
-              {linkName === '/KyleLynchResume.pdf' && (
+              {linkName === resumeLink && (
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -87,7 +88,7 @@ const Navbar = ({
             </div>
             <div className='link-inner-bottom'>
               {title2}
-              {linkName === '/KyleLynchResume.pdf' && (
+              {linkName === resumeLink && (
                 <span className='feather-download'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'

@@ -55,11 +55,7 @@
           box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
         }
         .react-card {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
           text-align: center;
-          padding-bottom: 1rem;
           .react-img-container {
             width: 100%;
             img {
@@ -73,26 +69,32 @@
               font-size: 2.6rem;
               margin-bottom: 3.2rem;
             }
-            a {
-              margin: 0 1rem;
-              font-size: 1.2rem;
-              padding: 0.8rem 1.6rem;
-              text-transform: uppercase;
-              border: 1px solid $white-color;
-              border-radius: 3rem;
-              transition: 300ms ease-in-out;
-              &:hover {
-                text-shadow: 0px 0px 6px $white-color;
-                box-shadow: 0px 0px 8px $white-color;
-              }
-              span svg {
-                margin: 0 0 -0.5rem 0.7rem;
-                border-radius: 50%;
+            div {
+              display: flex;
+              justify-content: space-evenly;
+              padding-bottom: 0.5rem;
+              a {
+                display: inline-flex;
+                align-items: center;
+                font-size: 1.3rem;
+                padding: 0.6rem 1.6rem 0.3rem;
+                text-transform: uppercase;
+                border: 1px solid $white-color;
+                border-radius: 3rem;
                 transition: 300ms ease-in-out;
-              }
+                &:hover {
+                  text-shadow: 0px 0px 6px $white-color;
+                  box-shadow: 0px 0px 8px $white-color;
+                }
+                span svg {
+                  margin-left: 0.7rem;
+                  border-radius: 50%;
+                  transition: 300ms ease-in-out;
+                }
 
-              &:hover svg {
-                box-shadow: 0px 0px 6px $white-color;
+                &:hover svg {
+                  box-shadow: 0px 0px 6px $white-color;
+                }
               }
             }
           }
