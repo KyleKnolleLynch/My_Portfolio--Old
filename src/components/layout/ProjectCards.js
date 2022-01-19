@@ -38,9 +38,9 @@ const ProjectCards = () => {
                       <source media='(min-width: 600px)' srcSet={project.img} />
                       <img
                         src={project.imgVert}
-                        alt='project'
-                        width='300'
-                        height='480'
+                        alt={project.title}
+                        width='600'
+                        height='960'
                       />
                     </picture>
                     <div className='overlay'></div>

@@ -65,7 +65,7 @@ const Home = () => {
               <source media='(min-width: 600px)' srcSet={miamiDisplayMd} />
               <img
                 src={miamiDisplaySm}
-                alt='inertia-display'
+                alt='miami-display'
                 width='200'
                 height='320'
               />
@@ -78,7 +78,7 @@ const Home = () => {
                 src={blogDisplaySm}
                 alt='blog-display'
                 width='200'
-                height='325'
+                height='320'
               />
             </picture>
           </div>
