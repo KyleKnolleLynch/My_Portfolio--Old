@@ -16,7 +16,7 @@ const ProjectCards = () => {
     card.addEventListener('onTouchStart', onTouchStart, { passive: true })
     return () => card.removeEventListener('onTouchStart', onTouchStart)
   }, [flipped])
-
+  
   return (
     <>
       {projectsData.map(project => (

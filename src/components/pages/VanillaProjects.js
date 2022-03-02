@@ -4,7 +4,6 @@ import { vanillaData } from '../../vanillaData'
 import VanillaCard from '../layout/VanillaCard'
 import HomeLink from '../layout/utils/HomeLink'
 import Copyright from '../layout/Copyright'
-import Cursor from '../layout/utils/Cursor'
 
 const VanillaProjects = () => {
   return (
@@ -30,7 +29,6 @@ const VanillaProjects = () => {
         <HomeLink />
         <Copyright color='#0e0016' />
       </main>
-      <Cursor />
     </div>
   )
 }

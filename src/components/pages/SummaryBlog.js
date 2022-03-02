@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import HomeLink from '../layout/utils/HomeLink'
 import Copyright from '../layout/Copyright'
-import Cursor from '../layout/utils/Cursor'
 import { CursorContext } from '../../context/CursorContext'
 
 const SummaryBlog = () => {
@@ -227,7 +226,6 @@ const SummaryBlog = () => {
       </main>
       <HomeLink classNames='home-link-bottom-neg-colors' />
       <Copyright />
-      <Cursor />
     </div>
   )
 }

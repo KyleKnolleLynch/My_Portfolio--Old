@@ -21,8 +21,8 @@ const Cursor = () => {
         : (circleRef.current.style.transform = `translate3d(${circleX}px, ${circleY}px, 0)`)
     }
 
-    document.addEventListener('mousemove', setCursor)
-    return () => document.removeEventListener('mousemove', setCursor)
+    window.addEventListener('mousemove', setCursor)
+    return () => window.removeEventListener('mousemove', setCursor)
   }, [hoveredState])
 
   return (

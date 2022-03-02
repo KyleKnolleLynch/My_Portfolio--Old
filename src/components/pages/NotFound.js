@@ -1,5 +1,4 @@
 import React from 'react';
-import Cursor from '../layout/utils/Cursor';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 
@@ -18,7 +17,6 @@ const NotFound = () => {
         </p>
       </section>
       <Footer />
-      <Cursor />
     </div>
   );
 };

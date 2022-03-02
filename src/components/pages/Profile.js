@@ -3,7 +3,6 @@ import VisibilitySensor from '../layout/utils/VisibilitySensor'
 import Navbar from '../layout/Navbar'
 import Copyright from '../layout/Copyright'
 import Footer from '../layout/Footer'
-import Cursor from '../layout/utils/Cursor'
 import { CursorContext } from '../../context/CursorContext'
 import ProfileImg from '../../assets/images/portrait1.webp'
 import ProfileAbout from '../layout/ProfileAbout'
@@ -128,7 +127,6 @@ const Profile = () => {
         <Copyright />
       </main>
       <Footer />
-      <Cursor />
     </div>
   )
 }
