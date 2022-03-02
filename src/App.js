@@ -10,16 +10,14 @@ import SummaryBlog from './components/pages/SummaryBlog'
 import SummaryMiami from './components/pages/SummaryMiami'
 import SummaryTechCart from './components/pages/SummaryTechCart'
 import NotFound from './components/pages/NotFound'
-
 import Cursor from './components/layout/utils/Cursor'
-
 
 import './css/main.min.css'
 
 const App = () => {
   const logoWhite = './logoIcons/white_icon_32.png'
   const logoPurple = './logoIcons/purple_icon_32.png'
-  
+
   useEffect(() => {
     if (window.innerWidth > 1024) {
       const logoPng = document.getElementById('favicon')
