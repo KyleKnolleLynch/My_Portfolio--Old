@@ -58,14 +58,10 @@
           -1px 1px 0 $white-color, 1px 1px 0 $white-color;
       }
 
-      @supports (
-        (text-stroke: 1px $white-color) or
-          (-webkit-text-stroke: 1px $white-color)
-      ) {
+      @supports (-webkit-text-stroke: 1px $white-color) {
         div {
           color: transparent;
           -webkit-text-stroke: 1px $white-color;
-          text-stroke: 1px $white-color;
           text-shadow: none;
         }
       }

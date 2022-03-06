@@ -101,12 +101,7 @@ const Profile = () => {
         <article className='profile-link-bottom profile-contact-email'>
           <span>
             email me{' '}
-            <img
-              src={arrowSvg}
-              alt='down right svg'
-              width='22'
-              height='22'
-            />
+            <img src={arrowSvg} alt='down right svg' width='22' height='22' />
           </span>
           <br />
           <a
