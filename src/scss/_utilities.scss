@@ -99,14 +99,10 @@ section {
       text-shadow: -1px -1px 0 $profile-bg-color, 1px -1px 0 $profile-bg-color,
         -1px 1px 0 $profile-bg-color, 1px 1px 0 $profile-bg-color;
     }
-    @supports (
-      (text-stroke: 1px $profile-bg-color) or
-        (-webkit-text-stroke: 1px $profile-bg-color)
-    ) {
+    @supports ((-webkit-text-stroke: 1px $profile-bg-color)) {
       &:hover {
         color: transparent;
         -webkit-text-stroke: 1px $profile-bg-color;
-        text-stroke: 1px $profile-bg-color;
         text-shadow: none;
       }
     }
@@ -124,7 +120,6 @@ section {
   }
 }
 
-
 //  return home link negative colors
 .home-link-bottom-neg-colors {
   margin: 5rem 0 10rem;
@@ -135,14 +130,10 @@ section {
       text-shadow: -1px -1px 0 $white-color, 1px -1px 0 $white-color,
         -1px 1px 0 $white-color, 1px 1px 0 $white-color;
     }
-    @supports (
-      (text-stroke: 1px $white-color) or
-        (-webkit-text-stroke: 1px $white-color)
-    ) {
+    @supports ((-webkit-text-stroke: 1px $white-color)) {
       &:hover {
         color: transparent;
         -webkit-text-stroke: 1px $white-color;
-        text-stroke: 1px $white-color;
         text-shadow: none;
       }
     }

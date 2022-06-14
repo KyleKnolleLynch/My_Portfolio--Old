@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CursorContext } from '../../context/CursorContext'
+import { FeatherDownload } from '../../assets/svgIcons'
 
 const Navbar = ({
   title1,
@@ -46,21 +47,7 @@ const Navbar = ({
               {title2}
               {linkName === resumeLink && (
                 <span className='feather-download'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='20'
-                    height='20'
-                    viewBox='0 0 22 22'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  >
-                    <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path>
-                    <polyline points='7 10 12 15 17 10'></polyline>
-                    <line x1='12' y1='15' x2='12' y2='3'></line>
-                  </svg>
+                  <FeatherDownload />
                 </span>
               )}
             </span>
@@ -68,21 +55,7 @@ const Navbar = ({
               {title2}
               {linkName === resumeLink && (
                 <span className='feather-download'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='20'
-                    height='20'
-                    viewBox='0 0 22 22'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  >
-                    <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path>
-                    <polyline points='7 10 12 15 17 10'></polyline>
-                    <line x1='12' y1='15' x2='12' y2='3'></line>
-                  </svg>
+                  <FeatherDownload />
                 </span>
               )}
             </div>
@@ -90,21 +63,7 @@ const Navbar = ({
               {title2}
               {linkName === resumeLink && (
                 <span className='feather-download'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='20'
-                    height='20'
-                    viewBox='0 0 22 22'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  >
-                    <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path>
-                    <polyline points='7 10 12 15 17 10'></polyline>
-                    <line x1='12' y1='15' x2='12' y2='3'></line>
-                  </svg>
+                  <FeatherDownload />
                 </span>
               )}
             </div>

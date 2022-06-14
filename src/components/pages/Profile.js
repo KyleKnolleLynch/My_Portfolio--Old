@@ -7,8 +7,8 @@ import { CursorContext } from '../../context/CursorContext'
 import ProfileImg from '../../assets/images/portrait1.webp'
 import ProfileAbout from '../layout/ProfileAbout'
 import ProfileBio from '../layout/ProfileBio'
-import arrowSvg from '../../assets/icons/arrow-down-right.svg'
-import { iconsData } from '../../iconsData'
+import { ArrowDownRight } from '../../assets/svgIcons'
+import { iconsArray } from '../../assets/iconsArray'
 
 const Profile = () => {
   const [banStyle, setBanStyle] = useState(0)
@@ -100,8 +100,7 @@ const Profile = () => {
         </section>
         <article className='profile-link-bottom profile-contact-email'>
           <span>
-            email me{' '}
-            <img src={arrowSvg} alt='down right svg' width='22' height='22' />
+            email me <ArrowDownRight />
           </span>
           <br />
           <a
@@ -113,7 +112,7 @@ const Profile = () => {
           </a>
         </article>
         <ul className='test-icons'>
-          {iconsData.map(icon => (
+          {iconsArray.map(icon => (
             <li key={icon.id}>
               <img src={icon.icon} alt='svg_icons' width='35' height='35' />
             </li>

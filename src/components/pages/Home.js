@@ -13,7 +13,8 @@ import miamiDisplayMd from '../../assets/images/projects/miami-travel-vert-md.we
 import miamiDisplayXl from '../../assets/images/projects/miami-travel-vert-xl.webp'
 import blogDisplaySm from '../../assets/images/projects/blog-vert-sm.webp'
 import blogDisplayMd from '../../assets/images/projects/blog-vert-md.webp'
-import arrowSvg from '../../assets/icons/arrow-down-right.svg'
+
+import { ArrowDownRight } from '../../assets/svgIcons'
 
 const ProjectCards = lazy(() => import('../layout/ProjectCards'))
 
@@ -111,7 +112,7 @@ const Home = () => {
         <article className='profile-link-bottom'>
           <span>
             Visit{' '}
-            <img src={arrowSvg} alt='down right svg' width='22' height='22' />
+            <ArrowDownRight />
           </span>
           <br />
           <Link

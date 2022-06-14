@@ -78,12 +78,12 @@
   letter-spacing: 0.1rem;
   span {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-end;
     transform: scale(1.2, 0.8);
     font-size: 1.6rem;
     font-family: $font-nimbus;
-    img {
-      width: 2.2rem;
+    svg {
+      margin-left: 0.1em;
     }
   }
   a {
