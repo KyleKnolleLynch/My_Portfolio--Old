@@ -1,5 +1,5 @@
 
-#  My Portfolio Website
+#  My Portfolio Website (Old)
 
 ##  Built with
 
@@ -10,4 +10,4 @@
 
 ---
 
-live site: [kylelynch.me](https://kylelynch.me)
+live site: [https://kylelynch-portfolio.netlify.app](https://kylelynch-portfolio.netlify.app)
